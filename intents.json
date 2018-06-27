@@ -1,0 +1,33 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "memory game",
+            "intents": [
+                {
+                    "name": "YesIntent",
+                    "slots": [],
+                    "samples": []
+                },
+                {
+                    "name": "AnswerIntent",
+                    "slots": [
+                        {
+                            "name": "first",
+                            "type": "AMAZON.NUMBER"
+                        },
+                        {
+                            "name": "second",
+                            "type": "AMAZON.NUMBER"
+                        },
+                        {
+                            "name": "third",
+                            "type": "AMAZON.NUMBER"
+                        }
+                    ],
+                    "samples": []
+                }
+            ],
+            "types": []
+        }
+    }
+}
