@@ -1,0 +1,5 @@
+ask-location: Welcome to UIUC menu checker. Which dining hall's menu today do you want to know?
+
+ask-meal: Ok. Which meal today in {{ hall }} do you want to know?
+
+answer-entrees: Today in {{ hall }} for {{ meal }}'s entrees, there are {{ results | join(", ") }}
