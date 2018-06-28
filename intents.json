@@ -1,33 +1,211 @@
 {
     "interactionModel": {
         "languageModel": {
-            "invocationName": "memory game",
+            "invocationName": "uiuc menu",
             "intents": [
                 {
-                    "name": "YesIntent",
-                    "slots": [],
+                    "name": "AMAZON.FallbackIntent",
                     "samples": []
                 },
                 {
-                    "name": "AnswerIntent",
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AnswerHallIntent",
                     "slots": [
                         {
-                            "name": "first",
-                            "type": "AMAZON.NUMBER"
+                            "name": "hall",
+                            "type": "HALL"
                         },
-                        {
-                            "name": "second",
-                            "type": "AMAZON.NUMBER"
-                        },
-                        {
-                            "name": "third",
-                            "type": "AMAZON.NUMBER"
-                        }
                     ],
+                    "samples": []
+                },
+                {
+                    "name": "AnswerMealIntent",
+                    "slots": [],
                     "samples": []
                 }
             ],
-            "types": []
+            "types": [
+                {
+                    "name": "HALL",
+                    "values": [
+                        {
+                            "id": "oodles",
+                            "name": {
+                                "value": "Oodles"
+                            }
+                        },
+                        {
+                            "id": "buseybeanandgreen",
+                            "name": {
+                                "value": "Busey Bean and Green"
+                            }
+                        },
+                        {
+                            "id": "buseyevans",
+                            "name": {
+                                "value": "Busey-Evans Dining Hall",
+                                "synonyms": [
+                                    "Busey-Evans Hall",
+                                    "Busey-Evans"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "soulingredient",
+                            "name": {
+                                "value": "Soul Ingredient"
+                            }
+                        },
+                        {
+                            "id": "crackedeggcafe",
+                            "name": {
+                                "value": "Cracked Egg Café"
+                            }
+                        },
+                        {
+                            "id": "far",
+                            "name": {
+                                "value": "FAR Dining Hall",
+                                "synonyms": [
+                                    "FAR Hall",
+                                    "FAR"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "neosoulingredient",
+                            "name": {
+                                "value": "Neo Soul Ingredient"
+                            }
+                        },
+                        {
+                            "id": "caffeinator",
+                            "name": {
+                                "value": "Caffeinator"
+                            }
+                        },
+                        {
+                            "id": "betterburger",
+                            "name": {
+                                "value": "Better Burger"
+                            }
+                        },
+                        {
+                            "id": "57north",
+                            "name": {
+                                "value": "57 North"
+                            }
+                        },
+                        {
+                            "id": "ikenberrydininghall",
+                            "name": {
+                                "value": "Ikenberry Dining Hall",
+                                "synonyms": [
+                                    "Ikenberry Hall",
+                                    "Ikenberry"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "tasteofasia",
+                            "name": {
+                                "value": "Taste of Asia"
+                            }
+                        },
+                        {
+                            "id": "cocinamexicana",
+                            "name": {
+                                "value": "Cocina Mexicana"
+                            }
+                        },
+                        {
+                            "id": "chomps",
+                            "name": {
+                                "value": "CHOMPS"
+                            }
+                        },
+                        {
+                            "id": "isr",
+                            "name": {
+                                "value": "ISR Dining Hall",
+                                "synonyms": [
+                                    "ISR Hall",
+                                    "ISR"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "pennstation",
+                            "name": {
+                                "value": "Penn Station"
+                            }
+                        },
+                        {
+                            "id": "par",
+                            "name": {
+                                "value": "PAR Dining Hall",
+                                "synonyms": [
+                                    "PAR Hall",
+                                    "PAR"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "leafy",
+                            "name": {
+                                "value": "Leafy"
+                            }
+                        },
+                        {
+                            "id": "fieldofgreens",
+                            "name": {
+                                "value": "Field of Greens"
+                            }
+                        },
+                        {
+                            "id": "lar",
+                            "name": {
+                                "value": "Lincoln Hall",
+                                "synonyms": [
+                                    "LAR",
+                                    "Allen Hall"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "MEAL",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "dinner"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "lunch"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "breakfast"
+                            }
+                        }
+                    ]
+                }
+            ]
         }
     }
 }
