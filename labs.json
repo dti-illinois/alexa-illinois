@@ -1,0 +1,132 @@
+[
+    {
+        "strlabname": "DCL L416",
+        "inusecount": 0,
+        "machinecount": 41
+    },
+    {
+        "strlabname": "DCL L426",
+        "inusecount": 0,
+        "machinecount": 11
+    },
+    {
+        "strlabname": "DCL L440",
+        "inusecount": 0,
+        "machinecount": 30
+    },
+    {
+        "strlabname": "DCL L520",
+        "inusecount": 0,
+        "machinecount": 30
+    },
+    {
+        "strlabname": "ECEB 2022",
+        "inusecount": 26,
+        "machinecount": 45
+    },
+    {
+        "strlabname": "ECEB 3022",
+        "inusecount": 1,
+        "machinecount": 17
+    },
+    {
+        "strlabname": "ECEB 3070",
+        "inusecount": 5,
+        "machinecount": 13
+    },
+    {
+        "strlabname": "EH 406B1",
+        "inusecount": 3,
+        "machinecount": 48
+    },
+    {
+        "strlabname": "EH 406B8",
+        "inusecount": 0,
+        "machinecount": 48
+    },
+    {
+        "strlabname": "ESPL",
+        "inusecount": 1,
+        "machinecount": 9
+    },
+    {
+        "strlabname": "FAR TRE 231",
+        "inusecount": 0,
+        "machinecount": 2
+    },
+    {
+        "strlabname": "GELIB 4th Floor Center",
+        "inusecount": 14,
+        "machinecount": 45
+    },
+    {
+        "strlabname": "GELIB 4th Floor East",
+        "inusecount": 16,
+        "machinecount": 55
+    },
+    {
+        "strlabname": "MEL 1001",
+        "inusecount": 0,
+        "machinecount": 25
+    },
+    {
+        "strlabname": "MEL 1009",
+        "inusecount": 0,
+        "machinecount": 41
+    },
+    {
+        "strlabname": "PAR 104",
+        "inusecount": 0,
+        "machinecount": 2
+    },
+    {
+        "strlabname": "REC 121E",
+        "inusecount": 0,
+        "machinecount": 1
+    },
+    {
+        "strlabname": "SDRP 1010",
+        "inusecount": 0,
+        "machinecount": 2
+    },
+    {
+        "strlabname": "SDRP 2054",
+        "inusecount": 0,
+        "machinecount": 1
+    },
+    {
+        "strlabname": "SIEBL 0218",
+        "inusecount": 2,
+        "machinecount": 36
+    },
+    {
+        "strlabname": "SIEBL 0220",
+        "inusecount": 3,
+        "machinecount": 21
+    },
+    {
+        "strlabname": "SIEBL 0222",
+        "inusecount": 17,
+        "machinecount": 36
+    },
+    {
+        "strlabname": "SIEBL 0403",
+        "inusecount": 0,
+        "machinecount": 44
+    },
+    {
+        "strlabname": "TB 207",
+        "inusecount": 0,
+        "machinecount": 8
+    },
+    {
+        "strlabname": "TB 302",
+        "inusecount": 0,
+        "machinecount": 8
+    },
+    {
+        "strlabname": "TB 316",
+        "inusecount": 1,
+        "machinecount": 30
+    }
+]
