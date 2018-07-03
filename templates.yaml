@@ -5,6 +5,7 @@ welcome: |
 room_usage_info: |
   {{ building }} room {{ room }} has {{ room_info.machinecount }} computers.
   {{ room_info.inusecount }} of them are in use.
+  Any other help do you need?
 
 help: |
   Which building and room would you like machine usage information for?
