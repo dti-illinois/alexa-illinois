@@ -3,7 +3,7 @@ DCL_name = 'digital computer lab'
 ECE_name = 'electrical and computer engineering building'
 EH_name = 'engineering hall'
 GELIB_name = 'grainger engineering library'
-MEL_name = 'mechanical engineering laboratory'
+MEL_name = 'mechanical engineering lab'
 SIEBL_name = 'siebel center'
 TB_name = 'Transportation building'
 
@@ -11,6 +11,7 @@ BUILDINGS = {
     #DCL
     'DCL': DCL_name,
     'digital computer lab': DCL_name,
+    'digital computer laboratory': DCL_name,
     #ECEBuidling
     'ECE': ECE_name,
     'ECEB': ECE_name,
@@ -66,4 +67,8 @@ ROOMS = {
     '0222': '0222',
     '0403': '0403',
     #room for GELIB
+    'fourth floor center': 'fourth floor center',
+    'fourth floor east': 'fourth floor east',
+    '4th floor center': 'fourth floor center',
+    '4th floor east': 'fourth floor east'
 }

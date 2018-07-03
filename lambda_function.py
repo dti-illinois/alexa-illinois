@@ -18,11 +18,25 @@ def launch():
     return question(welcome_text).reprompt(help_text)
 
 
-@ask.intent('OneshotEWSIntent',
+@ask.intent('EWSRoomUsageIntent',
     mapping={'building': 'buildings', 'room': 'rooms'},
     default={'building': 'digital computer lab', 'room': 'L416'})
-def one_shot_ews_usage(building, room):
-    return get_room_info(building, room)
+def get_room_usage(building, room):
+    room_info = get_room_info(building, room)
+    statement_text = render_template('room_usage_info', building=building,
+                                    room=room, room_info=room_info)
+    reprompt_text = render_template('reprompt_general')
+    return question(statement_text).reprompt(reprompt_text)
+
+
+@ask.intent('EWSSupported')
+
+
+@ask.intent('AMAZON.HelpIntent')
+def help():
+    help_text = render_template('help')
+    reprompt_text = render_template('reprompt_help')
+    return question(help_text).reprompt(reprompt_text)
 
 
 @ask.intent('AMAZON.StopIntent')

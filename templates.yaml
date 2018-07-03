@@ -1,13 +1,28 @@
 welcome: |
   Welcome to engineering workstation checker.
-  Which building and room would you like machine usage information for?
+  Which building would you like information for?
 
 room_usage_info: |
   {{ building }} room {{ room }} has {{ room_info.machinecount }} computers.
   {{ room_info.inusecount }} of them are in use.
-  Any other help do you need?
+  Any other information do you want?
 
 help: |
-  Which building and room would you like machine usage information for?
+  I can tell you the real time computer usage providing a building.
+  For example, you can ask, get information for digital computer lab.
+  Or, if you don't want a particular building, ask find me a lab.
+  For a list of supported buildings, ask what buildings are supported.
+  Now which building would you like information for?
+
+list_buildings: |
+  Currently, I know machine usage information for these buildings: {{ buidlings }}
+  Which building would you like information for?
+
+reprompt_help: Which building would you like information for?
+
+reprompt_general: Any other information do you want?
+
+problem: Sorry, the engineering workstation checker is experiencing a problem.
+  Please try again later.
 
 bye: Goodbye
