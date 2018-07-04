@@ -2,6 +2,19 @@ welcome: |
   Welcome to engineering workstation checker.
   Which building would you like information for?
 
+blue_search_success: |
+  pass
+
+blur_search_fail: |
+  
+
+building_usage_info: |
+  {{ building }} has {{lab_count}} labs and {{free_comp_count}} avaiable computers.
+  {% for room_name, room_info in building_info.items() %}
+    {{ room_info.free_comp }} in room {{room_name}}
+  {% endfor %}
+  Any other information do you want?
+
 room_usage_info: |
   {{ building }} room {{ room }} has {{ room_info.machinecount }} computers.
   {{ room_info.inusecount }} of them are in use.

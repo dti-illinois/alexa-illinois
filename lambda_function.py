@@ -1,7 +1,7 @@
 from flask import Flask, render_template
 from flask_ask import Ask, request, session, question, statement
 
-from ews_utils import get_room_info
+from ews_utils import get_building_info, get_room_info, get_supported_buildings
 
 app = Flask(__name__)
 ask = Ask(app, "/")
@@ -18,18 +18,40 @@ def launch():
     return question(welcome_text).reprompt(help_text)
 
 
+@ask.intent('EWSBlurSearchIntent')
+def blur_search():
+    pass
+
+
+@ask.intent('EWSBuildingUsageIntent',
+    mapping={'building': 'buildings'},
+    default={'building': 'digital computer lab'})
+def building_usage(building):
+    building_info, lab_count, total_free_comp = get_building_info(building)
+    building_usage_text = render_template('building_usage_info', building=building,
+                                        lab_count=lab_count, free_comp_count=total_free_comp,
+                                        building_info=building_info)
+    reprompt_text = render_template('reprompt_general')
+    return question(building_usage_text).reprompt(reprompt_text)
+
+
 @ask.intent('EWSRoomUsageIntent',
     mapping={'building': 'buildings', 'room': 'rooms'},
     default={'building': 'digital computer lab', 'room': 'L416'})
-def get_room_usage(building, room):
+def room_usage(building, room):
     room_info = get_room_info(building, room)
-    statement_text = render_template('room_usage_info', building=building,
+    room_usage_text = render_template('room_usage_info', building=building,
                                     room=room, room_info=room_info)
     reprompt_text = render_template('reprompt_general')
-    return question(statement_text).reprompt(reprompt_text)
+    return question(room_usage_text).reprompt(reprompt_text)
 
 
-@ask.intent('EWSSupported')
+@ask.intent('EWSSupportedBuildingsIntent')
+def supported_buildings():
+    buildings = get_supported_buildings()
+    buildings_text = render_template('list_buildings', buildings=buidlings)
+    reprompt_text = render_template('reprompt_general')
+    return question(buildings_text).reprompt(reprompt_text)
 
 
 @ask.intent('AMAZON.HelpIntent')
@@ -37,6 +59,18 @@ def help():
     help_text = render_template('help')
     reprompt_text = render_template('reprompt_help')
     return question(help_text).reprompt(reprompt_text)
+
+
+@ask.intent('AMAZON.YesIntent')
+def yes():
+    question_text = render_template('reprompt_help')
+    return question(question_text).reprompt(question_text)
+
+
+@ask.intent('AMAZON.NoIntent')
+def no():
+    bye_text = render_template('bye')
+    return statement(bye_text)
 
 
 @ask.intent('AMAZON.StopIntent')

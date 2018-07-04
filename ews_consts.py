@@ -5,7 +5,7 @@ EH_name = 'engineering hall'
 GELIB_name = 'grainger engineering library'
 MEL_name = 'mechanical engineering lab'
 SIEBL_name = 'siebel center'
-TB_name = 'Transportation building'
+TB_name = 'transportation building'
 
 BUILDINGS = {
     #DCL
