@@ -1,7 +1,7 @@
 {
     "interactionModel": {
         "languageModel": {
-            "invocationName": "uiuc menu",
+            "invocationName": "menu checker",
             "intents": [
                 {
                     "name": "AMAZON.FallbackIntent",
@@ -25,14 +25,53 @@
                         {
                             "name": "hall",
                             "type": "HALL"
-                        },
+                        }
                     ],
-                    "samples": []
+                    "samples": [
+                        "{hall}"
+                    ]
                 },
                 {
                     "name": "AnswerMealIntent",
-                    "slots": [],
-                    "samples": []
+                    "slots": [
+                        {
+                            "name": "meal",
+                            "type": "MEAL"
+                        }
+                    ],
+                    "samples": [
+                        "{meal}"
+                    ]
+                },
+                {
+                    "name": "AskMainIntent",
+                    "slots": [
+                        {
+                            "name": "hall",
+                            "type": "HALL"
+                        },
+                        {
+                            "name": "meal",
+                            "type": "MEAL"
+                        },
+                        {
+                            "name": "date",
+                            "type": "DATE"
+                        }
+                    ],
+                    "samples": [
+                        "{hall} 's {meal} {date}",
+                        "What's {hall} 's {meal} {date}",
+                        "What is {hall} 's {meal} {date}",
+                        "{date} 's  {meal} in {hall}",
+                        "What's {date} 's  {meal} in {hall}",
+                        "What's {date} 's  {meal} at {hall}",
+                        "What is {date} 's  {meal} in {hall}",
+                        "{meal} {date} in {hall}",
+                        "What's the {meal} {date} in {hall}",
+                        "What's the {meal} {date} at {hall}",
+                        "What is the {meal} {date} in {hall}"
+                    ]
                 }
             ],
             "types": [
@@ -76,10 +115,11 @@
                         {
                             "id": "far",
                             "name": {
-                                "value": "FAR Dining Hall",
+                                "value": "F.A.R. Dining Hall",
                                 "synonyms": [
-                                    "FAR Hall",
-                                    "FAR"
+                                    "far",
+                                    "F.A.R. Hall",
+                                    "F.A.R."
                                 ]
                             }
                         },
@@ -138,10 +178,10 @@
                         {
                             "id": "isr",
                             "name": {
-                                "value": "ISR Dining Hall",
+                                "value": "I.S.R Dining Hall",
                                 "synonyms": [
-                                    "ISR Hall",
-                                    "ISR"
+                                    "I.S.R.",
+                                    "I.S.R. Hall"
                                 ]
                             }
                         },
@@ -154,10 +194,11 @@
                         {
                             "id": "par",
                             "name": {
-                                "value": "PAR Dining Hall",
+                                "value": "P.A.R. Dining Hall",
                                 "synonyms": [
-                                    "PAR Hall",
-                                    "PAR"
+                                    "par",
+                                    "P.A.R",
+                                    "P.A.R Hall"
                                 ]
                             }
                         },
@@ -178,7 +219,8 @@
                             "name": {
                                 "value": "Lincoln Hall",
                                 "synonyms": [
-                                    "LAR",
+                                    "lar",
+                                    "L.A.R",
                                     "Allen Hall"
                                 ]
                             }
@@ -189,18 +231,38 @@
                     "name": "MEAL",
                     "values": [
                         {
+                            "id": "Dinner",
                             "name": {
-                                "value": "dinner"
+                                "value": "Dinner"
                             }
                         },
                         {
+                            "id": "Lunch",
                             "name": {
-                                "value": "lunch"
+                                "value": "Lunch"
                             }
                         },
                         {
+                            "id": "Breakfast",
                             "name": {
-                                "value": "breakfast"
+                                "value": "Breakfast"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "DATE",
+                    "values": [
+                        {
+                            "id": "tomorrow",
+                            "name": {
+                                "value": "Tomorrow"
+                            }
+                        },
+                        {
+                            "id": "today",
+                            "name": {
+                                "value": "Today"
                             }
                         }
                     ]

@@ -1,5 +1,21 @@
-ask-hall: Welcome to UIUC menu checker. Which dining hall's menu today do you want to know?
+welcome: Welcome to U.I.U.C. menu checker. How can I help you? Say "help" to know about how to use me, or say "interactive" to use me in an intereactive way.
 
-ask-meal: Ok. Which meal today in {{ hall }} do you want to know?
+help: Welcome to U.I.U.C. menu checker help. The first thing you can do is to check the menu, specifically entrees in dining halls. For example, here are some sample questions. "What's the dinner today in P.A.R. dining hall?", "What's today's dinner in P.A.R?" Or you can say "interactive" to let me ask questions about your query. After you got your answers for the entrees, you can continue asking about other things about your query.
 
-answer-entrees: Today in {{ hall }} for {{ meal }}'s entrees, there are {{ results | join(", ") }}
+inter-ask-hall: Sure. Which dining hall's menu today do you want to know?
+
+inter-ask-meal: Ok. Which meal do you want to know, breakfast, lunch, or dinner?
+
+inter-ask-date: Got it. Do you want it today or tomorrow?
+
+answer-entrees-ask: {{ date }} in {{ hall }} for {{ meal }}'s entrees, there are {{ results | join(", ") }}
+
+answer-dessert: {{ date }} in {{ hall }} for {{ meal }}'s dessert, there are {{ results | join(", ") }}. 
+
+answer-drinks: {{ date }} in {{ hall }} for {{ meal }}'s drinks, there are {{ result | join(", ") }}.
+
+answer-sides: {{ date }} in {{ hall }} for {{ meal }}'s sides, there are {{ result | join(", ") }}.
+
+error-not-found: I am sorry to tell you that there is no information about that yet. 
+
+error-not-understand:
