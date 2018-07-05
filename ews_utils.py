@@ -16,8 +16,13 @@ def make_blur_search():
     result = []
     raw = _get_ews_usage()
     for building in raw:
-        _get_free_room(raw[building])
-        break
+        free_comp_count, room = _get_free_room(raw[building])
+        if room is None:
+            continue
+        result.append({'building': building,
+                        'room': room,
+                        'count': free_comp_count})
+    return sorted(result, key=lambda x: x['count'], reverse=True)
 
 def get_building_info(building):
     building = BUILDINGS[building]
@@ -80,4 +85,4 @@ def _parse_ews_json(ews_json):
 #print(get_supported_buildings())
 #a, b, c =get_building_info('digital computer lab')
 #print(json.dumps(a, indent=4))
-make_blur_search()
+#print(make_blur_search())

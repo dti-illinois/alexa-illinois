@@ -1,7 +1,7 @@
 from flask import Flask, render_template
 from flask_ask import Ask, request, session, question, statement
 
-from ews_utils import get_building_info, get_room_info, get_supported_buildings
+from ews_utils import make_blur_search, get_building_info, get_room_info, get_supported_buildings
 
 app = Flask(__name__)
 ask = Ask(app, "/")
@@ -20,7 +20,13 @@ def launch():
 
 @ask.intent('EWSBlurSearchIntent')
 def blur_search():
-    pass
+    info = make_blur_search()
+    if len(info) == 0:
+        blur_search_text = render_template('blur_search_fail')
+    else:
+        blur_search_text = render_template('blue_search_success', info=info)
+    reprompt_text = render_template('reprompt_general')
+    return question_text(blur_search_text).reprompt(reprompt_text)
 
 
 @ask.intent('EWSBuildingUsageIntent',

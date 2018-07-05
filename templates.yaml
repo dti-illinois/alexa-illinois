@@ -3,10 +3,16 @@ welcome: |
   Which building would you like information for?
 
 blue_search_success: |
-  pass
+  I recommend the following labs.
+  {% for item in info %}
+    {{ item.building }} room {{ item.room }} with {{ item.count }} avaiable computers
+  {% endfor %}
+  Any other information do you want?
 
 blur_search_fail: |
-  
+  Sorry, none of the lab have more than 5 avaiable computers currently.
+  Please try again later.
+  Any other information do you want?
 
 building_usage_info: |
   {{ building }} has {{lab_count}} labs and {{free_comp_count}} avaiable computers.
