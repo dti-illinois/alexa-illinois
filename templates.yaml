@@ -1,21 +1,21 @@
-welcome: Welcome to U.I.U.C. menu checker. How can I help you? Say "help" to know about how to use me, or say "interactive" to use me in an intereactive way.
+welcome: Welcome to U.I.U.C. menu checker. How can I help you? Say "help" to know about how to use me, or say "interactive" to query in an interactive way.
 
-help: Welcome to U.I.U.C. menu checker help. The first thing you can do is to check the menu, specifically entrees in dining halls. For example, here are some sample questions. "What's the dinner today in P.A.R. dining hall?", "What's today's dinner in P.A.R?" Or you can say "interactive" to let me ask questions about your query. After you got your answers for the entrees, you can continue asking about other things about your query.
+help: The first thing you can do with me is to check the menu, specifically entrees in dining halls. For example, here are some sample questions. You can ask "What's the dinner today in P.A.R. dining hall?", "What's the the dinner today in P.A.R tomorrow", or simply "Dinner in P.A.R hall today".Or you can say "interactive" to let me ask questions about your query. After you got your answers for the entrees, you can continue asking about other things about your query. You can try it out now.
 
-inter-ask-hall: Sure. Which dining hall's menu today do you want to know?
+inter-ask-hall: Sure. Which dining hall's menu do you want to know?
 
 inter-ask-meal: Ok. Which meal do you want to know, breakfast, lunch, or dinner?
 
 inter-ask-date: Got it. Do you want it today or tomorrow?
 
-answer-entrees-ask: {{ date }} in {{ hall }} for {{ meal }}'s entrees, there are {{ results | join(", ") }}
+answer-entrees-ask: .{{ date }} in {{ hall }} for {{ meal }}'s entrees, there are {{ results | join(", ") }}. 
 
-answer-dessert: {{ date }} in {{ hall }} for {{ meal }}'s dessert, there are {{ results | join(", ") }}. 
+# answer-dessert: .{{ date }} in {{ hall }} for {{ meal }}'s dessert, there are {{ results | join(", ") }}. 
 
-answer-drinks: {{ date }} in {{ hall }} for {{ meal }}'s drinks, there are {{ result | join(", ") }}.
+# answer-drinks: .{{ date }} in {{ hall }} for {{ meal }}'s drinks, there are {{ result | join(", ") }}.
 
-answer-sides: {{ date }} in {{ hall }} for {{ meal }}'s sides, there are {{ result | join(", ") }}.
+# answer-sides: .{{ date }} in {{ hall }} for {{ meal }}'s sides, there are {{ result | join(", ") }}.
 
-error-not-found: I am sorry to tell you that there is no information about that yet. 
+error-not-found: I am sorry to tell you that there is no information about that yet. You can another one now, or you can say "stop" to end this session.
 
-error-not-understand:
+error-not-understand: I am sorry that I could not understand you. Could you say it again?

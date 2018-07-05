@@ -56,17 +56,14 @@
                         },
                         {
                             "name": "date",
-                            "type": "DATE"
+                            "type": "CustomDATE"
                         }
                     ],
                     "samples": [
-                        "{hall} 's {meal} {date}",
-                        "What's {hall} 's {meal} {date}",
-                        "What is {hall} 's {meal} {date}",
-                        "{date} 's  {meal} in {hall}",
-                        "What's {date} 's  {meal} in {hall}",
-                        "What's {date} 's  {meal} at {hall}",
-                        "What is {date} 's  {meal} in {hall}",
+                        "{meal} in {hall} {date}",
+                        "What's the {meal} in {hall} {date}",
+                        "What's the {meal} at {hall} {date}",
+                        "What is the {meal} in {hall} {date}",
                         "{meal} {date} in {hall}",
                         "What's the {meal} {date} in {hall}",
                         "What's the {meal} {date} at {hall}",
@@ -251,7 +248,7 @@
                     ]
                 },
                 {
-                    "name": "DATE",
+                    "name": "CustomDATE",
                     "values": [
                         {
                             "id": "tomorrow",
