@@ -1,10 +1,15 @@
 import json
+import time
 import urllib
 import requests
 from urllib.request import urlopen
+from datetime import date
+from datetime import time
+from datetime import datetime
+from datetime import timedelta
 
 
-url_dining_today = "https://web.housing.illinois.edu/MobileDining2/WebService/Search.aspx?k=7A828F94-620B-4EE3-A56F-328036CC3C04"
+url_dining = "https://web.housing.illinois.edu/MobileDining2/WebService/Search.aspx?k=7A828F94-620B-4EE3-A56F-328036CC3C04"
 url_dining_search = "https://web.housing.illinois.edu/MobileDining/WebService/MobileDining.asmx/SearchMenus?k=7A828F94-620B-4EE3-A56F-328036CC3C04&SearchPhrase="
 
 hall_id = {
@@ -35,30 +40,41 @@ def get_hall_id(hall_name):
     return hall_id[hall_name]
 
 
-def get_dining_today(hall, meal, course):
-    request_url = url_dining_today + "&id=" + str(hall) + "&t=json"
+def get_tomorrow_url():
+    tmr = date.today() + timedelta(days=1)
+    tmr_str = tmr.strftime("%Y-%m-%d")
+    return url_dining + "&from=" + tmr_str + "&to=" + tmr_str
+
+
+def get_dining_today(hall, meal, course, vegetarian):
+    request_url = url_dining + "&id=" + str(hall) + "&t=json"
     response = urlopen(request_url)
     try:
         response_json = json.load(response)
-        items = response_jsoSn['Menus']['Item']
+        items = response_json['Menus']['Item']
         results = []
         for item in items:
             if item['Course'] == course and item['Meal'] == meal:
-                results.append(item['FormalName'])
+                if not vegetarian:
+                    results.append(item['FormalName'])
+                elif 'Vegetarian' in item['Traits'].split(','):
+                    results.append(item['FormalName'])
         return results
     except ValueError:
         return None
 
 
-def get_dining_tomorrow(hall, meal, course):
-    request_url = url_dining_today + "&id=" + str(hall) + "&t=json"
+def get_dining_tomorrow(hall, meal, course, vegetarian):
+    request_url = get_tomorrow_url() + "&id=" + str(hall) + "&t=json"
     response = urlopen(request_url)
     try:
         response_json = json.load(response)
-        items = response_jsoSn['Menus']['Item']
+        items = response_json['Menus']['Item']
         results = []
         for item in items:
-            if item['Course'] == course and item['Meal'] == meal:
+            if not vegetarian:
+                results.append(item['FormalName'])
+            elif 'Vegetarian' in item['Traits'].split(','):
                 results.append(item['FormalName'])
         return results
     except ValueError:
