@@ -1,0 +1,21 @@
+SPORTS = {
+'baseball': 'baseball',
+'mbball': 'men\'s basketball',
+'mcross': 'men\'s cross country',
+'football': 'football',
+'mgolf': 'men\'s golf',
+'mgym': 'men\'s gymnastic',
+'mten': 'men\'s tennis',
+'mtrack': 'men\'s track & field',
+'wrestling': 'wrestling',
+'wbball': 'women\'s basketball',
+'wcross': 'women\'s cross country',
+'wgolf': 'women\'s golf',
+'wgym': 'women\'s gymnastic',
+'wsoc': 'soccer',
+'softball': 'softball',
+'wswim': 'swimming & diving',
+'wten': 'women\'s tennis',
+'wtrack': 'women\'s track & field',
+'wvball': 'volleyball'
+}
