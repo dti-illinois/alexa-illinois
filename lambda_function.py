@@ -1,5 +1,4 @@
 import logging
-from random import randint
 from flask import Flask, render_template
 from flask_ask import Ask, statement, question, session, request
 
@@ -30,12 +29,14 @@ def help():
     return question(help_msg)
 
 
+@ask.intent('AMAZON.NoIntent')
 @ask.intent("AMAZON.FallbackIntent")
 def fallback():
     fallback_msg = render_template('error-not-understand')
     return question(fallback_msg)
 
 
+@ask.intent('AMAZON.CancelIntent')
 @ask.intent("AMAZON.StopIntent")
 def stop():
     goodbye_msg = render_template('goodbye')
@@ -52,16 +53,6 @@ def vegetarian():
     return question(vegetarian_msg)
 
 
-@ask.intent("InteractiveIntent")
-def interactive():
-    session.attributes.pop('hall_id')
-    session.attributes.pop('hall_name')
-    session.attributes.pop('meal')
-    session.attributes.pop('date')
-    ask_hall_msg = render_template('inter-ask-hall')
-    return question(ask_hall_msg)
-
-
 @ask.intent("DetailIntent")
 def detail():
     try:
@@ -69,6 +60,41 @@ def detail():
     except KeyError:
         err_msg = render_template('error-other')
         return statement(err_msg)
+
+
+@ask.intent("AskMainIntent", mapping={
+    'hall_name': 'hall', 'meal': 'meal', 'date': 'date'})
+def ask_main(hall_name, meal, date):
+    try:
+        # get all info from request
+        hall = request.intent.slots.hall.resolutions.resolutionsPerAuthority[0]['values'][0]['value']['id']
+        meal = request.intent.slots.meal.resolutions.resolutionsPerAuthority[0]['values'][0]['value']['id']
+        date = request.intent.slots.date.resolutions.resolutionsPerAuthority[0]['values'][0]['value']['id']
+        # store them in the session
+        session.attributes['hall_id'] = get_hall_id(hall) 
+        session.attributes['hall_name'] = hall_name
+        session.attributes['meal'] = meal
+        session.attributes['date'] = date
+        return answer_entrees(session.attributes['vegetarian'])
+    except KeyError:
+        ask_msg = render_template('error-not-understand')
+        return question(ask_msg)
+
+
+@ask.intent("InteractiveIntent")
+def interactive():
+    # init all variables
+    if 'hall_id' in session.attributes.keys():
+        session.attributes.pop('hall_id')
+    if 'hall_name' in session.attributes.keys():
+        session.attributes.pop('hall_name')
+    if 'meal' in session.attributes.keys():
+        session.attributes.pop('meal')
+    if 'date' in session.attributes.keys():
+        session.attributes.pop('date')
+    # render template
+    ask_hall_msg = render_template('inter-ask-hall')
+    return question(ask_hall_msg)
 
 
 @ask.intent("AnswerHallIntent", mapping={'hall_name': 'hall'})
@@ -138,23 +164,6 @@ def answer_date(date):
         ask_msg = render_template('error-not-understand')
         return question(ask_msg)
 
-
-@ask.intent("AskMainIntent", mapping={'hall_name': 'hall', 'meal': 'meal', 'date': 'date'})
-def ask_main(hall_name, meal, date):
-    try:
-        # get all info from request
-        hall = request.intent.slots.hall.resolutions.resolutionsPerAuthority[0]['values'][0]['value']['id']
-        meal = request.intent.slots.meal.resolutions.resolutionsPerAuthority[0]['values'][0]['value']['id']
-        date = request.intent.slots.date.resolutions.resolutionsPerAuthority[0]['values'][0]['value']['id']
-        # store them in the session
-        session.attributes['hall_id'] = get_hall_id(hall) 
-        session.attributes['hall_name'] = hall_name
-        session.attributes['meal'] = meal
-        session.attributes['date'] = date
-        return answer_entrees(session.attributes['vegetarian'])
-    except KeyError:
-        ask_msg = render_template('error-not-understand')
-        return question(ask_msg)
 
 
 if __name__ == '__main__':

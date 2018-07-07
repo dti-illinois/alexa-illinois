@@ -20,6 +20,41 @@
                     "samples": []
                 },
                 {
+                    "name": "InteractiveIntent",
+                    "slots": [],
+                    "samples": [
+                        "Interactive"
+                    ]
+                },
+                {
+                    "name": "VegetarianIntent",
+                    "slots": [],
+                    "samples": [
+                        "Vegan",
+                        "Vegetarian"
+                    ]
+                },
+                {
+                    "name": "DetailIntent",
+                    "slots": [],
+                    "samples": [
+                        "Detail",
+                        "Details"
+                    ]
+                },
+                {
+                    "name": "AnswerDateIntent",
+                    "slots": [
+                        {
+                            "name": "date",
+                            "type": "CustomDATE"
+                        }
+                    ],
+                    "samples": [
+                        " {date}"
+                    ]
+                },
+                {
                     "name": "AnswerHallIntent",
                     "slots": [
                         {
