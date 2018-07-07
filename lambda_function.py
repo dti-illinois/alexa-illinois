@@ -4,8 +4,8 @@ from flask import Flask, render_template
 from flask_ask import Ask, statement, question, session, request
 
 from dining import get_hall_id
-from dining import get_dining_today
-from dining import get_dining_tomorrow
+from answer import answer_entrees
+from answer import answer_details
 
 app = Flask(__name__)
 ask = Ask(app, '/')
@@ -14,27 +14,6 @@ logging.getLogger("flask_ask").setLevel(logging.DEBUG)
 
 def lambda_handler(event, _context):
     return ask.run_aws_lambda(event)
-
-
-def answer_entrees(vegetarian):
-    hall_id = session.attributes['hall_id']
-    hall_name = session.attributes['hall_name']
-    meal = session.attributes['meal']
-    date = session.attributes['date']
-    if date == 'today':
-        results = get_dining_today(hall_id, meal, 'Entrees', vegetarian)
-    elif date == 'tomorrow':
-        results = get_dining_tomorrow(hall_id, meal, 'Entrees', vegetarian)
-    else:
-        pass
-    if not results == None and not results == []:
-        answer_msg = render_template('answer-entrees-ask', 
-            hall=hall_name, meal=meal, date=date,
-            results=results
-        )
-    else:
-        answer_msg = render_template('error-not-found')
-    return question(answer_msg)
 
 
 @ask.launch
@@ -75,8 +54,21 @@ def vegetarian():
 
 @ask.intent("InteractiveIntent")
 def interactive():
+    session.attributes.pop('hall_id')
+    session.attributes.pop('hall_name')
+    session.attributes.pop('meal')
+    session.attributes.pop('date')
     ask_hall_msg = render_template('inter-ask-hall')
     return question(ask_hall_msg)
+
+
+@ask.intent("DetailIntent")
+def detail():
+    try:
+        return answer_details(session.attributes['vegetarian'])
+    except KeyError:
+        err_msg = render_template('error-other')
+        return statement(err_msg)
 
 
 @ask.intent("AnswerHallIntent", mapping={'hall_name': 'hall'})

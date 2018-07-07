@@ -10,12 +10,14 @@ inter-ask-meal: Ok. Which meal do you want to know, breakfast, lunch, or dinner?
 
 inter-ask-date: Got it. Do you want it today or tomorrow?
 
-answer-entrees-ask: Sure, {{ date }} in {{ hall }} for {{ meal }}'s entrees, there are {{ results | join(", ") }}. If you want to know more details such as starches, salads and soup, say "detail". You can also start another query now, or say "stop" to end this session.
+answer-entrees-ask: Sure, {{ date }} in {{ hall }} for {{ meal }}'s entrees, there are {{ results | join(", ") }}. If you want to know more details such as starches, salads, soups and desserts, say "details". You can also start another query now, or say "stop" to end this session.
 
-answer-details: Here are the details about the {{ meal }} in {{ hall }} {{ date }}. For entrees, there are {{ results_entrees | join(", ") }}; For starches, there are {{ results_starches | join(", ") }}; For desserts, there are {{ results_desserts | join(", ") }}; For vegetables, there are {{ results_vegetables | join(", ") }}; For salads & salad bar, there are {{ results_salads | join(", ") }}.
+answer-details: Here are the details about the {{ meal }} in {{ hall }} {{ date }}. For entrees, there are {{ results_entrees | join(", ") }}; {% if not results_starches == [] %} For starches, there are {{ results_starches | join(", ") }};  {% endif %} {% if not results_vegetables == [] %} For vegetables, there are {{ results_vegetables | join(", ") }}; {% endif %} {% if not results_salads == [] %} For salads, there are {{ results_salads | join(", ") }}; {% endif %} {% if not results_soups == [] %} For soups, there are {{ results_soups | join(", ") }}; {% endif %} {% if not results_desserts == [] %} For desserts, there are {{ results_desserts | join(", ") }}. {% endif %} You can ask another one now, or say "stop" to end this session.
 
-error-not-found: I am sorry to tell you that there is no information about that yet. You can ask another one now, or you can say "stop" to end this session.
+error-not-found: I am sorry to tell you that there is no information about that yet. You can ask another one now, or  say "stop" to end this session.
 
-error-not-understand: I am sorry that I could not understand you. Could you say it again?
+error-not-understand: I am sorry that I couldn't understand you. Could you say it again?
+
+error-other: I am sorry to tell you that something has gone wrong. Please try again.
 
 goodbye: Goodbye.

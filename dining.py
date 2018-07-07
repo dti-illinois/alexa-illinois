@@ -4,8 +4,6 @@ import urllib
 import requests
 from urllib.request import urlopen
 from datetime import date
-from datetime import time
-from datetime import datetime
 from datetime import timedelta
 
 
@@ -46,8 +44,13 @@ def get_tomorrow_url():
     return url_dining + "&from=" + tmr_str + "&to=" + tmr_str
 
 
-def get_dining_today(hall, meal, course, vegetarian):
-    request_url = url_dining + "&id=" + str(hall) + "&t=json"
+def get_dining(date, hall, meal, course, vegetarian):
+    if date =='today':
+        request_url = url_dining + "&id=" + str(hall) + "&t=json"
+    elif date == 'tomorrow':
+        request_url = get_tomorrow_url() + "&id=" + str(hall) + "&t=json"
+    else:
+        return None
     response = urlopen(request_url)
     try:
         response_json = json.load(response)
@@ -59,23 +62,6 @@ def get_dining_today(hall, meal, course, vegetarian):
                     results.append(item['FormalName'])
                 elif 'Vegetarian' in item['Traits'].split(','):
                     results.append(item['FormalName'])
-        return results
-    except ValueError:
-        return None
-
-
-def get_dining_tomorrow(hall, meal, course, vegetarian):
-    request_url = get_tomorrow_url() + "&id=" + str(hall) + "&t=json"
-    response = urlopen(request_url)
-    try:
-        response_json = json.load(response)
-        items = response_json['Menus']['Item']
-        results = []
-        for item in items:
-            if not vegetarian:
-                results.append(item['FormalName'])
-            elif 'Vegetarian' in item['Traits'].split(','):
-                results.append(item['FormalName'])
         return results
     except ValueError:
         return None
