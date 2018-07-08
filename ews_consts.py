@@ -22,9 +22,12 @@ BUILDINGS = {
     'engineering hall': EH_name,
     #GELIB
     'GELIB': GELIB_name,
+    'Grainger': GELIB_name,
     'grainger': GELIB_name,
     'grainger library': GELIB_name,
+    'Grainger library': GELIB_name,
     'grainger engineering library': GELIB_name,
+    'Grainger engineering library': GELIB_name,
     #MEL
     'MEL': MEL_name,
     'mechanical lab': MEL_name,
@@ -33,7 +36,9 @@ BUILDINGS = {
     #SIEBL
     'SIEBL': SIEBL_name,
     'siebel': SIEBL_name,
+    'Siebel': SIEBL_name,
     'siebel center': SIEBL_name,
+    'Siebel center': SIEBL_name,
     #TB
     'TB': TB_name,
     'transportation building': TB_name
@@ -66,6 +71,10 @@ ROOMS = {
     '0220': '0220',
     '0222': '0222',
     '0403': '0403',
+    '218': '0218',
+    '220': '0220',
+    '222': '0222',
+    '403': '0403',
     #room for GELIB
     'fourth floor center': 'fourth floor center',
     'fourth floor east': 'fourth floor east',

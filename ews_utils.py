@@ -22,14 +22,15 @@ def make_blur_search():
         result.append({'building': building,
                         'room': room,
                         'count': free_comp_count})
-    return sorted(result, key=lambda x: x['count'], reverse=True)
+    return sorted(result, key=lambda x: x['count'], reverse=True)[0:3]
 
 def get_building_info(building):
+    if building not in BUILDINGS.keys():
+        return None, None, None
     building = BUILDINGS[building]
     raw = _get_ews_usage()[building]
     lab_count, total_free_comp = 0, 0
     for room in raw:
-        print(room)
         lab_count += 1
         free_comp = raw[room]['machinecount'] - raw[room]['inusecount']
         raw[room]['free_comp'] = free_comp
@@ -37,6 +38,10 @@ def get_building_info(building):
     return raw, lab_count, total_free_comp
 
 def get_room_info(building, room):
+    print(building)
+    print(room)
+    if building not in BUILDINGS.keys() or room not in ROOMS.keys():
+        return None
     building = BUILDINGS[building]
     room = ROOMS[room]
     room_info = _get_ews_usage()[building][room]
