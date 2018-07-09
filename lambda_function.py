@@ -21,7 +21,7 @@ def welcome():
     session.attributes['vegetarian'] = False
     welcome_msg = render_template('welcome')
     return question(welcome_msg)
-
+    
 
 @ask.intent("AMAZON.HelpIntent")
 def help():
@@ -29,7 +29,6 @@ def help():
     return question(help_msg)
 
 
-@ask.intent('AMAZON.NoIntent')
 @ask.intent("AMAZON.FallbackIntent")
 def fallback():
     fallback_msg = render_template('error-not-understand')
