@@ -1,0 +1,50 @@
+welcome: |
+  Welcome to sports schedule checker.
+  What sport would you like information for?
+
+welcome_sport: |
+  Now you are in {{ sport }} section.
+  Which match would you like information for?
+
+games_info: |
+  {% for game in games %}
+    Information for game on {{ game.month }} {{ game.day }} {{ game.year }}.
+    Opponent: {{ game.opponent }}.
+    Time: {{ game.time }}.
+    Location: {{ game.location }}
+    Result: {{ game.result }}.
+  {% endfor %}
+  Any other information do you want?
+
+help: |
+  I can tell you the recent schedule providing a sport type.
+  For a list of suppported sports, ask what sports are supported.
+  Now what sport would you like information for?
+
+help_sport: |
+  Now you are in {{ sport }} section.
+  For past game information, ask past n matches.
+  For future game information, ask future n matches.
+  For match on a specific date, ask match on date.
+  Which match would you like information for?
+
+list_sports: |
+  Currently, I know game information for these sports: {{ sports }}
+  What sport would you like information for?
+
+reprompt: |
+  Which match would you like information for?
+
+sport_type_error: |
+  Sorry I cannot find the sport in supported list.
+  For a list of suppported sports, ask what sports are supported.
+  Now what sport would you like information for?
+
+sport_info_error: |
+  Sorry I cannot find any game that matches your description.
+
+intent_error: |
+  Sorry I cannot understand your intent.
+  For instruction, ask what can you do?
+
+bye: Goodbye
