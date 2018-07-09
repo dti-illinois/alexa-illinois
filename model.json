@@ -27,19 +27,23 @@
                     ]
                 },
                 {
-                    "name": "VegetarianIntent",
-                    "slots": [],
-                    "samples": [
-                        "Vegan",
-                        "Vegetarian"
-                    ]
-                },
-                {
                     "name": "DetailIntent",
                     "slots": [],
                     "samples": [
-                        "Detail",
-                        "Details"
+                        "Details",
+                        "Detail"
+                    ]
+                },
+                {
+                    "name": "FilterIntent",
+                    "slots": [
+                        {
+                            "name": "filter_name",
+                            "type": "FILTER"
+                        }
+                    ],
+                    "samples": [
+                        "{filter_name}"
                     ]
                 },
                 {
@@ -51,7 +55,7 @@
                         }
                     ],
                     "samples": [
-                        " {date}"
+                        "{date}"
                     ]
                 },
                 {
@@ -295,6 +299,29 @@
                             "id": "today",
                             "name": {
                                 "value": "Today"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "FILTER",
+                    "values": [
+                        {
+                            "id": "Vegan",
+                            "name": {
+                                "value": "Vegan"
+                            }
+                        },
+                        {
+                            "id": "Vegetarian",
+                            "name": {
+                                "value": "Vegetarian"
+                            }
+                        },
+                        {
+                            "id": "Gluten-free",
+                            "name": {
+                                "value": "Gluten-free"
                             }
                         }
                     ]

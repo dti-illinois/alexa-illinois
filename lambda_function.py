@@ -18,7 +18,7 @@ def lambda_handler(event, _context):
 @ask.launch
 def welcome():
     # init
-    session.attributes['vegetarian'] = False
+    session.attributes['filter'] = {}
     welcome_msg = render_template('welcome')
     return question(welcome_msg)
     
@@ -42,27 +42,30 @@ def stop():
     return statement(goodbye_msg)
 
 
-@ask.intent("VegetarianIntent")
-def vegetarian():
-    if 'vegetarian' not in session.attributes.keys():
-        session.attributes['vegetarian'] = True
-    else:
-        session.attributes['vegetarian'] = not session.attributes['vegetarian']
-    vegetarian_msg = render_template('vegetarian')
-    return question(vegetarian_msg)
-
-
 @ask.intent("DetailIntent")
 def detail():
     try:
-        return answer_details(session.attributes['vegetarian'])
+        return answer_details(session.attributes['filter'])
     except KeyError:
         err_msg = render_template('error-other')
         return statement(err_msg)
 
 
-@ask.intent("AskMainIntent", mapping={
-    'hall_name': 'hall', 'meal': 'meal', 'date': 'date'})
+@ask.intent('FilterIntent')
+def add_filter(filter_name):
+    filter_name = request.intent.slots.filter_name.resolutions.resolutionsPerAuthority[0]['values'][0]['value']['id']
+    if filter_name not in session.attributes['filter'].keys():
+        session.attributes['filter'][filter_name] = True
+    else:
+        session.attributes['filter'][filter_name] = not session.attributes['filter'][filter_name]
+    filter_msg = render_template('filter', 
+        filter_name=filter_name,
+        flag=session.attributes['filter'][filter_name]
+    )
+    return question(filter_msg)
+
+
+@ask.intent("AskMainIntent", mapping={'hall_name': 'hall'})
 def ask_main(hall_name, meal, date):
     try:
         # get all info from request
@@ -74,7 +77,7 @@ def ask_main(hall_name, meal, date):
         session.attributes['hall_name'] = hall_name
         session.attributes['meal'] = meal
         session.attributes['date'] = date
-        return answer_entrees(session.attributes['vegetarian'])
+        return answer_entrees(session.attributes['filter'])
     except KeyError:
         ask_msg = render_template('error-not-understand')
         return question(ask_msg)
@@ -112,7 +115,7 @@ def answer_hall(hall_name):
         elif 'date' not in session.attributes.keys():
             ask_msg = render_template('inter-ask-date')
         else:
-            return answer_entrees(session.attributes['vegetarian'])
+            return answer_entrees(session.attributes['filter'])
         return question(ask_msg)
     except KeyError:
         ask_msg = render_template('error-not-understand')
@@ -134,7 +137,7 @@ def answer_meal(meal):
         elif 'date' not in session.attributes.keys():
             ask_msg = render_template('inter-ask-date')
         else:
-            return answer_entrees(session.attributes['vegetarian'])
+            return answer_entrees(session.attributes['filter'])
         return question(ask_msg)
     except KeyError:
         ask_msg = render_template('error-not-understand')
@@ -157,7 +160,7 @@ def answer_date(date):
         elif 'date' not in session.attributes.keys():
             ask_msg = render_template('inter-ask-date')
         else:
-            return answer_entrees(session.attributes['vegetarian'])
+            return answer_entrees(session.attributes['filter'])
         return question(ask_msg)
     except KeyError:
         ask_msg = render_template('error-not-understand')

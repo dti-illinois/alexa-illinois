@@ -1,8 +1,8 @@
-welcome: Welcome to U.I.U.C. menu checker. How can I help you? Say "help" to know about how to use me, or say "interactive" to query in an interactive way. Say "vegetarian" to filter Vegetarian food only.
+welcome: Welcome to U.I.U.C. menu checker. How can I help you? Say "help" to know about how to use me, or say "interactive" to query in an interactive way.
 
 help: The first thing you can do with me is to check the menu, specifically entrees in dining halls. For example, here are some sample questions. You can ask "What's the dinner today in P.A.R. dining hall?", "What's the the dinner today in P.A.R tomorrow", or simply "Dinner in P.A.R hall today".Or you can say "interactive" to let me ask questions about your query. After you got your answers for the entrees, you can continue asking about other things about your query. You can try it out now.
 
-vegetarian: Vegetarian food filter activated. Say it again if you want to turn it off. You can carry on with your query now. 
+filter: Got it. {{ filter_name }} food filter is {% if flag %} activated {% else %} turned off {% endif %}. Say it again if you want to {% if flag %} turn it off {% else %} switch it on {% endif %}. You can carry on with your query now. 
 
 inter-ask-hall: Sure. Which dining hall's menu do you want to know?
 
