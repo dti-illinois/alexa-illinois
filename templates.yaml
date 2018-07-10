@@ -1,0 +1,17 @@
+welcome: Welcome to U.I.U.C. staff checker. How can I help you? Say "help" to know about how to use me.
+
+help: You can search staff information of U.I.U.C with their firstnames, lastnames and middlenames. To start a query, you need to tell me what do you know about their names first. For example, you want to know the information about a staff called Will Smith, you need to say "first name Will" first, and after I get that, you then can say "last name Smith". It's okay if you don't give me one or two of the names, I'll do a blurry search and give you all that matches. Finally, say "start" to  initiate the query. You can try it out now.
+
+confirm-clue: Got it, {{ which_name }} {{ name }}. Anything else? Say "start" to initiate the query.
+
+answer-results: There are {{ num_results }} results matching your query. They are {% for result in results %} {{ result['role'] }} {{ result["firstname"] }} {% if "middlename" in result.keys() %} {{ result["middlename"] }} {% endif %} {{ result["lastname"] }} from {{ result["departmentname"] }}, whose office is at "placeholder for office address", {% endfor %}. You can start another query now, or say "stop" to end this session.
+
+answer-manyresults: There are {{ num_results }} results matching your query, which is too many. Could you be a bit more specific? You can start another query now, or say "stop" to end this session.
+
+answer-noresults: I am sorry to tell you that there is no staff's name matching your query. You can start another query now, or say "stop" to end this session.
+
+error-not-understand: I am sorry that I couldn't understand you. Could you say it again?
+
+error-other: I am sorry to tell you that something has gone wrong. Please try again.
+
+goodbye: Goodbye.
