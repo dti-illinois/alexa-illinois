@@ -1,0 +1,8 @@
+welcome: |
+  Welcome to C.U.M.T.D. schedule checker.
+
+intent_error: |
+  Sorry I cannot understand your intent.
+  For instruction, ask what can you do?
+
+bye: Goodbye
