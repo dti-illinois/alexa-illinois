@@ -1,0 +1,22 @@
+welcome: |
+  Welcome to U.I.U.C. library checker. How can I help you? |
+
+help: |
+  Ask "catalog" to see what libraries are supported; |
+
+answer-catalog: |
+  Here are all the libraries we support. They are |
+  {% for item in catalog %} |
+    {{ item }}, |
+  {% endfor %} |
+
+error-not-found: |
+  I am sorry to tell you that there is no information about that yet. You can ask another one now, or  say "stop" to end this session. |
+
+error-not-understand: |
+  I am sorry that I couldn't understand you. Could you say it again? |
+
+error-other: |
+  I am sorry to tell you that something has gone wrong. Please try again. |
+
+goodbye: Goodbye.
