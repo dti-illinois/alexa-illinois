@@ -1,0 +1,332 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "menu checker",
+            "intents": [
+                {
+                    "name": "AMAZON.FallbackIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "InteractiveIntent",
+                    "slots": [],
+                    "samples": [
+                        "Interactive"
+                    ]
+                },
+                {
+                    "name": "DetailIntent",
+                    "slots": [],
+                    "samples": [
+                        "Details",
+                        "Detail"
+                    ]
+                },
+                {
+                    "name": "FilterIntent",
+                    "slots": [
+                        {
+                            "name": "filter_name",
+                            "type": "FILTER"
+                        }
+                    ],
+                    "samples": [
+                        "{filter_name}"
+                    ]
+                },
+                {
+                    "name": "AnswerDateIntent",
+                    "slots": [
+                        {
+                            "name": "date",
+                            "type": "CustomDATE"
+                        }
+                    ],
+                    "samples": [
+                        "{date}"
+                    ]
+                },
+                {
+                    "name": "AnswerHallIntent",
+                    "slots": [
+                        {
+                            "name": "hall",
+                            "type": "HALL"
+                        }
+                    ],
+                    "samples": [
+                        "{hall}"
+                    ]
+                },
+                {
+                    "name": "AnswerMealIntent",
+                    "slots": [
+                        {
+                            "name": "meal",
+                            "type": "MEAL"
+                        }
+                    ],
+                    "samples": [
+                        "{meal}"
+                    ]
+                },
+                {
+                    "name": "AskMainIntent",
+                    "slots": [
+                        {
+                            "name": "hall",
+                            "type": "HALL"
+                        },
+                        {
+                            "name": "meal",
+                            "type": "MEAL"
+                        },
+                        {
+                            "name": "date",
+                            "type": "CustomDATE"
+                        }
+                    ],
+                    "samples": [
+                        "{meal} in {hall} {date}",
+                        "What's the {meal} in {hall} {date}",
+                        "What's the {meal} at {hall} {date}",
+                        "What is the {meal} in {hall} {date}",
+                        "{meal} {date} in {hall}",
+                        "What's the {meal} {date} in {hall}",
+                        "What's the {meal} {date} at {hall}",
+                        "What is the {meal} {date} in {hall}"
+                    ]
+                }
+            ],
+            "types": [
+                {
+                    "name": "HALL",
+                    "values": [
+                        {
+                            "id": "oodles",
+                            "name": {
+                                "value": "Oodles"
+                            }
+                        },
+                        {
+                            "id": "buseybeanandgreen",
+                            "name": {
+                                "value": "Busey Bean and Green"
+                            }
+                        },
+                        {
+                            "id": "buseyevans",
+                            "name": {
+                                "value": "Busey-Evans Dining Hall",
+                                "synonyms": [
+                                    "Busey-Evans Hall",
+                                    "Busey-Evans"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "soulingredient",
+                            "name": {
+                                "value": "Soul Ingredient"
+                            }
+                        },
+                        {
+                            "id": "crackedeggcafe",
+                            "name": {
+                                "value": "Cracked Egg Café"
+                            }
+                        },
+                        {
+                            "id": "far",
+                            "name": {
+                                "value": "F.A.R. Dining Hall",
+                                "synonyms": [
+                                    "far",
+                                    "F.A.R. Hall",
+                                    "F.A.R."
+                                ]
+                            }
+                        },
+                        {
+                            "id": "neosoulingredient",
+                            "name": {
+                                "value": "Neo Soul Ingredient"
+                            }
+                        },
+                        {
+                            "id": "caffeinator",
+                            "name": {
+                                "value": "Caffeinator"
+                            }
+                        },
+                        {
+                            "id": "betterburger",
+                            "name": {
+                                "value": "Better Burger"
+                            }
+                        },
+                        {
+                            "id": "57north",
+                            "name": {
+                                "value": "57 North"
+                            }
+                        },
+                        {
+                            "id": "ikenberrydininghall",
+                            "name": {
+                                "value": "Ikenberry Dining Hall",
+                                "synonyms": [
+                                    "Ikenberry Hall",
+                                    "Ikenberry"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "tasteofasia",
+                            "name": {
+                                "value": "Taste of Asia"
+                            }
+                        },
+                        {
+                            "id": "cocinamexicana",
+                            "name": {
+                                "value": "Cocina Mexicana"
+                            }
+                        },
+                        {
+                            "id": "chomps",
+                            "name": {
+                                "value": "CHOMPS"
+                            }
+                        },
+                        {
+                            "id": "isr",
+                            "name": {
+                                "value": "I.S.R Dining Hall",
+                                "synonyms": [
+                                    "I.S.R.",
+                                    "I.S.R. Hall"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "pennstation",
+                            "name": {
+                                "value": "Penn Station"
+                            }
+                        },
+                        {
+                            "id": "par",
+                            "name": {
+                                "value": "P.A.R. Dining Hall",
+                                "synonyms": [
+                                    "par",
+                                    "P.A.R",
+                                    "P.A.R Hall"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "leafy",
+                            "name": {
+                                "value": "Leafy"
+                            }
+                        },
+                        {
+                            "id": "fieldofgreens",
+                            "name": {
+                                "value": "Field of Greens"
+                            }
+                        },
+                        {
+                            "id": "lar",
+                            "name": {
+                                "value": "Lincoln Hall",
+                                "synonyms": [
+                                    "lar",
+                                    "L.A.R",
+                                    "Allen Hall"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "MEAL",
+                    "values": [
+                        {
+                            "id": "Dinner",
+                            "name": {
+                                "value": "Dinner"
+                            }
+                        },
+                        {
+                            "id": "Lunch",
+                            "name": {
+                                "value": "Lunch"
+                            }
+                        },
+                        {
+                            "id": "Breakfast",
+                            "name": {
+                                "value": "Breakfast"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "CustomDATE",
+                    "values": [
+                        {
+                            "id": "tomorrow",
+                            "name": {
+                                "value": "Tomorrow"
+                            }
+                        },
+                        {
+                            "id": "today",
+                            "name": {
+                                "value": "Today"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "FILTER",
+                    "values": [
+                        {
+                            "id": "Vegan",
+                            "name": {
+                                "value": "Vegan"
+                            }
+                        },
+                        {
+                            "id": "Vegetarian",
+                            "name": {
+                                "value": "Vegetarian"
+                            }
+                        },
+                        {
+                            "id": "Gluten-free",
+                            "name": {
+                                "value": "Gluten-free"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}
