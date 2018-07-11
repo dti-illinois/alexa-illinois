@@ -1,6 +1,18 @@
 welcome: |
   Welcome to C.U.M.T.D. schedule checker.
 
+stop_name: |
+  You are at {{ stop_name }}
+
+routes_by_stop: |
+  Here are the routes that go through this stop.
+  {% for route in routes %}
+    {{ route }}.
+  {% endfor %}
+
+help: |
+  pass
+
 intent_error: |
   Sorry I cannot understand your intent.
   For instruction, ask what can you do?

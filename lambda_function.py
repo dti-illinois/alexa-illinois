@@ -1,22 +1,37 @@
 from flask import Flask, render_template
 from flask_ask import Ask, request, session, context, question, statement
 
+from cumtd_utils import *
+
 app = Flask(__name__)
 ask = Ask(app, '/')
 
 @ask.launch
 def launch():
-    pass
+    device_id = context.System.device.deviceId
+    session.attributes['deviceId'] = device_id
+    welcome_text = render_template('welcome')
+    help_text = render_template('help')
+    session.attributes['lastSpeech'] = welcome_text
+    return question(welcome_text).reprompt(help_text)
 
 
 @ask.intent('CUMTDStopIntent')
 def get_stop():
-    pass
+    stop_name = get_stop_name(session.attributes['deviceId'])
+    stop_name_text = render_template('stop_name', stop_name=stop_name)
+    session.attributes['lastSpeech'] = stop_name_text
+    help_text = render_template('help')
+    return question(stop_name_text).reprompt(help_text)
 
 
 @ask.intent('CUMTDRoutesIntent')
 def get_routes():
-    pass
+    routes = get_routes_by_stop(session.attributes['deviceId'])
+    routes_text = render_template('routes_by_stop', routes=routes)
+    session.attributes['lastSpeech'] = routes_text
+    help_text = render_template('help')
+    return question(routes_text).reprompt(help_text)
 
 
 @ask.intent('CUMTDRouteOnServiceIntent')
