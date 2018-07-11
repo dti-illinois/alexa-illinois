@@ -35,26 +35,26 @@ def write_stops_to_file1():
         json.dump({'stops': result}, f, indent=4)
 
 def write_stops_to_file2():
-    result = []
+    result = {}
     for stop in stops:
         stop_points = stop['stop_points']
         for stop_point in stop_points:
             id = stop_point['stop_id']
             name = stop_point['stop_name']
             name = _reformat_name(name)
-            result.append({id: name})
+            result[id] = name
     with open('CUMTD_stops_id_key.json', 'w') as f:
         json.dump({'stops': result}, f, indent=4)
 
 def write_stops_to_file3():
-    result = []
+    result = {}
     for stop in stops:
         stop_points = stop['stop_points']
         for stop_point in stop_points:
             id = stop_point['stop_id']
             name = stop_point['stop_name']
             name = _reformat_name(name)
-            result.append({name: id})
+            result[name] = id
     with open('CUMTD_stops_name_key.json', 'w') as f:
         json.dump({'stops': result}, f, indent=4)
 
@@ -72,5 +72,3 @@ def write_stops_to_slots():
 def _reformat_name(name):
     r = name.replace('(', '').replace(')', '')
     return r
-
-write_routes_to_slot()

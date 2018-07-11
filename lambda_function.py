@@ -51,8 +51,14 @@ def get_remaining_time_by_route(route_id):
     return
 
 @ask.intent('CUMTDSearchRouteIntent')
-def get_route_by_destination():
-    pass
+def get_route_by_destination(destination_stop_name):
+    with open('CUMTD_stops_name_key', 'r') as f:
+        stops = json.load(f)['stops']
+    if destination_stop_id is None or destination_stop_id not in stops.keys():
+        pass
+    else:
+        destination_stop_id = stops[destination_stop_name]
+        planned_trip = get_planned_trip(session.attributes['stop_id'], destination_stop_id)
 
 
 @ask.intent('AMAZON.HelpIntent')

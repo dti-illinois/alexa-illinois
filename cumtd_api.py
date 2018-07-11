@@ -47,6 +47,9 @@ class CUMTD:
     def get_trips_by_route(self, route_id):
         return self._make_request('GetTripsByRoute', locals())
 
+    def get_planned_trips_by_stops(self, origin_stop_id, destination_stop_id):
+        return self._make_request('GetPlannedTripsByStops', locals())
+
     def _make_request(self, func, args):
         params = { 'key': self.key }
         for k, v in args.items():

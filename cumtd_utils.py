@@ -34,6 +34,16 @@ def get_remaining_time(stop_id, route_id):
         })
     return sorted(result, key=lambda x: x['time'])
 
+def get_planned_trip(origin_stop_id, destination_stop_id):
+    date = datetime.datetime.now().strftime('%Y-%m-%d')
+    itineraries = mtd.get_planned_trips_by_stops(origin_stop_id=origin_stop_id,
+        destination_stop_id=destination_stop_id)['itineraries']
+    for itinerary in itineraries:
+
+def _parse_itinerary(itinerary):
+    travel_time = itinerary['travel_time']
+    for leg in legs:
+        type = leg['type']
 def _get_all_routes_by_stop(stop_id):
     routes = mtd.get_routes_by_stop(stop_id)['routes']
     routes = _parse_routes(routes)
@@ -60,4 +70,4 @@ def _parse_routes(routes):
         result[route['route_id']] = False
     return result
 
-get_remaining_time('PLAZA:4', 'YELLOW')
+get_planned_trip('PLAZA:4', 'UWALMART:2')
