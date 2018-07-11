@@ -1,0 +1,200 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "lab checker",
+            "intents": [
+                {
+                    "name": "AMAZON.FallbackIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": [
+                        "how should I ask",
+                        "how should I use you",
+                        "how should I use",
+                        "tell me what can you do",
+                        "what can you do"
+                    ]
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.YesIntent",
+                    "samples": []
+                },
+                {
+                    "name": "EWSBlurSearchIntent",
+                    "slots": [],
+                    "samples": [
+                        "blur search",
+                        "Where can I find an avaible computer",
+                        "find me a computer",
+                        "find me a lab"
+                    ]
+                },
+                {
+                    "name": "EWSBuildingUsageIntent",
+                    "slots": [
+                        {
+                            "name": "buildings",
+                            "type": "buildings"
+                        }
+                    ],
+                    "samples": [
+                        "how many avaible computers in {buildings}",
+                        "tell me about {buildings}",
+                        "information abount {buildings}",
+                        "information on {buildings}",
+                        "{buildings}"
+                    ]
+                },
+                {
+                    "name": "AMAZON.NoIntent",
+                    "samples": []
+                },
+                {
+                    "name": "EWSRoomUsageIntent",
+                    "slots": [
+                        {
+                            "name": "buildings",
+                            "type": "buildings"
+                        },
+                        {
+                            "name": "room_four_digits",
+                            "type": "AMAZON.FOUR_DIGIT_NUMBER"
+                        },
+                        {
+                            "name": "room_three_digits",
+                            "type": "AMAZON.NUMBER"
+                        },
+                        {
+                            "name": "room_letter",
+                            "type": "room_number"
+                        }
+                    ],
+                    "samples": [
+                        "information on {buildings} room {room_letter}",
+                        "information on {buildings} room {room_three_digits}",
+                        "information on {buildings} room {room_four_digits}",
+                        "tell me about {buildings} room {room_letter}",
+                        "tell me about {buildings} room {room_three_digits}",
+                        "tell me about {buildings} room {room_four_digits}",
+                        "{buildings} room {room_letter}",
+                        "{buildings} room {room_three_digits}",
+                        "{buildings} room {room_four_digits}"
+                    ]
+                },
+                {
+                    "name": "EWSSupportedBuildingsIntent",
+                    "slots": [],
+                    "samples": [
+                        "What buildings are supported"
+                    ]
+                },
+                {
+                    "name": "AMAZON.RepeatIntent",
+                    "samples": []
+                }
+            ],
+            "types": [
+                {
+                    "name": "buildings",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "transportation building",
+                                "synonyms": [
+                                    "T.B."
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "siebel center",
+                                "synonyms": [
+                                    "S.I.E.B.L.",
+                                    "siebel"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "mechanical engineering lab",
+                                "synonyms": [
+                                    "mechanical engineering laboratory",
+                                    "mechanical lab",
+                                    "M.E.L."
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "grainger engineering library",
+                                "synonyms": [
+                                    "G.E.L.I.B.",
+                                    "grainger library",
+                                    "grainger"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "engineering hall",
+                                "synonyms": [
+                                    "E.H."
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "electrical and computer engineering building",
+                                "synonyms": [
+                                    "E.C.E.",
+                                    "E.C.E.B.",
+                                    "E.C.E. building"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "digital computer lab",
+                                "synonyms": [
+                                    "digital computer laboratory",
+                                    "D.C.L."
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "room_number",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "fourth floor east",
+                                "synonyms": [
+                                    "4th floor east"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "fourth floor center",
+                                "synonyms": [
+                                    "4th floor center"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}
