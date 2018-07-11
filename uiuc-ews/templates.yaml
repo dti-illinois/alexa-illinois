@@ -1,0 +1,59 @@
+welcome: |
+  Welcome to engineering workstation checker.
+  Which building would you like information for?
+
+blue_search_success: |
+  I recommend the following labs.
+  {% for item in info %}
+    {{ item.building }} room {{ item.room }} with {{ item.count }} available computers.
+  {% endfor %}
+  Any other information do you want?
+
+blur_search_fail: |
+  Sorry, none of the lab have more than 5 available computers currently.
+  Please try again later.
+  Any other information do you want?
+
+building_usage_info: |
+  {{ building }} has {{lab_count}} labs and {{free_comp_count}} available computers.
+  {% for room_name, room_info in building_info.items() %}
+    {{ room_info.free_comp }} in room {{room_name}}.
+  {% endfor %}
+  Any other information do you want?
+
+room_usage_info: |
+  {{ building }} room {{ room }} has {{ room_info.machinecount }} computers.
+  {{ room_info.inusecount }} of them are in use.
+  Any other information do you want?
+
+help: |
+  I can tell you the real time computer usage providing a building.
+  For example, you can ask, get information for digital computer lab.
+  Or, if you don't want a particular building, ask find me a lab.
+  For a list of supported buildings, ask what buildings are supported.
+  Now which building would you like information for?
+
+list_buildings: |
+  Currently, I know machine usage information for these buildings: {{ buildings }}
+  Which building would you like information for?
+
+reprompt_help: Which building would you like information for?
+
+reprompt_general: Any other information do you want?
+
+building_problem: |
+  Sorry I cannot find the building in the supported list.
+  For a list of supported buildings, ask what buildings are supported.
+  Any other information do you want?
+
+room_problem: |
+  Sorry I cannot find the building and room in the supported list.
+  For building information, ask information on builidng name
+  For a list of supported buildings, ask what buildings are supported.
+  Any other information do you want?
+
+intent_problem: |
+  Sorry I cannot understand your intent.
+  For instruction, please ask what can you do?
+
+bye: Goodbye
