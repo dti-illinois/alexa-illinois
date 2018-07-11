@@ -1,0 +1,209 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "sports checker",
+            "intents": [
+                {
+                    "name": "AMAZON.FallbackIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": [
+                        "How should I ask",
+                        "What can you do"
+                    ]
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.RepeatIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.YesIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NoIntent",
+                    "samples": []
+                },
+                {
+                    "name": "SportsTypeIntent",
+                    "slots": [
+                        {
+                            "name": "sports",
+                            "type": "sports"
+                        }
+                    ],
+                    "samples": [
+                        "{sports}"
+                    ]
+                },
+                {
+                    "name": "SportsDPastIntent",
+                    "slots": [
+                        {
+                            "name": "n",
+                            "type": "AMAZON.NUMBER"
+                        }
+                    ],
+                    "samples": [
+                        "Recent {n} matches",
+                        "Recent match",
+                        "Past match",
+                        "Past {n} matches",
+                        "Latest match"
+                    ]
+                },
+                {
+                    "name": "SportsDFutureIntent",
+                    "slots": [
+                        {
+                            "name": "n",
+                            "type": "AMAZON.NUMBER"
+                        }
+                    ],
+                    "samples": [
+                        "Coming {n} games",
+                        "Coming game",
+                        "Future {n} games",
+                        "Future game",
+                        "Future {n} matches",
+                        "Future match",
+                        "Coming {n} matches",
+                        "Coming match"
+                    ]
+                },
+                {
+                    "name": "SportsDDateIntent",
+                    "slots": [
+                        {
+                            "name": "date",
+                            "type": "AMAZON.DATE"
+                        }
+                    ],
+                    "samples": [
+                        "match on {date}",
+                        "{date}"
+                    ]
+                },
+                {
+                    "name": "SportSupportedIntent",
+                    "slots": [],
+                    "samples": [
+                        "what sports are supported"
+                    ]
+                }
+            ],
+            "types": [
+                {
+                    "name": "sports",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "volleyball"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "women's track and field"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "women's tennis"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "swimming and diving"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "softball"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "soccer"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "women's gymnastic"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "women's golf"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "women's cross country"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "women's basketball"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "wrestling"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "men's track and field"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "men's tennis"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "men's gymnastic"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "men's golf"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "football"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "men's cross country"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "men's basketball"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "baseball"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}
