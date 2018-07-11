@@ -7,8 +7,9 @@ stop_name: |
 routes_by_stop: |
   Here are the routes that go through this stop.
   {% for route in routes %}
-    {{ route }}.
+    Line {{ route }}.
   {% endfor %}
+  Say detail for full name of the routes.
 
 help: |
   pass

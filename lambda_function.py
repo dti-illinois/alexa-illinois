@@ -9,7 +9,9 @@ ask = Ask(app, '/')
 @ask.launch
 def launch():
     device_id = context.System.device.deviceId
-    session.attributes['deviceId'] = device_id
+    session.attributes['stop_name'], session.attributes['stop_id'] = get_stop_info(device_id)
+    session.attributes['routes'] = get_routes_on_service(session.attributes['stop_id'])
+
     welcome_text = render_template('welcome')
     help_text = render_template('help')
     session.attributes['lastSpeech'] = welcome_text
@@ -18,8 +20,7 @@ def launch():
 
 @ask.intent('CUMTDStopIntent')
 def get_stop():
-    stop_name = get_stop_name(session.attributes['deviceId'])
-    stop_name_text = render_template('stop_name', stop_name=stop_name)
+    stop_name_text = render_template('stop_name', stop_name=session.attributes['stop_name'])
     session.attributes['lastSpeech'] = stop_name_text
     help_text = render_template('help')
     return question(stop_name_text).reprompt(help_text)
@@ -27,25 +28,30 @@ def get_stop():
 
 @ask.intent('CUMTDRoutesIntent')
 def get_routes():
-    routes = get_routes_by_stop(session.attributes['deviceId'])
-    routes_text = render_template('routes_by_stop', routes=routes)
+    routes_text = render_template('routes_by_stop', routes=session.attributes['routes'])
     session.attributes['lastSpeech'] = routes_text
     help_text = render_template('help')
     return question(routes_text).reprompt(help_text)
 
 
 @ask.intent('CUMTDRouteOnServiceIntent')
-def get_route_on_service():
-    pass
+def get_route_service_by_date(date):
+    if date is None:
+        pass
+    else:
+        pass
 
 
 @ask.intent('CUMTDRemainingTimeIntent')
-def get_remaining_time_by_route():
-    pass
-
+def get_remaining_time_by_route(route_id):
+    if route_id is None or route_id not in session.attributes['routes']:
+        pass
+    else:
+        remaining_time = get_remaining_time(session.attributes['stop_id'], route_id)
+    return
 
 @ask.intent('CUMTDSearchRouteIntent')
-def get_route_by_detination():
+def get_route_by_destination():
     pass
 
 

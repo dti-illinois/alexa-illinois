@@ -9,8 +9,15 @@ def write_routes_to_file():
     result = {}
     for route in routes:
         result[route['route_id']] = ''
-    with open('CUMTD_route.json', 'w') as f:
+    with open('CUMTD_route_name2short.json', 'w') as f:
         json.dump({'routes': result}, f, indent=4)
+
+def write_routes_to_slot():
+    result = []
+    for route in routes:
+        result.append({'name': {'value': route['route_id']}})
+    with open('CUMTD_routes_slot.json', 'w') as f:
+        json.dump({'values': result}, f, indent=4)
 
 def write_stops_to_file1():
     result = []
@@ -24,7 +31,7 @@ def write_stops_to_file1():
             'id': id,
             'name': name
             })
-    with open('CUMTD_stops1.json', 'w') as f:
+    with open('CUMTD_stops_no_key.json', 'w') as f:
         json.dump({'stops': result}, f, indent=4)
 
 def write_stops_to_file2():
@@ -36,7 +43,7 @@ def write_stops_to_file2():
             name = stop_point['stop_name']
             name = _reformat_name(name)
             result.append({id: name})
-    with open('CUMTD_stops2.json', 'w') as f:
+    with open('CUMTD_stops_id_key.json', 'w') as f:
         json.dump({'stops': result}, f, indent=4)
 
 def write_stops_to_file3():
@@ -48,7 +55,7 @@ def write_stops_to_file3():
             name = stop_point['stop_name']
             name = _reformat_name(name)
             result.append({name: id})
-    with open('CUMTD_stops3.json', 'w') as f:
+    with open('CUMTD_stops_name_key.json', 'w') as f:
         json.dump({'stops': result}, f, indent=4)
 
 def write_stops_to_slots():
@@ -59,9 +66,11 @@ def write_stops_to_slots():
             name = stop_point['stop_name']
             name = _reformat_name(name)
             result.append({'name': {'value': name}})
-    with open('stop_slots.json', 'w') as f:
+    with open('CUMTD_stops_slot.json', 'w') as f:
         json.dump({'values': result}, f, indent=4)
 
 def _reformat_name(name):
     r = name.replace('(', '').replace(')', '')
     return r
+
+write_routes_to_slot()

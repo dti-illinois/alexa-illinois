@@ -1,0 +1,424 @@
+{
+    "values": [
+        {
+            "name": {
+                "value": "1 YELLOW ALT"
+            }
+        },
+        {
+            "name": {
+                "value": "10W GOLD ALT"
+            }
+        },
+        {
+            "name": {
+                "value": "1N YELLOW ALT"
+            }
+        },
+        {
+            "name": {
+                "value": "1N YELLOW ALT PM"
+            }
+        },
+        {
+            "name": {
+                "value": "1S YELLOW ALT"
+            }
+        },
+        {
+            "name": {
+                "value": "3S LAVENDER ALT"
+            }
+        },
+        {
+            "name": {
+                "value": "5E GREEN EXPRESS 1 ALT"
+            }
+        },
+        {
+            "name": {
+                "value": "5E GREEN EXPRESS ALT"
+            }
+        },
+        {
+            "name": {
+                "value": "5W GREEN ALT 2"
+            }
+        },
+        {
+            "name": {
+                "value": "5W GREEN EXPRESS 2"
+            }
+        },
+        {
+            "name": {
+                "value": "7E GREY ALT"
+            }
+        },
+        {
+            "name": {
+                "value": "7W GREY ALT"
+            }
+        },
+        {
+            "name": {
+                "value": "BLUE"
+            }
+        },
+        {
+            "name": {
+                "value": "BRONZE"
+            }
+        },
+        {
+            "name": {
+                "value": "BRONZE ALT"
+            }
+        },
+        {
+            "name": {
+                "value": "BRONZE YANKEE RIDGE"
+            }
+        },
+        {
+            "name": {
+                "value": "BROWN"
+            }
+        },
+        {
+            "name": {
+                "value": "BROWN ALT"
+            }
+        },
+        {
+            "name": {
+                "value": "BROWN ALT PM"
+            }
+        },
+        {
+            "name": {
+                "value": "BROWN ALT1"
+            }
+        },
+        {
+            "name": {
+                "value": "GOLD"
+            }
+        },
+        {
+            "name": {
+                "value": "GOLD ALT"
+            }
+        },
+        {
+            "name": {
+                "value": "GOLDHOPPER"
+            }
+        },
+        {
+            "name": {
+                "value": "GREEN"
+            }
+        },
+        {
+            "name": {
+                "value": "GREEN ALT"
+            }
+        },
+        {
+            "name": {
+                "value": "GREEN EVENING"
+            }
+        },
+        {
+            "name": {
+                "value": "GREEN EVENING SATURDAY"
+            }
+        },
+        {
+            "name": {
+                "value": "GREEN EXPRESS"
+            }
+        },
+        {
+            "name": {
+                "value": "GREEN EXPRESS ALT"
+            }
+        },
+        {
+            "name": {
+                "value": "GREEN SATURDAY"
+            }
+        },
+        {
+            "name": {
+                "value": "GREEN SUNDAY"
+            }
+        },
+        {
+            "name": {
+                "value": "GREENHOPPER"
+            }
+        },
+        {
+            "name": {
+                "value": "GREENHOPPER EVENING"
+            }
+        },
+        {
+            "name": {
+                "value": "GREENHOPPER EVENING SATURDAY"
+            }
+        },
+        {
+            "name": {
+                "value": "GREY"
+            }
+        },
+        {
+            "name": {
+                "value": "GREY ALT"
+            }
+        },
+        {
+            "name": {
+                "value": "GREY EVENING"
+            }
+        },
+        {
+            "name": {
+                "value": "GREY EVENING SATURDAY"
+            }
+        },
+        {
+            "name": {
+                "value": "GREY SATURDAY"
+            }
+        },
+        {
+            "name": {
+                "value": "GREY SUNDAY"
+            }
+        },
+        {
+            "name": {
+                "value": "ILLINI LIMITED"
+            }
+        },
+        {
+            "name": {
+                "value": "ILLINI LIMITED EVENING"
+            }
+        },
+        {
+            "name": {
+                "value": "ILLINI LIMITED EVENING SATURDAY"
+            }
+        },
+        {
+            "name": {
+                "value": "ILLINI LIMITED SATURDAY"
+            }
+        },
+        {
+            "name": {
+                "value": "ILLINI LIMITED SUNDAY"
+            }
+        },
+        {
+            "name": {
+                "value": "LAVENDER"
+            }
+        },
+        {
+            "name": {
+                "value": "LAVENDER ALT"
+            }
+        },
+        {
+            "name": {
+                "value": "LAVENDER SATURDAY"
+            }
+        },
+        {
+            "name": {
+                "value": "LAVENDER SUNDAY"
+            }
+        },
+        {
+            "name": {
+                "value": "LIME EVENING"
+            }
+        },
+        {
+            "name": {
+                "value": "LIME EVENING SATURDAY"
+            }
+        },
+        {
+            "name": {
+                "value": "LIME SATURDAY"
+            }
+        },
+        {
+            "name": {
+                "value": "LIME SUNDAY"
+            }
+        },
+        {
+            "name": {
+                "value": "NAVY"
+            }
+        },
+        {
+            "name": {
+                "value": "ORANGE"
+            }
+        },
+        {
+            "name": {
+                "value": "ORANGE ALT"
+            }
+        },
+        {
+            "name": {
+                "value": "ORANGEHOPPER"
+            }
+        },
+        {
+            "name": {
+                "value": "PINK"
+            }
+        },
+        {
+            "name": {
+                "value": "RAVEN"
+            }
+        },
+        {
+            "name": {
+                "value": "RED"
+            }
+        },
+        {
+            "name": {
+                "value": "RED SATURDAY"
+            }
+        },
+        {
+            "name": {
+                "value": "RUBY"
+            }
+        },
+        {
+            "name": {
+                "value": "RUBY EVENING"
+            }
+        },
+        {
+            "name": {
+                "value": "RUBY EVENING SATURDAY"
+            }
+        },
+        {
+            "name": {
+                "value": "RUBY SATURDAY"
+            }
+        },
+        {
+            "name": {
+                "value": "RUBY SUNDAY"
+            }
+        },
+        {
+            "name": {
+                "value": "SILVER"
+            }
+        },
+        {
+            "name": {
+                "value": "SILVER LIMITED EVENING"
+            }
+        },
+        {
+            "name": {
+                "value": "SILVER LIMITED EVENING SATURDAY"
+            }
+        },
+        {
+            "name": {
+                "value": "SILVER LIMITED SATURDAY"
+            }
+        },
+        {
+            "name": {
+                "value": "SILVER LIMITED SUNDAY"
+            }
+        },
+        {
+            "name": {
+                "value": "SILVER SATURDAY"
+            }
+        },
+        {
+            "name": {
+                "value": "SILVER SUNDAY"
+            }
+        },
+        {
+            "name": {
+                "value": "TEAL"
+            }
+        },
+        {
+            "name": {
+                "value": "TEAL EVENING"
+            }
+        },
+        {
+            "name": {
+                "value": "TEAL EVENING SATURDAY"
+            }
+        },
+        {
+            "name": {
+                "value": "TEAL SATURDAY"
+            }
+        },
+        {
+            "name": {
+                "value": "TEAL SUNDAY"
+            }
+        },
+        {
+            "name": {
+                "value": "YELLOW"
+            }
+        },
+        {
+            "name": {
+                "value": "YELLOW EVENING"
+            }
+        },
+        {
+            "name": {
+                "value": "YELLOW EVENING SATURDAY"
+            }
+        },
+        {
+            "name": {
+                "value": "YELLOW SATURDAY"
+            }
+        },
+        {
+            "name": {
+                "value": "YELLOW SUNDAY"
+            }
+        },
+        {
+            "name": {
+                "value": "YELLOWHOPPER"
+            }
+        }
+    ]
+}
