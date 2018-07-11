@@ -1,0 +1,71 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "info checker",
+            "intents": [
+                {
+                    "name": "AMAZON.FallbackIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+{
+                    "name": "StartIntent",
+                    "slots": [],
+                    "samples": [
+                        "Query",
+                        "Begin",
+                        "Start"
+                    ]
+                },
+                {
+                    "name": "AnswerFirstNameIntent",
+                    "slots": [
+                        {
+                            "name": "firstname",
+                            "type": "FIRSTNAME"
+                        }
+                    ],
+                    "samples": [
+                        "First name  {firstname}"
+                    ]
+                },
+                {
+                    "name": "AnswerLastNameIntent",
+                    "slots": [
+                        {
+                            "name": "lastname",
+                            "type": "LASTNAME"
+                        }
+                    ],
+                    "samples": [
+                        "Last name {lastname}"
+                    ]
+                },
+                {
+                    "name": "AnswerMiddleNameIntent",
+                    "slots": [
+                        {
+                            "name": "middlename",
+                            "type": "MIDDLENAME"
+                        }
+                    ],
+                    "samples": [
+                        "Middle name {middlename}"
+                    ]
+                }
+            ],
+            "types": []
+        }
+    }
+}
