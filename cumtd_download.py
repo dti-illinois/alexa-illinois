@@ -6,10 +6,11 @@ stops = mtd.get_stops()['stops']
 routes = mtd.get_routes()['routes']
 
 def write_routes_to_file():
-    result = []
+    result = {}
     for route in routes:
-        result.append({'id': route['route_id']})
-    with open('CUMTD_route')
+        result[route['route_id']] = ''
+    with open('CUMTD_route.json', 'w') as f:
+        json.dump({'routes': result}, f, indent=4)
 
 def write_stops_to_file1():
     result = []
