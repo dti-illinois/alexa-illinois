@@ -20,78 +20,67 @@
                     "samples": []
                 },
                 {
-                    "name": "InteractiveIntent",
-                    "slots": [],
-                    "samples": [
-                        "Interactive"
-                    ]
-                },
-                {
-                    "name": "VegetarianIntent",
-                    "slots": [],
-                    "samples": [
-                        "Vegan",
-                        "Vegetarian"
-                    ]
-                },
-                {
-                    "name": "DetailIntent",
-                    "slots": [],
-                    "samples": [
-                        "Detail",
-                        "Details"
-                    ]
-                },
-                {
-                    "name": "AnswerDateIntent",
+                    "name": "crnIntent",
                     "slots": [
                         {
-                            "name": "date",
-                            "type": "CustomDATE"
+                            "name": "crn",
+                            "type": "AMAZON.NUMBER"
+                        }
+                    ],
+                    "samples": []
+                },
+                {
+                    "name": "CourseNumIntent",
+                    "slots": [
+                        {
+                            "name": "courseNum",
+                            "type": "AMAZON.NUMBER"
+                        }
+                    ],
+                    "samples": []
+                },
+                {
+                    "name": "SemesterIntent",
+                    "slots": [
+                        {
+                            "name": "semester",
+                            "type": "Semester"
+                        }
+                    ],
+                    "samples": []
+                },
+                {
+                    "name": "YearIntent",
+                    "slots": [
+                        {
+                            "name": "year",
+                            "type": "AMAZON.FOUR_DIGIT_NUMBER"
+                        }
+                    ],
+                    "samples": []
+                },
+                {
+                    "name": "SubjectCodeIntent",
+                    "slots": [
+                        {
+                            "name": "subjectCode",
+                            "type": "subjectCode"
                         }
                     ],
                     "samples": [
-                        " {date}"
-                    ]
-                },
-                {
-                    "name": "AnswerHallIntent",
-                    "slots": [
-                        {
-                            "name": "hall",
-                            "type": "HALL"
-                        }
-                    ],
-                    "samples": [
-                        "{hall}"
-                    ]
-                },
-                {
-                    "name": "AnswerMealIntent",
-                    "slots": [
-                        {
-                            "name": "meal",
-                            "type": "MEAL"
-                        }
-                    ],
-                    "samples": [
-                        "{meal}"
+                        "{subjectCode}"
                     ]
                 },
                 {
                     "name": "AskMainIntent",
                     "slots": [
                         {
-                            "name": "hall",
-                            "type": "HALL"
-                        },
-                        {
                             "name": "meal",
-                            "type": "MEAL"
+                            "type": "subjectCode"
                         },
                         {
                             "name": "date",
-                            "type": "CustomDATE"
+                            "type": "Semester"
                         }
                     ],
                     "samples": [
@@ -260,41 +249,47 @@
                     ]
                 },
                 {
-                    "name": "MEAL",
+                    "name": "subjectCode",
                     "values": [
                         {
-                            "id": "Dinner",
+                            "id": "cs",
                             "name": {
-                                "value": "Dinner"
-                            }
-                        },
-                        {
-                            "id": "Lunch",
-                            "name": {
-                                "value": "Lunch"
-                            }
-                        },
-                        {
-                            "id": "Breakfast",
-                            "name": {
-                                "value": "Breakfast"
+                                "value": "Computer Science",
+                                "synonyms": [
+                                    "C.S."
+                                ]
                             }
                         }
                     ]
                 },
                 {
-                    "name": "CustomDATE",
+                    "name": "Semester",
                     "values": [
                         {
-                            "id": "tomorrow",
+                            "id": "winter",
                             "name": {
-                                "value": "Tomorrow"
+                                "value": "Winter"
                             }
                         },
                         {
-                            "id": "today",
+                            "id": "summer",
                             "name": {
-                                "value": "Today"
+                                "value": "Summer"
+                            }
+                        },
+                        {
+                            "id": "fall",
+                            "name": {
+                                "value": "Fall",
+                                "synonyms": [
+                                    "autumn"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "spring",
+                            "name": {
+                                "value": "Spring"
                             }
                         }
                     ]
