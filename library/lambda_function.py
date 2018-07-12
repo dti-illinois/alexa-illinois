@@ -1,8 +1,8 @@
 import logging
+import library as lib
 from flask import Flask, render_template
 from flask_ask import Ask, statement, question, session, request
 
-import library
 
 app = Flask(__name__)
 ask = Ask(app, '/')
@@ -36,17 +36,17 @@ def stop():
 
 @ask.intent('AskCatalogIntent')
 def ask_catalog():
-    return library.ask_catalog()
+    return lib.ask_catalog()
 
 
 @ask.intent('AskNextSevenDaysIntent')
 def ask_next_seven_days(library):
-    return library.ask_next_seven_days(library)
+    return lib.ask_next_seven_days(library)
 
 
 @ask.intent('AskWithDateIntent')
 def ask_library_with_date(library, date):
-    return library.ask_with_date(library, date)
+    return lib.ask_with_date(library, date)
 
 
 if __name__ == '__main__':

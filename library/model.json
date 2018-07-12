@@ -25,6 +25,47 @@
                     "samples": [
                         "Catalog"
                     ]
+                },
+                {
+                    "name": "AskWithDateIntent",
+                    "slots": [
+                        {
+                            "name": "date",
+                            "type": "AMAZON.DATE"
+                        },
+                        {
+                            "name": "library",
+                            "type": "LIBRARY"
+                        }
+                    ],
+                    "samples": [
+                        "{library} {date}",
+                        "Open hours of {library} {date}",
+                        "What's the open hours of {library} {date}",
+                        "What is the open hours of {library} {date}",
+                        "Open hours of {library} on {date}",
+                        "What's the open hours of {library} on {date}",
+                        "What is the open hours of {library} on {date}",
+                        "{library} open hours on {date}",
+                        "What's the {library} open hours on {date}",
+                        "What is the {library} open hours on {date}"
+                    ]
+                }, {
+                    "name": "AskNextSevenDaysIntent",
+                    "slots": [
+                        {
+                            "name": "library",
+                            "type": "LIBRARY"
+                        }
+                    ],
+                    "samples": [
+                        "{library} next seven days",
+                        "next seven days {library}",
+                        "next seven days in {library}",
+                        "{library} next week",
+                        "next week {library}",
+                        "next week in {library}"
+                    ]
                 }
             ],
             "types": [
@@ -32,7 +73,7 @@
                     "name": "LIBRARY",
                     "values": [
                         {
-                            "id": "9",
+                            "id": "1",
                             "name": {
                                 "value": "Grainger Library",
                                 "synonyms": [
@@ -42,25 +83,25 @@
                             }
                         },
                         {
-                            "id": "20",
+                            "id": "3",
                             "name": {
                                 "value": "Mathematics Library"
                             }
                         },
                         {
-                            "id": "8",
+                            "id": "5",
                             "name": {
                                 "value": "Communications Library"
                             }
                         },
                         {
-                            "id": "15",
+                            "id": "6",
                             "name": {
                                 "value": "International and Area Studies Library"
                             }
                         },
                         {
-                            "id": "1",
+                            "id": "9",
                             "name": {
                                 "value": "A.C.E.S. Library",
                                 "synonyms": [
@@ -69,13 +110,13 @@
                             }
                         },
                         {
-                            "id": "27",
+                            "id": "11",
                             "name": {
                                 "value": "Social Sciences, Health, and Education Library"
                             }
                         },
                         {
-                            "id": "2",
+                            "id": "12",
                             "name": {
                                 "value": "Architecture and Art Library",
                                 "synonyms": [
@@ -84,37 +125,37 @@
                             }
                         },
                         {
-                            "id": "31",
+                            "id": "13",
                             "name": {
                                 "value": "University Archives"
                             }
                         },
                         {
-                            "id": "19",
+                            "id": "16",
                             "name": {
                                 "value": "Map Library"
                             }
                         },
                         {
-                            "id": "30",
+                            "id": "17",
                             "name": {
                                 "value": "Undergraduate Library"
                             }
                         },
                         {
-                            "id": "23",
+                            "id": "22",
                             "name": {
                                 "value": "Rare Book and Manuscript Library"
                             }
                         },
                         {
-                            "id": "17",
+                            "id": "23",
                             "name": {
                                 "value": "Literatures and Languages Library"
                             }
                         },
                         {
-                            "id": "21",
+                            "id": "27",
                             "name": {
                                 "value": "Music and Performing Arts Library",
                                 "synonyms": [
@@ -123,85 +164,85 @@
                             }
                         },
                         {
-                            "id": "16",
+                            "id": "29",
                             "name": {
                                 "value": "Law Library"
                             }
                         },
                         {
-                            "id": "13",
+                            "id": "31",
                             "name": {
                                 "value": "Illinois History and Lincoln Collections"
                             }
                         },
                         {
-                            "id": "5",
+                            "id": "34",
                             "name": {
                                 "value": "University High School Library"
                             }
                         },
                         {
-                            "id": "4",
+                            "id": "37",
                             "name": {
                                 "value": "Center for Children's Books"
                             }
                         },
                         {
-                            "id": "12",
+                            "id": "44",
                             "name": {
                                 "value": "Illinois Fire Service Institute Library"
                             }
                         },
                         {
-                            "id": "14",
+                            "id": "50",
                             "name": {
                                 "value": "Interlibrary Loan and Document Delivery"
                             }
                         },
                         {
-                            "id": "32",
+                            "id": "56",
                             "name": {
                                 "value": "Residence Hall Libraries - Urbana"
                             }
                         },
                         {
-                            "id": "26",
+                            "id": "57",
                             "name": {
                                 "value": "Scholarly Commons"
                             }
                         },
                         {
-                            "id": "28",
+                            "id": "59",
                             "name": {
                                 "value": "Sousa Archives & Center For American Music"
                             }
                         },
                         {
-                            "id": "3",
+                            "id": "73",
                             "name": {
                                 "value": "Veterinary Medicine Library"
                             }
                         },
                         {
-                            "id": "11",
+                            "id": "75",
                             "name": {
                                 "value": "History, Philosophy, and Newspaper Library"
                             }
                         },
                         {
-                            "id": "6",
+                            "id": "76",
                             "name": {
                                 "value": "Chemistry Library"
                             }
                         },
                         {
-                            "id": "18",
+                            "id": "80",
                             "name": {
                                 "value": "Main Library"
                             }
                         },
                         {
-                            "id": "29",
+                            "id": "81",
                             "name": {
                                 "value": "Student Life and Culture Archives",
                                 "synonyms": [
@@ -210,13 +251,13 @@
                             }
                         },
                         {
-                            "id": "25",
+                            "id": "82",
                             "name": {
                                 "value": "Residence Hall Libraries - Ikenberry"
                             }
                         },
                         {
-                            "id": "33",
+                            "id": "83",
                             "name": {
                                 "value": "Oak Street Library"
                             }

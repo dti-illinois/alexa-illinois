@@ -1,22 +1,31 @@
 welcome: |
-  Welcome to U.I.U.C. library checker. How can I help you? |
+  Welcome to U.I.U.C. library checker. How can I help you?
 
 help: |
-  Ask "catalog" to see what libraries are supported; |
+  Say "your library, your date" to know about the opening hours of that library on that date.
+  Say "next seven days, your library" to know about the opening hours of that library next seven days, including today.
+  There are more expressions that are supported to do the above. Say "sample questions" if you want to listen to some sample queries.
+  Say "catalog" to see what libraries are supported.
 
 answer-catalog: |
-  Here are all the libraries we support. They are |
-  {% for item in catalog %} |
-    {{ item }}, |
-  {% endfor %} |
+  Here are all the libraries we support. They are {% for item in catalog %} {{item+"."}} {% endfor %}.
+
+answer-with-date: |
+  Sure. On {{year}}-{{month}}-{{date}}, {{library}} is open from {{calendar['nextSevenDays'][0]['hours'][0]['label']}}.
+
+answer-next-seven-days: |
+  Sure, Opening hours of {{library}} next seven days are as follows. Today, from {{calendar['nextSevenDays'][0]['hours'][0]['label']}}. Tomorrow, from {{calendar['nextSevenDays'][0]['hours'][0]['label']}}. {% for i in range(2, 7) %} On {{calendar['nextSevenDays'][i]['date']}}, {{calendar['nextSevenDays'][i]['hours'][0]['label']}}. {% endfor %} 
 
 error-not-found: |
-  I am sorry to tell you that there is no information about that yet. You can ask another one now, or  say "stop" to end this session. |
+  I am sorry to tell you that there is no information about that yet. You can ask another one now, or  say "stop" to end this session.
 
 error-not-understand: |
-  I am sorry that I couldn't understand you. Could you say it again? |
+  I am sorry that I couldn't understand you. Could you say it again?
+
+error-no-match: |
+  I am sorry that I couldn't understand your input. Could you say it again?
 
 error-other: |
-  I am sorry to tell you that something has gone wrong. Please try again. |
+  I am sorry to tell you that something has gone wrong. Please try again.
 
 goodbye: Goodbye.

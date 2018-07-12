@@ -23,8 +23,8 @@ def get_library_id(response):
 
 def get_catalog():
     results = []
-    model = json.load(open(path_slot_library, 'r'))
-    for slot in model["interactionModel"]["languageModel"]["types"]:
+    model = json.load(open(path_model, 'r'))
+    for slot in model["interactionModel"]["languageModel"]["types"][0]["values"]:
         results.append(slot["name"]["value"])
     return results
 
@@ -41,6 +41,7 @@ def get_all():
 
 def get_calendar(library_id, y, m, d):
     request_url = url_library_search + str(library_id) + "/" + y + "/" + m + "/" + d
+    print(request_url)
     response_json = urlopen(request_url)
     try:
         response = json.load(response_json)
