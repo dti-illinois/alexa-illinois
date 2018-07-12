@@ -39,6 +39,11 @@ def ask_catalog():
     return lib.ask_catalog()
 
 
+@ask.intent('AskBasicInfoIntent')
+def ask_basic_info(library):
+	return lib.ask_basic_info(library)
+
+
 @ask.intent('AskNextSevenDaysIntent')
 def ask_next_seven_days(library):
     return lib.ask_next_seven_days(library)

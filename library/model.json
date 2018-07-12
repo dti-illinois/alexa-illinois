@@ -23,7 +23,34 @@
                     "name": "AskCatalogIntent",
                     "slots": [],
                     "samples": [
-                        "Catalog"
+                        "catalog"
+                    ]
+                },
+                {
+                    "name": "AskBasicInfoIntent",
+                    "slots": [
+                        {
+                            "name": "library",
+                            "type": "LIBRARY"
+                        }
+                    ],
+                    "samples": [
+                        "information {library}",
+                        "{library} information"
+                    ]
+                },
+                {
+                    "name": "AskNextSevenDaysIntent",
+                    "slots": [
+                        {
+                            "name": "library",
+                            "type": "LIBRARY"
+                        }
+                    ],
+                    "samples": [
+                        "{library} next seven days",
+                        "next seven days {library}",
+                        "next seven days of {library}"
                     ]
                 },
                 {
@@ -39,32 +66,20 @@
                         }
                     ],
                     "samples": [
-                        "{library} {date}",
-                        "Open hours of {library} {date}",
-                        "What's the open hours of {library} {date}",
-                        "What is the open hours of {library} {date}",
-                        "Open hours of {library} on {date}",
-                        "What's the open hours of {library} on {date}",
-                        "What is the open hours of {library} on {date}",
-                        "{library} open hours on {date}",
-                        "What's the {library} open hours on {date}",
-                        "What is the {library} open hours on {date}"
-                    ]
-                }, {
-                    "name": "AskNextSevenDaysIntent",
-                    "slots": [
-                        {
-                            "name": "library",
-                            "type": "LIBRARY"
-                        }
-                    ],
-                    "samples": [
-                        "{library} next seven days",
-                        "next seven days {library}",
-                        "next seven days in {library}",
-                        "{library} next week",
-                        "next week {library}",
-                        "next week in {library}"
+                        "{library} opening hours {date}",
+                        "opening hours {library} {date}",
+                        "{library} {date} opening hours",
+
+                        "opening hours of {library} {date}",
+                        "opening hours of {library} on {date}",
+                        "{library} opening hours on {date}",
+                        
+                        "what's the opening hours of {library} {date}",
+                        "what's the opening hours of {library} on {date}",
+                        "what's the {library} opening hours on {date}",
+                        "what is the opening hours of {library} {date}",
+                        "what is the opening hours of {library} on {date}",
+                        "what is the {library} opening hours on {date}"
                     ]
                 }
             ],

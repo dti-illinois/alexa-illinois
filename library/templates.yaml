@@ -2,22 +2,42 @@ welcome: |
   Welcome to U.I.U.C. library checker. How can I help you?
 
 help: |
-  Say "your library, your date" to know about the opening hours of that library on that date.
-  Say "next seven days, your library" to know about the opening hours of that library next seven days, including today.
-  There are more expressions that are supported to do the above. Say "sample questions" if you want to listen to some sample queries.
+  Take Grainger Library as an example.
+  Say "Grainger Library information" to know about some basic information about the library, such as consulting hours, phone number, email and address.
+  Say "Grainger Library opening hours, tomorrow" to know about the opening hours of the library on whatever date.
+  Say "Grainger Library next seven days" to know about the opening hours of the library next seven days, including today.
+  There are more expressions that are supported to do the above. 
+  Say "sample questions" if you want to listen to some other sample queries.
   Say "catalog" to see what libraries are supported.
 
 answer-catalog: |
-  Here are all the libraries we support. They are {% for item in catalog %} {{item+"."}} {% endfor %}.
+  Here are all the libraries we support. They are 
+  {% for item in catalog %} {{item+"."}} {% endfor %}.
+
+answer-basic-info: |
+  Here are the information of {{library}}.
+  Email: {{info['contact_email']}}.
+  Phone number: {{info['phone_number']}}.
+  Consulting hours: {{info['consulting_hours']}}.
+  Building name: {{info['building_name']}}.
+  Address: {{info['street_address']}}.
 
 answer-with-date: |
-  Sure. On {{year}}-{{month}}-{{date}}, {{library}} is open from {{calendar['nextSevenDays'][0]['hours'][0]['label']}}.
+  Sure. On {{year}}-{{month}}-{{date}}, 
+  {{library}} is open from {{calendar['nextSevenDays'][0]['hours'][0]['label']}}.
 
 answer-next-seven-days: |
-  Sure, Opening hours of {{library}} next seven days are as follows. Today, from {{calendar['nextSevenDays'][0]['hours'][0]['label']}}. Tomorrow, from {{calendar['nextSevenDays'][0]['hours'][0]['label']}}. {% for i in range(2, 7) %} On {{calendar['nextSevenDays'][i]['date']}}, {{calendar['nextSevenDays'][i]['hours'][0]['label']}}. {% endfor %} 
+  Sure, Opening hours of {{library}} next seven days are as follows. 
+  Today, from {{calendar['nextSevenDays'][0]['hours'][0]['label']}}. 
+  Tomorrow, from {{calendar['nextSevenDays'][0]['hours'][0]['label']}}. 
+  {% for i in range(2, 7) %} 
+    On {{calendar['nextSevenDays'][i]['date']}}, 
+    from {{calendar['nextSevenDays'][i]['hours'][0]['label']}}. 
+  {% endfor %} 
 
 error-not-found: |
-  I am sorry to tell you that there is no information about that yet. You can ask another one now, or  say "stop" to end this session.
+  I am sorry to tell you that there is no information about that yet. 
+  You can ask another one now, or  say "stop" to end this session.
 
 error-not-understand: |
   I am sorry that I couldn't understand you. Could you say it again?

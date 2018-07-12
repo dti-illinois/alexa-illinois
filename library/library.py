@@ -15,8 +15,27 @@ def ask_catalog():
     return question(answer_msg)
 
 
+def ask_basic_info(library):
+    try:
+        info = data.get_all()
+        library_id = request.intent.slots.library.resolutions.resolutionsPerAuthority[0]['values'][0]['value']['id']
+        for library_info in info:
+            if library_info['unit_id'] == int(library_id):
+                answer_msg = render_template(
+                    "answer-basic-info", 
+                    library = library,
+                    info = library_info
+                )
+                break
+    # No library matching / date matching
+    except (KeyError, AttributeError) as e:
+        answer_msg = render_template("error-no-match")
+    # other errors
+    except: answer_msg = render_template("error-other")
+    return question(answer_msg)
+
+
 def ask_with_date(library, date_str):
-    info = data.get_all()
     try:
         library_id = request.intent.slots.library.resolutions.resolutionsPerAuthority[0]['values'][0]['value']['id']
         date_arr = date_str.split('-')
