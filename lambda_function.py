@@ -35,19 +35,29 @@ def get_routes():
 
 
 @ask.intent('CUMTDRouteOnServiceIntent')
-def get_route_service_by_date(date):
+def get_route_service_by_date(route_id, date):
+    help_text = render_template('help')
     if date is None:
-        pass
-    else:
-        pass
+        date_error_text = render_template('date_error')
+        return question(date_error_text).reprompt(help_text)
+    if route_id is not in session.attributes['routes'] or route_id is None:
+        route_id_error_text = render_template('route_id_error')
+        return question(route_id_error_text).reprompt(help_text)
+    on_service = get_route_on_service_by_date(route_id, date)
+    route_on_service_by_date_text = render_template('route_on_service_by_date',
+    route_id=route_id, on_service=on_service, date=date)
+    return question(route_on_service_by_date_text).reprompt(help_text)
 
 
 @ask.intent('CUMTDRemainingTimeIntent')
 def get_remaining_time_by_route(route_id):
+    help_text = render_template('help')
     if route_id is None or route_id not in session.attributes['routes']:
-        pass
-    else:
-        remaining_time = get_remaining_time(session.attributes['stop_id'], route_id)
+        route_id_error_text = render_template('route_id_error')
+        return question(route_id_error_text).reprompt(help_text)
+
+    remaining_time_info = get_remaining_time(session.attributes['stop_id'], route_id)
+    
     return
 
 @ask.intent('CUMTDSearchRouteIntent')

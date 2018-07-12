@@ -1,21 +1,38 @@
 welcome: |
   Welcome to C.U.M.T.D. schedule checker.
+  Say help for instruction.
+  Now, what information do you want?
 
 stop_name: |
   You are at {{ stop_name }}
 
 routes_by_stop: |
-  Here are the routes that go through this stop.
+  Here are the routes on service today.
   {% for route in routes %}
     Line {{ route }}.
   {% endfor %}
-  Say detail for full name of the routes.
+
+route_on_service_by_date: |
+  Line {{ route_id }} is {{ on_service }} on {{ date }}.
 
 help: |
-  pass
+  For stop name, say stop name.
+  For routes go through this stop, say routes on service.
+  For route service on specific date, ask whether route will be on service on date.
+
 
 intent_error: |
   Sorry I cannot understand your intent.
-  For instruction, ask what can you do?
+  For instruction, say help.
+
+date_error: |
+  Sorry I cannot understand the date.
+  Can you this it again?
+  For instruction, say help.
+
+route_id_error: |
+  Sorry the route does not go through this stop or is not on service today.
+  Please ask another route.
+  For instruction, say help.
 
 bye: Goodbye
