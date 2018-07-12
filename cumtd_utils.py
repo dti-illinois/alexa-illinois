@@ -79,7 +79,6 @@ def get_planned_trip(origin_stop_id, destination_stop_id):
     planned_trips = []
     for itinerary in itineraries:
         planned_trips.append(_parse_itinerary(itinerary))
-    print(json.dumps(planned_trips, indent=4))
     return planned_trips
 
 def _parse_itinerary(itinerary):
@@ -94,13 +93,14 @@ def _parse_itinerary(itinerary):
         elif type == 'Service':
             services = _parse_services(leg['services'])
             s.append(services)
+    result['time'] = travel_time
     result['walk'] = w
     result['services'] = s
     return result
 
 def _parse_walk(walk):
     result = {}
-    result['directionl'] = walk['direction']
+    result['directional'] = walk['direction']
     result['distance'] = walk['distance']
     result['start'] = walk['begin']['name']
     result['end'] = walk['end']['name']
@@ -122,6 +122,6 @@ def _parse_routes(routes):
         result[route['route_id']] = False
     return result
 
-print(json.dumps(get_remaining_time('PLAZA:4', 'yellow'), indent=4))
+#print(json.dumps(get_remaining_time('PLAZA:4', 'yellow'), indent=4))
 #get_planned_trip('PLAZA:4', 'UWALMART:2')
 #print(get_routes_on_service_by_date('GOLD','2018-07-15'))
