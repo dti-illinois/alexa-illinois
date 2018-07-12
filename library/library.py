@@ -21,6 +21,7 @@ def ask_basic_info(library):
         library_id = request.intent.slots.library.resolutions.resolutionsPerAuthority[0]['values'][0]['value']['id']
         for library_info in info:
             if library_info['unit_id'] == int(library_id):
+                email = library_info['contact_email']
                 answer_msg = render_template(
                     "answer-basic-info", 
                     library = library,

@@ -1,30 +1,54 @@
 welcome: |
   Welcome to U.I.U.C. library checker. How can I help you?
 
+reprompt: |
+  You may ask a question now, or say stop to end this session.
+
 help: |
   Take Grainger Library as an example.
   Say "Grainger Library information" to know about some basic information about the library, such as consulting hours, phone number, email and address.
-  Say "Grainger Library opening hours, tomorrow" to know about the opening hours of the library on whatever date.
+  Say "Grainger Library opening hours tomorrow" to know about the opening hours of the library on whatever date.
   Say "Grainger Library next seven days" to know about the opening hours of the library next seven days, including today.
   There are more expressions that are supported to do the above. 
-  Say "sample questions" if you want to listen to some other sample queries.
+  Say "sample questions" if you want to listen to some other sample expressions.
   Say "catalog" to see what libraries are supported.
+  You can try it out now.
+
+sample-questions: |
+  To ask basic information, you can say 
+    "Grainger Library information", 
+    "information of Grainger Library", 
+    "information Grainger Library".
+  To ask about opening hours by date, you can say
+    "Grainger Library opening hours tomorrow", 
+    "Grainger Library tomorrow opening hours", 
+    "opening hours of Grainger Library tomorrow", 
+    "What's the opening hours of Grainger Library tomorrow",
+    "What's Grainger Library's opening hours tomorrow".
+  To ask about opening hours of a library next seven days, you can say
+    "Grainger Library next seven days",
+    "Next seven days Grainger Library",
+    "Next seven days of Grainger Library".
+  You can try it out now.
 
 answer-catalog: |
   Here are all the libraries we support. They are 
   {% for item in catalog %} {{item+"."}} {% endfor %}.
+  You can ask a question now.
 
 answer-basic-info: |
-  Here are the information of {{library}}.
+  Here is the information of {{library}}.
   Email: {{info['contact_email']}}.
   Phone number: {{info['phone_number']}}.
   Consulting hours: {{info['consulting_hours']}}.
   Building name: {{info['building_name']}}.
   Address: {{info['street_address']}}.
+  You can ask another question now, or say stop to end this session.
 
 answer-with-date: |
   Sure. On {{year}}-{{month}}-{{date}}, 
   {{library}} is open from {{calendar['nextSevenDays'][0]['hours'][0]['label']}}.
+  You can ask another question now, or say stop to end this session.
 
 answer-next-seven-days: |
   Sure, Opening hours of {{library}} next seven days are as follows. 
@@ -34,10 +58,11 @@ answer-next-seven-days: |
     On {{calendar['nextSevenDays'][i]['date']}}, 
     from {{calendar['nextSevenDays'][i]['hours'][0]['label']}}. 
   {% endfor %} 
+  You can ask another question now, or say stop to end this session.
 
 error-not-found: |
   I am sorry to tell you that there is no information about that yet. 
-  You can ask another one now, or  say "stop" to end this session.
+  You can ask another question now, or  say "stop" to end this session.
 
 error-not-understand: |
   I am sorry that I couldn't understand you. Could you say it again?

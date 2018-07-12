@@ -20,6 +20,13 @@
                     "samples": []
                 },
                 {
+                    "name": "SampleQuestionsIntent",
+                    "samples": [
+                        "sample question",
+                        "sample questions"
+                    ]
+                },
+                {
                     "name": "AskCatalogIntent",
                     "slots": [],
                     "samples": [
@@ -36,7 +43,8 @@
                     ],
                     "samples": [
                         "information {library}",
-                        "{library} information"
+                        "{library} information",
+                        "information of {library}"
                     ]
                 },
                 {
@@ -67,12 +75,11 @@
                     ],
                     "samples": [
                         "{library} opening hours {date}",
-                        "opening hours {library} {date}",
+                        "{library} opening hours on {date}",
                         "{library} {date} opening hours",
-
+                        "opening hours {library} {date}",
                         "opening hours of {library} {date}",
                         "opening hours of {library} on {date}",
-                        "{library} opening hours on {date}",
                         
                         "what's the opening hours of {library} {date}",
                         "what's the opening hours of {library} on {date}",
