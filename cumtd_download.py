@@ -71,4 +71,14 @@ def write_stops_to_slots():
 
 def _reformat_name(name):
     r = name.replace('(', '').replace(')', '')
-    return r
+    r = r.replace('First', '1st')
+    r = r.replace('Third', '3rd')
+    r = r.replace('Fourth', '4th')
+    r = r.replace('Fifth', '5th')
+    r = r.replace('Sixth', '6th')
+    return r.lower()
+
+write_stops_to_file1()
+write_stops_to_file2()
+write_stops_to_file3()
+write_stops_to_slots()

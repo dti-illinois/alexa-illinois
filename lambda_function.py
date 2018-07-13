@@ -75,12 +75,16 @@ def get_remaining_time_by_route(route_id):
 @ask.intent('CUMTDSearchRouteIntent')
 def get_route_by_destination(destination_stop_name):
     help_text = render_template('help')
+    destination_stop_name = destination_stop_name.replace('and', '&').lower()
     if destination_stop_name is None or destination_stop_name not in stops.keys():
         stop_name_error_text = render_template('stop_name_error')
         return question(stop_name_error_text).reprompt(help_text)
     else:
         destination_stop_id = stops[destination_stop_name]
         planned_trips = get_planned_trip(session.attributes['stop_id'], destination_stop_id)
+        if len(planned_trips) == 0:
+            trip_error_text = render_template('trip_error')
+            return question(trip_error_text).reprompt(help_text)
         session.attributes['remainingTrips'] = planned_trips[1:]
         planned_trip_text = render_template('planned_trip', info=planned_trips[0])
         return question(planned_trip_text).reprompt(help_text)
@@ -113,7 +117,7 @@ def repeat():
 @ask.intent('AMAZON.FallbackIntent')
 def fallback():
     intent_error_text = render_template('intent_error')
-    return qeustion(intent_error_text)
+    return question(intent_error_text)
 
 
 @ask.intent('AMAZON.YesIntent')
