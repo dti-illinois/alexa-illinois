@@ -1,5 +1,6 @@
 import logging
 import library as lib
+
 from flask import Flask, render_template
 from flask_ask import Ask, statement, question, session, request
 

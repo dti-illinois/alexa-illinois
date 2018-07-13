@@ -1,10 +1,11 @@
 import json
 import time
-import data
+from datetime import date
+from datetime import datetime
 from flask import render_template
 from flask_ask import statement, question, session, request
-from datetime import date
 
+import data
 
 def ask_catalog():
     catalog = data.get_catalog()
@@ -44,9 +45,9 @@ def ask_with_date(library, date_str):
         calendar = data.get_calendar(library_id, y, m, d)
         answer_msg = render_template(
             "answer-with-date",
-            year = y, month = m, date = d,
+            date_str = date_str,
             library = library,
-            calendar = calendar
+            opening_hours = calendar['nextSevenDays'][0]['hours'][0]['label']
         )
     # No library matching / date matching
     except (KeyError, AttributeError) as e:
@@ -57,16 +58,23 @@ def ask_with_date(library, date_str):
 
 
 def ask_next_seven_days(library):
+    library_id = request.intent.slots.library.resolutions.resolutionsPerAuthority[0]['values'][0]['value']['id']
+    today = date.today()
+    y, m, d = str(today.year), str(today.month), str(today.day)
+    calendar = data.get_calendar(library_id, y, m, d)
+    # process data, convert date to weekday
+    date_from, date_to, opening_hours = data.process_next_seven_days(calendar)
+    # render template
+    answer_msg = render_template(
+        "answer-next-seven-days",
+        library = library,
+        length = len(date_from),
+        date_from = date_from,
+        date_to = date_to,
+        opening_hours = opening_hours
+    )
     try:
-        library_id = request.intent.slots.library.resolutions.resolutionsPerAuthority[0]['values'][0]['value']['id']
-        today = date.today()
-        y, m, d = str(today.year), str(today.month), str(today.day)
-        calendar = data.get_calendar(library_id, y, m, d)
-        answer_msg = render_template(
-            "answer-next-seven-days",
-            library = library,
-            calendar = calendar
-        )
+        pass
     # No library matching / date matching
     except (KeyError, AttributeError) as e:
         answer_msg = render_template("error-no-match")

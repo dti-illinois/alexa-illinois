@@ -46,18 +46,27 @@ answer-basic-info: |
   You can ask another question now, or say stop to end this session.
 
 answer-with-date: |
-  Sure. On {{year}}-{{month}}-{{date}}, 
-  {{library}} is open from {{calendar['nextSevenDays'][0]['hours'][0]['label']}}.
+  Sure. On {{date_str}}, 
+  {% if opening_hours == 'Closed' %} {{library}} is closed.
+  {% elif opening_hours == 'To Be Announced' %} the opening hours of {{library}} is not announced yet.
+  {% else %} {{library}} is open from {{opening_hours}}.
+  {% endif %}
   You can ask another question now, or say stop to end this session.
 
 answer-next-seven-days: |
-  Sure, Opening hours of {{library}} next seven days are as follows. 
-  Today, from {{calendar['nextSevenDays'][0]['hours'][0]['label']}}. 
-  Tomorrow, from {{calendar['nextSevenDays'][0]['hours'][0]['label']}}. 
-  {% for i in range(2, 7) %} 
-    On {{calendar['nextSevenDays'][i]['date']}}, 
-    from {{calendar['nextSevenDays'][i]['hours'][0]['label']}}. 
-  {% endfor %} 
+  Sure, Opening hours of {{library}} next seven days are as follows.  
+  {% for i in range(length) %}
+    {% if date_from[i] == date_to[i] %}
+      {% if date_from[i] == 'today' or date_from[i] == 'tomorrow' %} {{date_from[i]}} 
+      {% else %} On {{date_from[i]}} 
+      {% endif %}
+    {% else %} from {{date_from[i]}} to {{date_to[i]}}, 
+    {% endif %}
+    {% if opening_hours[i] == 'Closed' %} it is closed.
+    {% elif opening_hours[i] == 'To Be Announced' %} the opening hours is not announced yet.
+    {% else %} it is open from {{opening_hours[i]}}. 
+    {% endif %}
+  {% endfor %}
   You can ask another question now, or say stop to end this session.
 
 error-not-found: |
@@ -68,7 +77,7 @@ error-not-understand: |
   I am sorry that I couldn't understand you. Could you say it again?
 
 error-no-match: |
-  I am sorry that I couldn't understand your input. Could you say it again?
+  I am sorry that No libraries or dates is matching your input. Could you say it again?
 
 error-other: |
   I am sorry to tell you that something has gone wrong. Please try again.
