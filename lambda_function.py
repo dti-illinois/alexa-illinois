@@ -131,6 +131,10 @@ def no():
     bye_text = render_template('bye')
     return statement(bye_text)
 
+@ask.intent('AMAZON.StopIntent')
+def stop():
+    bye_text = render_template('bye')
+    return statement(bye_text)
 
 @ask.intent('AMAZON.CancelIntent')
 def cancel():
