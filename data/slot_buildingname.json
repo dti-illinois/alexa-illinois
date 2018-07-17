@@ -1,0 +1,1877 @@
+[
+    {
+        "name": {
+            "value": "Building Name"
+        }
+    },
+    {
+        "name": {
+            "value": "Nugent Hall"
+        }
+    },
+    {
+        "name": {
+            "value": "State Farm Center"
+        }
+    },
+    {
+        "name": {
+            "value": "Vet Med Teaching Hospital"
+        }
+    },
+    {
+        "name": {
+            "value": "Illini Union"
+        }
+    },
+    {
+        "name": {
+            "value": "Flagg Hall"
+        }
+    },
+    {
+        "name": {
+            "value": "Atrel 1611 Titan"
+        }
+    },
+    {
+        "name": {
+            "value": "South Farms Isolation Work Area"
+        }
+    },
+    {
+        "name": {
+            "value": "Davenport Hall"
+        }
+    },
+    {
+        "name": {
+            "value": "Art Annex East 2"
+        }
+    },
+    {
+        "name": {
+            "value": "Mckinley Health Clinic"
+        }
+    },
+    {
+        "name": {
+            "value": "Harding Band Building"
+        }
+    },
+    {
+        "name": {
+            "value": "Kenney Gym Annex"
+        }
+    },
+    {
+        "name": {
+            "value": "Armory"
+        }
+    },
+    {
+        "name": {
+            "value": "Foellinger Auditoruim"
+        }
+    },
+    {
+        "name": {
+            "value": "Agricultural Engineering Sciences Building"
+        }
+    },
+    {
+        "name": {
+            "value": "Chem Annex"
+        }
+    },
+    {
+        "name": {
+            "value": "Kiln House"
+        }
+    },
+    {
+        "name": {
+            "value": "Noyes"
+        }
+    },
+    {
+        "name": {
+            "value": "Talbot Lab"
+        }
+    },
+    {
+        "name": {
+            "value": "Ice Arena"
+        }
+    },
+    {
+        "name": {
+            "value": "Engineering Hall"
+        }
+    },
+    {
+        "name": {
+            "value": "Advanced Computation Building"
+        }
+    },
+    {
+        "name": {
+            "value": "Art Annex"
+        }
+    },
+    {
+        "name": {
+            "value": "Physiology Research Lab"
+        }
+    },
+    {
+        "name": {
+            "value": "Kenney Gym"
+        }
+    },
+    {
+        "name": {
+            "value": "Newmark"
+        }
+    },
+    {
+        "name": {
+            "value": "Harker Hall"
+        }
+    },
+    {
+        "name": {
+            "value": "Altgeld Hall"
+        }
+    },
+    {
+        "name": {
+            "value": "Lincoln Hall"
+        }
+    },
+    {
+        "name": {
+            "value": "Mechanical Engineering Laboratory"
+        }
+    },
+    {
+        "name": {
+            "value": "Natural History Building"
+        }
+    },
+    {
+        "name": {
+            "value": "Observatory"
+        }
+    },
+    {
+        "name": {
+            "value": "Material Sciences Engineering Building"
+        }
+    },
+    {
+        "name": {
+            "value": "Everitt"
+        }
+    },
+    {
+        "name": {
+            "value": "Music Building"
+        }
+    },
+    {
+        "name": {
+            "value": "Stock Pavilion"
+        }
+    },
+    {
+        "name": {
+            "value": "Main Library"
+        }
+    },
+    {
+        "name": {
+            "value": "Transportation Building"
+        }
+    },
+    {
+        "name": {
+            "value": "Gregory Hall"
+        }
+    },
+    {
+        "name": {
+            "value": "English Building"
+        }
+    },
+    {
+        "name": {
+            "value": "Henry Administration Building"
+        }
+    },
+    {
+        "name": {
+            "value": "Nuclear Radiations Laboratory"
+        }
+    },
+    {
+        "name": {
+            "value": "Architecture Building"
+        }
+    },
+    {
+        "name": {
+            "value": "Krannert Center for the Performing Arts"
+        }
+    },
+    {
+        "name": {
+            "value": "David Kinley Hall"
+        }
+    },
+    {
+        "name": {
+            "value": "Ceramics Building"
+        }
+    },
+    {
+        "name": {
+            "value": "Vivarium"
+        }
+    },
+    {
+        "name": {
+            "value": "Huff Hall"
+        }
+    },
+    {
+        "name": {
+            "value": "Richard D and Anne Marie Irwin Doctoral Study Hall"
+        }
+    },
+    {
+        "name": {
+            "value": "Smith Music Hall"
+        }
+    },
+    {
+        "name": {
+            "value": "University High School"
+        }
+    },
+    {
+        "name": {
+            "value": "Children's Development Laboratory"
+        }
+    },
+    {
+        "name": {
+            "value": "University High Gym"
+        }
+    },
+    {
+        "name": {
+            "value": "Freer Hall"
+        }
+    },
+    {
+        "name": {
+            "value": "Illini Hall"
+        }
+    },
+    {
+        "name": {
+            "value": "Seitz Materials Research Laboratory"
+        }
+    },
+    {
+        "name": {
+            "value": "Loomis Laboratory"
+        }
+    },
+    {
+        "name": {
+            "value": "Horticulture Field Lab"
+        }
+    },
+    {
+        "name": {
+            "value": "Mumford Hall"
+        }
+    },
+    {
+        "name": {
+            "value": "Chemical and Life Sciences Laboratory"
+        }
+    },
+    {
+        "name": {
+            "value": "Student Arcade Building"
+        }
+    },
+    {
+        "name": {
+            "value": "Memorial Stadium"
+        }
+    },
+    {
+        "name": {
+            "value": "Agricultural Bioprocess Laboratory"
+        }
+    },
+    {
+        "name": {
+            "value": "IGPA"
+        }
+    },
+    {
+        "name": {
+            "value": "Childrens Research Center"
+        }
+    },
+    {
+        "name": {
+            "value": "Psychology"
+        }
+    },
+    {
+        "name": {
+            "value": "Plant Services NE"
+        }
+    },
+    {
+        "name": {
+            "value": "Snyder Hall"
+        }
+    },
+    {
+        "name": {
+            "value": "Scott Hall"
+        }
+    },
+    {
+        "name": {
+            "value": "Weston Hall"
+        }
+    },
+    {
+        "name": {
+            "value": "Hopkins Hall"
+        }
+    },
+    {
+        "name": {
+            "value": "Lundgren"
+        }
+    },
+    {
+        "name": {
+            "value": "Clark"
+        }
+    },
+    {
+        "name": {
+            "value": "Barton"
+        }
+    },
+    {
+        "name": {
+            "value": "Noble Hall"
+        }
+    },
+    {
+        "name": {
+            "value": "Van Doren"
+        }
+    },
+    {
+        "name": {
+            "value": "Taft"
+        }
+    },
+    {
+        "name": {
+            "value": "Alice Campbell Alumni Center"
+        }
+    },
+    {
+        "name": {
+            "value": "Superconductivity Laboratory"
+        }
+    },
+    {
+        "name": {
+            "value": "Undergrad Library"
+        }
+    },
+    {
+        "name": {
+            "value": "Presidents House"
+        }
+    },
+    {
+        "name": {
+            "value": "Blaisdell Hall"
+        }
+    },
+    {
+        "name": {
+            "value": "Saunders Hall"
+        }
+    },
+    {
+        "name": {
+            "value": "Babcock Hall"
+        }
+    },
+    {
+        "name": {
+            "value": "Carr Hall"
+        }
+    },
+    {
+        "name": {
+            "value": "PAR Food Building"
+        }
+    },
+    {
+        "name": {
+            "value": "Illini Union Bookstore"
+        }
+    },
+    {
+        "name": {
+            "value": "Computer Applications Building"
+        }
+    },
+    {
+        "name": {
+            "value": "Natural Resources Building"
+        }
+    },
+    {
+        "name": {
+            "value": "Nuclear Physics Lab"
+        }
+    },
+    {
+        "name": {
+            "value": "Busey Hall"
+        }
+    },
+    {
+        "name": {
+            "value": "Mechanical Engineering Building"
+        }
+    },
+    {
+        "name": {
+            "value": "Evans Hall"
+        }
+    },
+    {
+        "name": {
+            "value": "Roger Adams Laboratory"
+        }
+    },
+    {
+        "name": {
+            "value": "Nuclear Engineering Lab"
+        }
+    },
+    {
+        "name": {
+            "value": "ARC"
+        }
+    },
+    {
+        "name": {
+            "value": "Abbott Power Plant"
+        }
+    },
+    {
+        "name": {
+            "value": "Radio Transmitter Station"
+        }
+    },
+    {
+        "name": {
+            "value": "National Soybean Research Center"
+        }
+    },
+    {
+        "name": {
+            "value": "Levis"
+        }
+    },
+    {
+        "name": {
+            "value": "Geological Survey Laboratory"
+        }
+    },
+    {
+        "name": {
+            "value": "Coble Hall"
+        }
+    },
+    {
+        "name": {
+            "value": "Turner Hall Greenhouses"
+        }
+    },
+    {
+        "name": {
+            "value": "Natural Resources Garage"
+        }
+    },
+    {
+        "name": {
+            "value": "Natural Resources Building Greenhouse"
+        }
+    },
+    {
+        "name": {
+            "value": "Goodwin"
+        }
+    },
+    {
+        "name": {
+            "value": "Green"
+        }
+    },
+    {
+        "name": {
+            "value": "Burrill Hall"
+        }
+    },
+    {
+        "name": {
+            "value": "Illinois Simulator Lab"
+        }
+    },
+    {
+        "name": {
+            "value": "LAR Hall"
+        }
+    },
+    {
+        "name": {
+            "value": "Allen Hall"
+        }
+    },
+    {
+        "name": {
+            "value": "Dalkey Press"
+        }
+    },
+    {
+        "name": {
+            "value": "1205 Nevada"
+        }
+    },
+    {
+        "name": {
+            "value": "Coordinated Sciences Laboratory"
+        }
+    },
+    {
+        "name": {
+            "value": "1204 W Nevada"
+        }
+    },
+    {
+        "name": {
+            "value": "Hydrosystems Laboratory"
+        }
+    },
+    {
+        "name": {
+            "value": "Personnel Services Building"
+        }
+    },
+    {
+        "name": {
+            "value": "Law Building"
+        }
+    },
+    {
+        "name": {
+            "value": "1201 W Nevada"
+        }
+    },
+    {
+        "name": {
+            "value": "Bevier"
+        }
+    },
+    {
+        "name": {
+            "value": "Wohlers"
+        }
+    },
+    {
+        "name": {
+            "value": "Education Building"
+        }
+    },
+    {
+        "name": {
+            "value": "1401 S Maryland"
+        }
+    },
+    {
+        "name": {
+            "value": "Engineering Senior Design Laboratory"
+        }
+    },
+    {
+        "name": {
+            "value": "Animal Sciences Laboratory"
+        }
+    },
+    {
+        "name": {
+            "value": "Colonel Wolfe"
+        }
+    },
+    {
+        "name": {
+            "value": "Burnsides Laboratory"
+        }
+    },
+    {
+        "name": {
+            "value": "Central Receiving Building"
+        }
+    },
+    {
+        "name": {
+            "value": "Meat Sciences Laboratory"
+        }
+    },
+    {
+        "name": {
+            "value": "Foreign Language Building"
+        }
+    },
+    {
+        "name": {
+            "value": "Engineering Sciences Building"
+        }
+    },
+    {
+        "name": {
+            "value": "Rehab Education Center"
+        }
+    },
+    {
+        "name": {
+            "value": "Mailing Center"
+        }
+    },
+    {
+        "name": {
+            "value": "Daniels Hall"
+        }
+    },
+    {
+        "name": {
+            "value": "Wood Engineering"
+        }
+    },
+    {
+        "name": {
+            "value": "Entomology Lab"
+        }
+    },
+    {
+        "name": {
+            "value": "Fred Turner Student Services Building"
+        }
+    },
+    {
+        "name": {
+            "value": "Medical Sciences Building"
+        }
+    },
+    {
+        "name": {
+            "value": "Swanlund"
+        }
+    },
+    {
+        "name": {
+            "value": "1203 W Nevada"
+        }
+    },
+    {
+        "name": {
+            "value": "Optical Physics and Engineering Building"
+        }
+    },
+    {
+        "name": {
+            "value": "Turner Hall"
+        }
+    },
+    {
+        "name": {
+            "value": "Physical Plant Services Building"
+        }
+    },
+    {
+        "name": {
+            "value": "1001 W Nevada"
+        }
+    },
+    {
+        "name": {
+            "value": "Garage and Car Pool"
+        }
+    },
+    {
+        "name": {
+            "value": "Hydrogen Liquefier Building"
+        }
+    },
+    {
+        "name": {
+            "value": "Waste Management And Research Laboratory"
+        }
+    },
+    {
+        "name": {
+            "value": "1203 Half Nevada"
+        }
+    },
+    {
+        "name": {
+            "value": "Atmospheric Sciences"
+        }
+    },
+    {
+        "name": {
+            "value": "Speech and Hearing"
+        }
+    },
+    {
+        "name": {
+            "value": "Digital Computer Lab"
+        }
+    },
+    {
+        "name": {
+            "value": "Environmental Health and Safety"
+        }
+    },
+    {
+        "name": {
+            "value": "Housing Food Stores"
+        }
+    },
+    {
+        "name": {
+            "value": "School of Labor And Employment Relations"
+        }
+    },
+    {
+        "name": {
+            "value": "Art and Design"
+        }
+    },
+    {
+        "name": {
+            "value": "Krannert Art Museum"
+        }
+    },
+    {
+        "name": {
+            "value": "805 W Penn"
+        }
+    },
+    {
+        "name": {
+            "value": "Printing Services"
+        }
+    },
+    {
+        "name": {
+            "value": "1205 W Oregon"
+        }
+    },
+    {
+        "name": {
+            "value": "Orchard Place Apartments"
+        }
+    },
+    {
+        "name": {
+            "value": "Beckman Institute"
+        }
+    },
+    {
+        "name": {
+            "value": "OD North Laundry"
+        }
+    },
+    {
+        "name": {
+            "value": "North Chiller"
+        }
+    },
+    {
+        "name": {
+            "value": "Housing Maintenance Shop"
+        }
+    },
+    {
+        "name": {
+            "value": "OD South Laundry"
+        }
+    },
+    {
+        "name": {
+            "value": "Micro and Nano"
+        }
+    },
+    {
+        "name": {
+            "value": "1207 W Oregon"
+        }
+    },
+    {
+        "name": {
+            "value": "Morrill Hall"
+        }
+    },
+    {
+        "name": {
+            "value": "508 S Sixth"
+        }
+    },
+    {
+        "name": {
+            "value": "625 S. Wright"
+        }
+    },
+    {
+        "name": {
+            "value": "OD Community Building"
+        }
+    },
+    {
+        "name": {
+            "value": "912 S Fifth"
+        }
+    },
+    {
+        "name": {
+            "value": "Housing Warehouse"
+        }
+    },
+    {
+        "name": {
+            "value": "University Press Building"
+        }
+    },
+    {
+        "name": {
+            "value": "Plant Sciences Laboratory"
+        }
+    },
+    {
+        "name": {
+            "value": "Ubben"
+        }
+    },
+    {
+        "name": {
+            "value": "Dance Studio"
+        }
+    },
+    {
+        "name": {
+            "value": "Waste Transfer And Mat. Recovery Facility"
+        }
+    },
+    {
+        "name": {
+            "value": "Wardall Hall"
+        }
+    },
+    {
+        "name": {
+            "value": "Townsend Hall"
+        }
+    },
+    {
+        "name": {
+            "value": "ISR Lounge"
+        }
+    },
+    {
+        "name": {
+            "value": "Food Service"
+        }
+    },
+    {
+        "name": {
+            "value": "Police Training Institute Tactical"
+        }
+    },
+    {
+        "name": {
+            "value": "50 Gerty"
+        }
+    },
+    {
+        "name": {
+            "value": "Driver Training Facility"
+        }
+    },
+    {
+        "name": {
+            "value": "Vet Med Clinical Studies"
+        }
+    },
+    {
+        "name": {
+            "value": "State Water Survey Building 2"
+        }
+    },
+    {
+        "name": {
+            "value": "Fire Station"
+        }
+    },
+    {
+        "name": {
+            "value": "Sherman Hall"
+        }
+    },
+    {
+        "name": {
+            "value": "Fire Safety"
+        }
+    },
+    {
+        "name": {
+            "value": "Trelease"
+        }
+    },
+    {
+        "name": {
+            "value": "Oglesby"
+        }
+    },
+    {
+        "name": {
+            "value": "Florida Avenue Residence Hall Lounge Building"
+        }
+    },
+    {
+        "name": {
+            "value": "Astronomy Building"
+        }
+    },
+    {
+        "name": {
+            "value": "Track"
+        }
+    },
+    {
+        "name": {
+            "value": "Building Research Council Building"
+        }
+    },
+    {
+        "name": {
+            "value": "Biological Control Laboratory"
+        }
+    },
+    {
+        "name": {
+            "value": "Survey Storage 1"
+        }
+    },
+    {
+        "name": {
+            "value": "Natural History Survey Storage 2"
+        }
+    },
+    {
+        "name": {
+            "value": "Illinois Field"
+        }
+    },
+    {
+        "name": {
+            "value": "Natural Resources Studies Annex"
+        }
+    },
+    {
+        "name": {
+            "value": "Public Safety Building"
+        }
+    },
+    {
+        "name": {
+            "value": "Grainger Library"
+        }
+    },
+    {
+        "name": {
+            "value": "Agriculture Services Building"
+        }
+    },
+    {
+        "name": {
+            "value": "South Studio 2"
+        }
+    },
+    {
+        "name": {
+            "value": "South Studio 1"
+        }
+    },
+    {
+        "name": {
+            "value": "Library Information Sciences Building"
+        }
+    },
+    {
+        "name": {
+            "value": "Edward R Madigan Laboratory"
+        }
+    },
+    {
+        "name": {
+            "value": "South Studio 3"
+        }
+    },
+    {
+        "name": {
+            "value": "Temple Buell Hall"
+        }
+    },
+    {
+        "name": {
+            "value": "Motorcycle Safety"
+        }
+    },
+    {
+        "name": {
+            "value": "Veterinary Medicine Basic Science Building"
+        }
+    },
+    {
+        "name": {
+            "value": "Veterinary Medicine Chiller Plant"
+        }
+    },
+    {
+        "name": {
+            "value": "505 E Green"
+        }
+    },
+    {
+        "name": {
+            "value": "Japan House"
+        }
+    },
+    {
+        "name": {
+            "value": "PTI"
+        }
+    },
+    {
+        "name": {
+            "value": "Covenent"
+        }
+    },
+    {
+        "name": {
+            "value": "Atkins Tennis Center"
+        }
+    },
+    {
+        "name": {
+            "value": "CRCE"
+        }
+    },
+    {
+        "name": {
+            "value": "Dance Admin"
+        }
+    },
+    {
+        "name": {
+            "value": "South Studio 4"
+        }
+    },
+    {
+        "name": {
+            "value": "901 W Oregon"
+        }
+    },
+    {
+        "name": {
+            "value": "International Studies Building"
+        }
+    },
+    {
+        "name": {
+            "value": "Graduate Photo Studio"
+        }
+    },
+    {
+        "name": {
+            "value": "South Studio 7"
+        }
+    },
+    {
+        "name": {
+            "value": "Special Materials Storage Facility"
+        }
+    },
+    {
+        "name": {
+            "value": "Spurlock Museum"
+        }
+    },
+    {
+        "name": {
+            "value": "South Studio 6"
+        }
+    },
+    {
+        "name": {
+            "value": "Campbell Hall"
+        }
+    },
+    {
+        "name": {
+            "value": "ACES Funk Library"
+        }
+    },
+    {
+        "name": {
+            "value": "Admissions and Records Building"
+        }
+    },
+    {
+        "name": {
+            "value": "Bielfeldt Hall"
+        }
+    },
+    {
+        "name": {
+            "value": "Campus Rec Outdoor Center"
+        }
+    },
+    {
+        "name": {
+            "value": "Irwin Academic Building"
+        }
+    },
+    {
+        "name": {
+            "value": "Chanute Facility 918"
+        }
+    },
+    {
+        "name": {
+            "value": "Chanute Facility 927"
+        }
+    },
+    {
+        "name": {
+            "value": "Irwin Indoor Football Facility"
+        }
+    },
+    {
+        "name": {
+            "value": "ECE Building"
+        }
+    },
+    {
+        "name": {
+            "value": "909 W Oregon"
+        }
+    },
+    {
+        "name": {
+            "value": "Illini Plaza"
+        }
+    },
+    {
+        "name": {
+            "value": "201 W Curtis Suite 1"
+        }
+    },
+    {
+        "name": {
+            "value": "631 Green"
+        }
+    },
+    {
+        "name": {
+            "value": "1112 W University"
+        }
+    },
+    {
+        "name": {
+            "value": "Illini Center"
+        }
+    },
+    {
+        "name": {
+            "value": "510 Devonshire"
+        }
+    },
+    {
+        "name": {
+            "value": "WILL Monticello"
+        }
+    },
+    {
+        "name": {
+            "value": "Fire Sub Station"
+        }
+    },
+    {
+        "name": {
+            "value": "111 E Green"
+        }
+    },
+    {
+        "name": {
+            "value": "Eichelberger Field Press Box"
+        }
+    },
+    {
+        "name": {
+            "value": "Siebel Center"
+        }
+    },
+    {
+        "name": {
+            "value": "NCSA"
+        }
+    },
+    {
+        "name": {
+            "value": "Carle Forum Center"
+        }
+    },
+    {
+        "name": {
+            "value": "Native American House"
+        }
+    },
+    {
+        "name": {
+            "value": "Trade Center"
+        }
+    },
+    {
+        "name": {
+            "value": "Control Tower"
+        }
+    },
+    {
+        "name": {
+            "value": "Snow Removal Equipment Building"
+        }
+    },
+    {
+        "name": {
+            "value": "Quonset 7"
+        }
+    },
+    {
+        "name": {
+            "value": "Quonset 8"
+        }
+    },
+    {
+        "name": {
+            "value": "Willard Main Terminal"
+        }
+    },
+    {
+        "name": {
+            "value": "Willard Institute of Aviation"
+        }
+    },
+    {
+        "name": {
+            "value": "Airport Rescue and Firefighting"
+        }
+    },
+    {
+        "name": {
+            "value": "Caretakers House"
+        }
+    },
+    {
+        "name": {
+            "value": "OD Computer Lab"
+        }
+    },
+    {
+        "name": {
+            "value": "OD Health Clinic"
+        }
+    },
+    {
+        "name": {
+            "value": "Orchard Downs South Computer Lab"
+        }
+    },
+    {
+        "name": {
+            "value": "Horse Feed Storage"
+        }
+    },
+    {
+        "name": {
+            "value": "Agronomy South Farms Laboratory"
+        }
+    },
+    {
+        "name": {
+            "value": "Animal Science Shop and Storage Horse Farm"
+        }
+    },
+    {
+        "name": {
+            "value": "Animal Science K40 Facility"
+        }
+    },
+    {
+        "name": {
+            "value": "Seedhouse"
+        }
+    },
+    {
+        "name": {
+            "value": "Sheet Metal Barn"
+        }
+    },
+    {
+        "name": {
+            "value": "USDA Growth Chamber Building"
+        }
+    },
+    {
+        "name": {
+            "value": "Dairy Experimental Round Barn"
+        }
+    },
+    {
+        "name": {
+            "value": "Pollinatarium"
+        }
+    },
+    {
+        "name": {
+            "value": "Horticulture Research Laboratory"
+        }
+    },
+    {
+        "name": {
+            "value": "Milking Parlor"
+        }
+    },
+    {
+        "name": {
+            "value": "Swine Research Center Farm House"
+        }
+    },
+    {
+        "name": {
+            "value": "Poultry Office USDA Soybean Lab"
+        }
+    },
+    {
+        "name": {
+            "value": "Machinery Storage Building"
+        }
+    },
+    {
+        "name": {
+            "value": "Soybean Research Agronomy Farm"
+        }
+    },
+    {
+        "name": {
+            "value": "Aeronomy Field Station"
+        }
+    },
+    {
+        "name": {
+            "value": "Laser Radar Facility"
+        }
+    },
+    {
+        "name": {
+            "value": "Swine Research Center"
+        }
+    },
+    {
+        "name": {
+            "value": "Pesticides"
+        }
+    },
+    {
+        "name": {
+            "value": "Early Childhood Development Lab"
+        }
+    },
+    {
+        "name": {
+            "value": "Forbes Natural History"
+        }
+    },
+    {
+        "name": {
+            "value": "Z Building"
+        }
+    },
+    {
+        "name": {
+            "value": "Gateway Building"
+        }
+    },
+    {
+        "name": {
+            "value": "Technology Plaza"
+        }
+    },
+    {
+        "name": {
+            "value": "Soyface Trailer"
+        }
+    },
+    {
+        "name": {
+            "value": "Aerodynamics Research Laboratory"
+        }
+    },
+    {
+        "name": {
+            "value": "North Campus Parking Deck"
+        }
+    },
+    {
+        "name": {
+            "value": "Enterprise Works"
+        }
+    },
+    {
+        "name": {
+            "value": "Oak Street Library"
+        }
+    },
+    {
+        "name": {
+            "value": "Pond Site Laboratory"
+        }
+    },
+    {
+        "name": {
+            "value": "Z2"
+        }
+    },
+    {
+        "name": {
+            "value": "State Water Survey Building 1"
+        }
+    },
+    {
+        "name": {
+            "value": "State Water Survey Building 3"
+        }
+    },
+    {
+        "name": {
+            "value": "State Water Survey Building 4"
+        }
+    },
+    {
+        "name": {
+            "value": "State Water Survey Building 5"
+        }
+    },
+    {
+        "name": {
+            "value": "State Water Survey Building 6"
+        }
+    },
+    {
+        "name": {
+            "value": "State Water Survey Building 9"
+        }
+    },
+    {
+        "name": {
+            "value": "CDMS"
+        }
+    },
+    {
+        "name": {
+            "value": "203 W Curtis Suite 1"
+        }
+    },
+    {
+        "name": {
+            "value": "201 W Curtis Suite 2"
+        }
+    },
+    {
+        "name": {
+            "value": "Christopher Hall"
+        }
+    },
+    {
+        "name": {
+            "value": "State Water Survey Building 11"
+        }
+    },
+    {
+        "name": {
+            "value": "701 Greg"
+        }
+    },
+    {
+        "name": {
+            "value": "Asian American House"
+        }
+    },
+    {
+        "name": {
+            "value": "Beef and Sheep Field Lab"
+        }
+    },
+    {
+        "name": {
+            "value": "Calving Isolation"
+        }
+    },
+    {
+        "name": {
+            "value": "Bee Research"
+        }
+    },
+    {
+        "name": {
+            "value": "FSI Hazmat Storage Building"
+        }
+    },
+    {
+        "name": {
+            "value": "FSI Storage Building"
+        }
+    },
+    {
+        "name": {
+            "value": "FSI Apparatus Storage Building"
+        }
+    },
+    {
+        "name": {
+            "value": "FSI South Storage Building"
+        }
+    },
+    {
+        "name": {
+            "value": "Indoor Golf"
+        }
+    },
+    {
+        "name": {
+            "value": "Business Instructional Facility"
+        }
+    },
+    {
+        "name": {
+            "value": "528 Green"
+        }
+    },
+    {
+        "name": {
+            "value": "Engineering Senior Project Laboratory"
+        }
+    },
+    {
+        "name": {
+            "value": "Tech Fab"
+        }
+    },
+    {
+        "name": {
+            "value": "Child Care Facility"
+        }
+    },
+    {
+        "name": {
+            "value": "Conference Center"
+        }
+    },
+    {
+        "name": {
+            "value": "Poultry Cage House Building 3"
+        }
+    },
+    {
+        "name": {
+            "value": "Ashton Woods Apartment Office"
+        }
+    },
+    {
+        "name": {
+            "value": "Integrated Bioprocessing Research Laboratory"
+        }
+    },
+    {
+        "name": {
+            "value": "Poultry Specialized Research Building 2"
+        }
+    },
+    {
+        "name": {
+            "value": "Poultry Chick Lab Hatchery Building 1"
+        }
+    },
+    {
+        "name": {
+            "value": "Poultry Grower House 4"
+        }
+    },
+    {
+        "name": {
+            "value": "Poultry Breeder House Building 5"
+        }
+    },
+    {
+        "name": {
+            "value": "700 S Gregory"
+        }
+    },
+    {
+        "name": {
+            "value": "EBI Metal Shed"
+        }
+    },
+    {
+        "name": {
+            "value": "Petascale"
+        }
+    },
+    {
+        "name": {
+            "value": "Ikenberry Dining"
+        }
+    },
+    {
+        "name": {
+            "value": "Wassaja Hall"
+        }
+    },
+    {
+        "name": {
+            "value": "Bousfield Hall"
+        }
+    },
+    {
+        "name": {
+            "value": "Fruit Research"
+        }
+    },
+    {
+        "name": {
+            "value": "FSI Learning Resource Center"
+        }
+    },
+    {
+        "name": {
+            "value": "507 E Green"
+        }
+    },
+    {
+        "name": {
+            "value": "McFarland Carillon"
+        }
+    },
+    {
+        "name": {
+            "value": "901 W University"
+        }
+    },
+    {
+        "name": {
+            "value": "Tech Fab 2"
+        }
+    },
+    {
+        "name": {
+            "value": "EBI Shed"
+        }
+    },
+    {
+        "name": {
+            "value": "Robert Evers Lab"
+        }
+    },
+    {
+        "name": {
+            "value": "Eichelberger Field Locker Room"
+        }
+    },
+    {
+        "name": {
+            "value": "Illinois Field Locker Room"
+        }
+    },
+    {
+        "name": {
+            "value": "Biomass Drying Shed"
+        }
+    },
+    {
+        "name": {
+            "value": "Gable Home"
+        }
+    },
+    {
+        "name": {
+            "value": "Dixon Springs IFRC"
+        }
+    },
+    {
+        "name": {
+            "value": "Dixon Springs Arnold House"
+        }
+    },
+    {
+        "name": {
+            "value": "Dixon Springs Dorm And Meeting Hall"
+        }
+    },
+    {
+        "name": {
+            "value": "Dixon Springs Admin Office"
+        }
+    },
+    {
+        "name": {
+            "value": "Dixon Springs Green Barn"
+        }
+    },
+    {
+        "name": {
+            "value": "Dixon Springs Hart House"
+        }
+    },
+    {
+        "name": {
+            "value": "Dixon Springs Office and Lab"
+        }
+    },
+    {
+        "name": {
+            "value": "Crop Sciences Research Center"
+        }
+    },
+    {
+        "name": {
+            "value": "Carle Mills Cancer Center"
+        }
+    },
+    {
+        "name": {
+            "value": "Solar Decathlon House"
+        }
+    },
+    {
+        "name": {
+            "value": "Center for Wounded Vets"
+        }
+    },
+    {
+        "name": {
+            "value": "PNCL"
+        }
+    },
+    {
+        "name": {
+            "value": "Technology Development and Fabrication Center IV"
+        }
+    },
+    {
+        "name": {
+            "value": "Allerton Main House"
+        }
+    },
+    {
+        "name": {
+            "value": "Allerton Gate House"
+        }
+    },
+    {
+        "name": {
+            "value": "Allerton House in the Woods"
+        }
+    },
+    {
+        "name": {
+            "value": "Allerton Evergreen Lodge"
+        }
+    },
+    {
+        "name": {
+            "value": "Allerton Tool House"
+        }
+    },
+    {
+        "name": {
+            "value": "Allerton Visitor Center"
+        }
+    },
+    {
+        "name": {
+            "value": "Allerton 4H Camp Office"
+        }
+    },
+    {
+        "name": {
+            "value": "ICYT"
+        }
+    },
+    {
+        "name": {
+            "value": "M2"
+        }
+    },
+    {
+        "name": {
+            "value": "Oak Chiller"
+        }
+    },
+    {
+        "name": {
+            "value": "Vet Med Harrison"
+        }
+    },
+    {
+        "name": {
+            "value": "Chicago Architecture Studio"
+        }
+    },
+    {
+        "name": {
+            "value": "UIF Wacker Dr Chicago"
+        }
+    }
+]
