@@ -1,0 +1,16 @@
+
+welcome: Welcome to U.I.U.C. wireless checker. How can I help you? Say "help" to know about how to use me.
+
+help: You can search wireless connections information of U.I.U.C in different building. And, I will tell you how many Total wireless access points and how many Client Device to connect these points. To start a query, you need to tell me the building name. For example, you want to know the wireless information for Illini Union, you need to say "Illini Union". Finally, say "start" to  initiate the query. You can try it now.
+
+confirm-clue: Got it, {{ which_name }} {{ name }}. Anything else? Say "start" to initiate the query.
+
+answer-results: There are total {{ result["totalAP"] }} wireless access points and {{ result["clientdevices"] }} client devices to connect these points at {{ result["buildingname"] }}. 
+
+answer-noresults: I am sorry to tell you that there is no building name matching your query. You can start another query now, or say "stop" to end this session.
+
+error-not-understand: I am sorry that I couldn't understand you. Could you say it again?
+
+error-other: I am sorry to tell you that something has gone wrong. Please try again.
+
+goodbye: Goodbye.
