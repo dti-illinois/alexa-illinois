@@ -1,0 +1,46 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "wireless checker",
+            "intents": [
+                {
+                    "name": "AMAZON.FallbackIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "StartIntent",
+                    "slots": [],
+                    "samples": [
+                        "begin",
+                        "start"
+                    ]
+                },
+                {
+                    "name": "AnswerBuildingNameIntent",
+                    "slots": [
+                        {
+                            "name": "buildingname",
+                            "type": "BuildingName"
+                        }
+                    ],
+                    "samples": [
+                        "{buildingname}"
+                    ]
+                }
+            ],
+            "types": []
+        }
+    }
+}
