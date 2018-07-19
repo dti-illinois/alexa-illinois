@@ -2,9 +2,9 @@ import logging
 from flask import Flask, render_template
 from flask_ask import Ask, statement, question, session, request
 
-from courses import
-from answer import answer_entrees
+
 from answer import answer_details
+from answer import answer_sections
 
 
 app = Flask(__name__)
@@ -19,153 +19,154 @@ def lambda_handler(event, _context):
 @ask.launch
 def welcome():
     # init
-    session.attributes['filter'] = {}
-    welcome_msg = render_template('welcome')
+    welcome_msg = render_template('welcome') #TODO: welcome template
     return question(welcome_msg)
 
 
 @ask.intent("AMAZON.HelpIntent")
 def help():
-    help_msg = render_template('help')
+    help_msg = render_template('help')  #TODO: help template
     return question(help_msg)
 
 
 @ask.intent("AMAZON.FallbackIntent")
 def fallback():
-    fallback_msg = render_template('error-not-understand')
+    fallback_msg = render_template('error-not-understand') #TODO: fallback template
     return question(fallback_msg)
 
 
 @ask.intent('AMAZON.CancelIntent')
 @ask.intent("AMAZON.StopIntent")
 def stop():
-    goodbye_msg = render_template('goodbye')
+    goodbye_msg = render_template('goodbye') #TODO: goodbye template
     return statement(goodbye_msg)
 
+# User says year (2018), and then will be redirected to AnswerSemesterIntent
+@ask.intent('AnswerYearIntent', mapping={'year': 'year'})
+def answer_year(year):
+    try:
+        # get year from request
+        year = request.intent.slots.year.resolutions.resolutionsPerAuthority[0]['values'][0]['value']['id']
+        # store year into session
+        session.attributes['year'] = year
+        # ask other not answered specs
+        if 'semester' not in session.attributes.keys():
+            ask_msg = render_template('ask-semester')
+        elif 'subject' not in session.attributes.keys():
+            ask_msg = render_template('ask-subject')
+        elif 'course_num' not in session.attributes.keys():
+            ask_msg = render_template('ask-course_num')
+        elif 'section' not in session.attributes.keys():
+            ask_msg = render_template('ask-section')
+        else:
+            return answer_details()
+        return question(ask_msg)
+    except KeyError:
+        err_msg = render_template()
+        return statement(err_msg)
+    #TODO: Define MissingValueError
 
-@ask.intent("DetailIntent")
-def detail():
+
+# User says semester (fall), and then will be redirected to AnswerCourseNameIntent or AnswerSubjectIntent
+@ask.intent('AnswerSemesterIntent', mapping={'semester': 'semester'})
+def answer_semester():
+    try:
+        # get semester from request
+        semester = request.intent.slots.semester.resolutions.resolutionsPerAuthority[0]['values'][0]['value']['id']
+        # store year into session
+        session.attributes['semester'] = semester
+        # ask other not answered specs
+        if 'year' not in session.attributes.keys():
+            ask_msg = render_template('ask-year')
+        elif 'subject' not in session.attributes.keys():
+            ask_msg = render_template('ask-subject')
+        elif 'course_num' not in session.attributes.keys():
+            ask_msg = render_template('ask-course_num')
+        elif 'section' not in session.attributes.keys():
+            ask_msg = render_template('ask-section')
+        else:
+            return answer_details()
+        return question(ask_msg)
+    except KeyError:
+        ask_msg = render_template('error-not-understand')
+        return question(ask_msg)
+
+
+# User says course name (CS 225), and then will be redirected to AnswerSectionIntent
+@ask.intent("AnswerCourseNameIntent")
+def answer_course_name():
+    try:
+        # get subject and course_num from request
+        subject = request.intent.slots.subject.resolutions.resolutionsPerAuthority[0]['values'][0]['value']['id']
+        course_num = request.intent.slots.course_num.resolutions.resolutionsPerAuthority[0]['values'][0]['value']['id']
+        # store year into session
+        session.attributes['subject'] = subject
+        session.attributes['course_num'] = course_num
+        # ask other not answered specs
+        if 'year' not in session.attributes.keys():
+            ask_msg = render_template('ask-year')
+        elif 'semester' not in session.attributes.keys():
+            ask_msg = render_template('ask-semester')
+        elif 'section' not in session.attributes.keys():
+            ask_msg = render_template('ask-section')
+        else:
+            return answer_details()
+        return question(ask_msg)
+    except KeyError:
+        err_msg = render_template('error-other')
+        return statement(err_msg)
+
+# User says subject name (C.S. or Computer Science), and then will be redirected to AnswerCourseNumIntent
+@ask.intent("AnswerSubjectIntent")
+def answer_subject():
+    try:
+        # get subject and course_num from request
+        subject = request.intent.slots.subject.resolutions.resolutionsPerAuthority[0]['values'][0]['value']['id']
+        course_num = request.intent.slots.course_num.resolutions.resolutionsPerAuthority[0]['values'][0]['value']['id']
+        # store year into session
+        session.attributes['subject'] = subject
+        session.attributes['course_num'] = course_num
+        # ask other not answered specs
+        if 'year' not in session.attributes.keys():
+            ask_msg = render_template('ask-year')
+        elif 'semester' not in session.attributes.keys():
+            ask_msg = render_template('ask-semester')
+        elif 'section' not in session.attributes.keys():
+            ask_msg = render_template('ask-section')
+        else:
+            return answer_details()
+        return question(ask_msg)
+    except KeyError:
+        err_msg = render_template('error-other')
+        return statement(err_msg)
+
+# User says course number (225), and then will be redirected to AnswerSectionIntent
+# However, for here, we will provide the detail of section name
+@ask.intent("AnswerCourseNumIntent")
+def answer_course_num():
     try:
         return answer_details(session.attributes['filter'])
     except KeyError:
         err_msg = render_template('error-other')
         return statement(err_msg)
 
-
-@ask.intent('FilterIntent')
-def add_filter(filter_name):
-    filter_name = request.intent.slots.filter_name.resolutions.resolutionsPerAuthority[0]['values'][0]['value']['id']
-    if filter_name not in session.attributes['filter'].keys():
-        session.attributes['filter'][filter_name] = True
-    else:
-        session.attributes['filter'][filter_name] = not session.attributes['filter'][filter_name]
-    filter_msg = render_template('filter',
-                                 filter_name=filter_name,
-                                 flag=session.attributes['filter'][filter_name]
-                                 )
-    return question(filter_msg)
-
-
-@ask.intent("AskMainIntent", mapping={'hall_name': 'hall'})
-def ask_main(hall_name, meal, date):
+# What user says will be section number and I have to find corresponding crn
+@ask.intent("AnswerSectionIntent")
+def answer_crn():
     try:
-        # get all info from request
-        hall = request.intent.slots.hall.resolutions.resolutionsPerAuthority[0]['values'][0]['value']['id']
-        meal = request.intent.slots.meal.resolutions.resolutionsPerAuthority[0]['values'][0]['value']['id']
-        date = request.intent.slots.date.resolutions.resolutionsPerAuthority[0]['values'][0]['value']['id']
-        # store them in the session
-        session.attributes['hall_id'] = get_hall_id(hall)
-        session.attributes['hall_name'] = hall_name
-        session.attributes['meal'] = meal
-        session.attributes['date'] = date
-        return answer_entrees(session.attributes['filter'])
+        return answer_details()
     except KeyError:
-        ask_msg = render_template('error-not-understand')
-        return question(ask_msg)
+        err_msg = render_template('error-other')
+        return statement(err_msg)
 
-
-@ask.intent("InteractiveIntent")
-def interactive():
-    # init all variables
-    if 'hall_id' in session.attributes.keys():
-        session.attributes.pop('hall_id')
-    if 'hall_name' in session.attributes.keys():
-        session.attributes.pop('hall_name')
-    if 'meal' in session.attributes.keys():
-        session.attributes.pop('meal')
-    if 'date' in session.attributes.keys():
-        session.attributes.pop('date')
-    # render template
-    ask_hall_msg = render_template('inter-ask-hall')
-    return question(ask_hall_msg)
-
-
-@ask.intent("AnswerHallIntent", mapping={'hall_name': 'hall'})
-def answer_hall(hall_name):
+# TODO: try only if all above done
+@ask.intent("AnswerMainIntent")
+def answer_crn():
     try:
-        # get hall id from request
-        hall = request.intent.slots.hall.resolutions.resolutionsPerAuthority[0]['values'][0]['value']['id']
-        # store hall id and name into session
-        session.attributes['hall_id'] = get_hall_id(hall)
-        session.attributes['hall_name'] = hall_name
-        # ask other not answered specs
-        if 'hall_name' not in session.attributes.keys():
-            ask_msg = render_template('inter-ask-hall')
-        elif 'meal' not in session.attributes.keys():
-            ask_msg = render_template('inter-ask-meal')
-        elif 'date' not in session.attributes.keys():
-            ask_msg = render_template('inter-ask-date')
-        else:
-            return answer_entrees(session.attributes['filter'])
-        return question(ask_msg)
+        return answer_details(session.attributes['filter'])
     except KeyError:
-        ask_msg = render_template('error-not-understand')
-        return question(ask_msg)
-
-
-@ask.intent("AnswerMealIntent", mapping={'meal': 'meal'})
-def answer_meal(meal):
-    try:
-        # get meal name from request
-        meal = request.intent.slots.meal.resolutions.resolutionsPerAuthority[0]['values'][0]['value']['id']
-        # store meal into session
-        session.attributes['meal'] = meal
-        # ask other not answered specs
-        if 'hall_name' not in session.attributes.keys():
-            ask_msg = render_template('inter-ask-hall')
-        elif 'meal' not in session.attributes.keys():
-            ask_msg = render_template('inter-ask-meal')
-        elif 'date' not in session.attributes.keys():
-            ask_msg = render_template('inter-ask-date')
-        else:
-            return answer_entrees(session.attributes['filter'])
-        return question(ask_msg)
-    except KeyError:
-        ask_msg = render_template('error-not-understand')
-        return question(ask_msg)
-
-
-@ask.intent("AnswerDateIntent", mapping={'date': 'date'})
-def answer_date(date):
-    try:
-        # get date (today or tomorrow) from request
-        date = request.intent.slots.date.resolutions.resolutionsPerAuthority[0]['values'][0]['value']['id']
-        # store date into session
-        session.attributes['date'] = date
-        # ask other not answered specs
-        if 'hall_name' not in session.attributes.keys():
-            ask_msg = render_template('inter-ask-hall')
-        elif 'meal' not in session.attributes.keys():
-            ask_msg = render_template('inter-ask-meal')
-        elif 'date' not in session.attributes.keys():
-            ask_msg = render_template('inter-ask-date')
-        else:
-            return answer_entrees(session.attributes['filter'])
-        return question(ask_msg)
-    except KeyError:
-        ask_msg = render_template('error-not-understand')
-        return question(ask_msg)
-
+        err_msg = render_template('error-other')
+        return statement(err_msg)
 
 if __name__ == '__main__':
     app.run(debug=True)

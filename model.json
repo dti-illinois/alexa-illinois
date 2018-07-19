@@ -20,37 +20,7 @@
                     "samples": []
                 },
                 {
-                    "name": "crnIntent",
-                    "slots": [
-                        {
-                            "name": "crn",
-                            "type": "AMAZON.NUMBER"
-                        }
-                    ],
-                    "samples": []
-                },
-                {
-                    "name": "CourseNumIntent",
-                    "slots": [
-                        {
-                            "name": "courseNum",
-                            "type": "AMAZON.NUMBER"
-                        }
-                    ],
-                    "samples": []
-                },
-                {
-                    "name": "SemesterIntent",
-                    "slots": [
-                        {
-                            "name": "semester",
-                            "type": "Semester"
-                        }
-                    ],
-                    "samples": []
-                },
-                {
-                    "name": "YearIntent",
+                    "name": "AnswerYearIntent",
                     "slots": [
                         {
                             "name": "year",
@@ -60,16 +30,60 @@
                     "samples": []
                 },
                 {
-                    "name": "SubjectCodeIntent",
+                    "name": "AnswerSemesterIntent",
+                    "slots": [
+                        {
+                            "name": "semester",
+                            "type": "Semester"
+                        }
+                    ],
+                    "samples": []
+                },
+                {
+                    "name": "AnswerCourseNameIntent",
+                    "slots": [
+                        {
+                            "name": "subjectCode",
+                            "type": "subjectCode"
+                        },
+                        {
+                            "name": "courseNum",
+                            "type": "AMAZON.NUMBER"
+                        }
+                    ],
+                    "samples": [
+                        "{subjectCode}  {courseNum}"
+                    ]
+                },
+                {
+                    "name": "AnswerSubjectIntent",
                     "slots": [
                         {
                             "name": "subjectCode",
                             "type": "subjectCode"
                         }
                     ],
-                    "samples": [
-                        "{subjectCode}"
-                    ]
+                    "samples": []
+                },
+                {
+                    "name": "AnswerCourseNumIntent",
+                    "slots": [
+                        {
+                            "name": "courseNum",
+                            "type": "AMAZON.NUMBER"
+                        }
+                    ],
+                    "samples": []
+                },
+                {
+                    "name": "crnIntent",
+                    "slots": [
+                        {
+                            "name": "crn",
+                            "type": "AMAZON.NUMBER"
+                        }
+                    ],
+                    "samples": []
                 },
                 {
                     "name": "AskMainIntent",
