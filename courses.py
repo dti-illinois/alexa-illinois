@@ -12,8 +12,8 @@ def make_link(year, semester, subject, courseIdx, section = None):
         link += "/" + section
     return link
 
-def make_link(link, section):
-    link += "/" + section
+def make_link(link, crn):
+    link += "/" + crn
     return link
 
 def get_sections(link):
@@ -23,8 +23,14 @@ def get_sections(link):
     list = [(lambda x: x["#text"])(x) for x in json_items["ns2:course"]["sections"]["section"]]
     return list
 
-def get_lecture_detail(link):
+def get_crn(link, section):
     return
+
+
+def get_lecture_detail(link):
+    dict = {}
+
+    return dict
 
 
 
