@@ -1,13 +1,13 @@
 welcome: |
-  Welcome to C.U.M.T.D. schedule checker.
-  Say help for instruction.
-  How can I help you?
+  Welcome to the Champaign-Urbana Mass Transit District information skill.
+  For details on what I can answer, say "help".
+  How can I assist you today?
 
 stop_name: |
-  You are at {{ stop_name }}.
+  You are currently located at {{ stop_name }}.
 
 routes_by_stop: |
-  Here are the routes on service today.
+  Here are the routes in service today.
   {% for route in routes %}
     {{ route }}.
   {% endfor %}
@@ -16,11 +16,10 @@ route_on_service_by_date: |
   Line {{ route_id }} is {{ on_service }} on {{ date }}.
 
 remaining_time_by_route: |
-  Bus {{ info.headsign }} is comming in {{ info.time }} minutes.
+  Bus {{ info.headsign }} will be arriving in {{ info.time }} minutes.
 
 planned_trip: |
-  I recommend the following itinerary.
-  Estimite travel time {{ info.time }} minutes.
+  I recommend the following directions.
   {% if not info.walk == [] %}
   {% for item in info.walk %}
     Walk {{ item.directional }} from {{ item.start }} to
@@ -36,40 +35,42 @@ planned_trip: |
       {% endif %}
   {% endfor %}
   {% endif %}
-  If you want another route. Say change.
+  The estimated travel time is {{ info.time }} minutes.
+  If you would like to hear a different route, say "change".
 
 help: |
-  For stop name, say stop name.
-  For routes go through this stop, say routes on service.
-  For route service on specific date, ask whether route will be on service on date.
-  For expected coming time of route, ask when will route come.
-  For route to a stop, ask how to go do destination stop name.
-  Now, what information do you want?
+  For the name of your current stop, say "stop name".
+  To find out all routes that will stop at this location today, say "routes in service".
+  To find out what time a specific route will stop at this location, say "when will the green route come", for example.
+  You can also ask if a specific route will be running on any given day.
+  To get directions to a specific stop, say "how do I get to" and say your destination.
+  How can I assist you now?
 
 intent_error: |
-  Sorry I cannot understand your intent.
-  For instruction, say help.
+  I'm sorry, but I cannot understand that statement.
+  Can you repeat it please?
+  Or for further instruction, say "help".
 
 date_error: |
-  Sorry I cannot understand the date.
-  Can you this it again?
-  For instruction, say help.
+  I'm sorry, but I cannot understand that date.
+  Can you repeat it please?
+  Or for further instruction, say "help".
 
 route_id_error: |
-  Sorry the route does not go through this stop or is not on service today.
-  Please ask another route.
-  For instruction, say help.
+  I'm sorry, but that route does not stop at this location, or it may not be in service today.
+  Please ask for a different route.
+  Or for further instruction, say "help".
 
 stop_name_error: |
-  Sorry I cannot find that stop in the stop database.
-  Can you say it again.
-  For instruction, say help.
+  I'm sorry, but I do not recognize that stop.
+  Can you say it again?
+  Or for further instruction, say "help".
 
 trip_error: |
-  Sorry I do not have any planned trips.
-  For instruction, say help.
+  I'm sorry, but there are no available trips that meet your criteria.
+  For further instruction, say "help".
 
 no_bus_comming_error: |
-  Sorry I cannot find a {{ route }} comming in 30 minutes.
+  I'm sorry, but I cannot find a {{ route }} that will be arriving here within 30 minutes.
 
 bye: Goodbye
