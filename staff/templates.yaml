@@ -1,17 +1,39 @@
-welcome: Welcome to U.I.U.C. staff checker. How can I help you? Say "help" to know about how to use me.
+welcome: |
+  Welcome to the University of Illinois, Urbana-Champaign faculty/staff directory skill.
+  For details on what information I can provide, say "help".
+  How can I assist you today?
 
-help: You can search staff information of U.I.U.C with their firstnames, lastnames and middlenames. To start a query, you need to tell me what do you know about their names first. For example, you want to know the information about a staff called Will Smith, you need to say "first name Will" first, and after I get that, you then can say "last name Smith". It's okay if you don't give me one or two of the names, I'll do a blurry search and give you all that matches. Finally, say "start" to  initiate the query. You can try it out now.
+help: |
+  You can search for information about Illinois faculty and staff by using their first, last, or middle names. 
+  To build a query, I need one part of their name at a time so I know where to look.  
+  For example, if you're looking for information on a Will Smith, you would start by saying "first name Will". 
+  After I've got that name, you would then say "last name Smith". 
+  Finally, say "start" to initiate the query.
+  It's okay if you don't give me one or two of the names, I'll return all the matches. 
+  You can try it out now.
 
-confirm-clue: Got it, {{ which_name }} {{ name }}. Anything else? Say "start" to initiate the query.
+confirm-clue: |
+  Got it, {{ which_name }} {{ name }}. Do you know any additional parts of their name? Or you can say "start" to initiate the query.
 
-answer-results: There are {{ num_results }} results matching your query. They are {% for result in results %} {{ result['role'] }} {{ result["firstname"] }} {% if "middlename" in result.keys() %} {{ result["middlename"] }} {% endif %} {{ result["lastname"] }} from {{ result["departmentname"] }}, whose office is at "placeholder for office address", {% endfor %}. You can start another query now, or say "stop" to end this session.
+answer-results: |
+  There are {{ num_results }} results matching your query. 
+  They are {% for result in results %} {{ result['role'] }} {{ result["firstname"] }} {% if "middlename" in result.keys() %} {{ result["middlename"] }} {% endif %} 
+  {{ result["lastname"] }} from {{ result["departmentname"] }}, whose office is at "placeholder for office address", {% endfor %}. 
+  You can build another query now, or say "stop" to end this session.
 
-answer-manyresults: There are {{ num_results }} results matching your query, which is too many. Could you be a bit more specific? You can start another query now, or say "stop" to end this session.
+answer-manyresults: |
+  There are {{ num_results }} results matching your query, which is too many to return. 
+  Can you add any additional information? 
+  You can also build another query now, or say "stop" to end this session.
 
-answer-noresults: I am sorry to tell you that there is no staff's name matching your query. You can start another query now, or say "stop" to end this session.
+answer-noresults: |
+  I'm sorry, but I do not have anyone matching that query in my records. 
+  You can build another query now, or say "stop" to end this session.
 
-error-not-understand: I am sorry that I couldn't understand you. Could you say it again?
+error-not-understand: |
+  I'm sorry, but I couldn't understand that. Can you please say it again?
 
-error-other: I am sorry to tell you that something has gone wrong. Please try again.
+error-other: |
+  I'm sorry, but I've hit an error. Please try again.
 
 goodbye: Goodbye.
