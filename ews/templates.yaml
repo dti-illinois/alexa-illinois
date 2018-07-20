@@ -1,5 +1,5 @@
 welcome: |
-  Welcome to engineering workstation checker.
+  Welcome to the University of Illinois, Urbana-Champaign engineering workstation checker.
   Which building would you like information for?
 
 blue_search_success: |
@@ -7,31 +7,31 @@ blue_search_success: |
   {% for item in info %}
     {{ item.building }} room {{ item.room }} with {{ item.count }} available computers.
   {% endfor %}
-  Any other information do you want?
+  Is there any other information that you would like?
 
 blur_search_fail: |
-  Sorry, none of the lab have more than 5 available computers currently.
+  I am sorry, but none of the labs currently have more than 5 available computers.
   Please try again later.
-  Any other information do you want?
-
+  Is there any other information that you would like?
+  
 building_usage_info: |
   {{ building }} has {{lab_count}} labs and {{free_comp_count}} available computers.
   {% for room_name, room_info in building_info.items() %}
     {{ room_info.free_comp }} in room {{room_name}}.
   {% endfor %}
-  Any other information do you want?
+  Is there any other information that you would like?
 
 room_usage_info: |
   {{ building }} room {{ room }} has {{ room_info.machinecount }} computers.
   {{ room_info.inusecount }} of them are in use.
-  Any other information do you want?
+  Is there any other information that you would like?
 
 help: |
-  I can tell you the real time computer usage providing a building.
-  For example, you can ask, get information for digital computer lab.
-  Or, if you don't want a particular building, ask find me a lab.
-  For a list of supported buildings, ask what buildings are supported.
-  Now which building would you like information for?
+  I can provide the real time computer usage for a particular building.
+  For example, you can say "get information for digital computer lab".
+  Or if you don't need a specific building, you can say "find me a lab".
+  For a list of all supported buildings, you can say "which buildings are supported".
+  Which building would you like information for?
 
 list_buildings: |
   Currently, I know machine usage information for these buildings: {{ buildings }}
@@ -39,21 +39,21 @@ list_buildings: |
 
 reprompt_help: Which building would you like information for?
 
-reprompt_general: Any other information do you want?
+reprompt_general: Is there any other information that you would like?
 
 building_problem: |
-  Sorry I cannot find the building in the supported list.
-  For a list of supported buildings, ask what buildings are supported.
-  Any other information do you want?
+  I'm sorry, but I cannot find that building in the supported list.
+  For a list of all supported buildings, you can say "which buildings are supported".
+  Is there any other information that you would like?
 
 room_problem: |
-  Sorry I cannot find the building and room in the supported list.
-  For building information, ask information on builidng name
-  For a list of supported buildings, ask what buildings are supported.
-  Any other information do you want?
+  I'm sorry, but I cannot find that building and room in the supported list.
+  For information on a specific building, say "information on the building name".
+  Or for a list of all supported buildings, say "which buildings are supported".
+  Is there any other information that you would like?
 
 intent_problem: |
-  Sorry I cannot understand your intent.
-  For instruction, please ask what can you do?
+  I'm sorry, but I cannot find that building and room in the supported list.
+  If you need instruction, please ask me what I can do.
 
 bye: Goodbye
