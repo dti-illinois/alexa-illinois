@@ -3,8 +3,11 @@ from flask import Flask, render_template
 from flask_ask import Ask, statement, question, session, request
 
 
-from answer import answer_details
-from answer import answer_sections
+from answer import answer_class_details
+from answer import answer_course_details
+
+from courses import make_prelink
+from courses import get_sections
 
 
 app = Flask(__name__)
@@ -53,23 +56,23 @@ def answer_year(year):
         if 'semester' not in session.attributes.keys():
             ask_msg = render_template('ask-semester')
         elif 'subject' not in session.attributes.keys():
-            ask_msg = render_template('ask-subject')
+            ask_msg = render_template('ask-course')
         elif 'course_num' not in session.attributes.keys():
             ask_msg = render_template('ask-course_num')
         elif 'section' not in session.attributes.keys():
             ask_msg = render_template('ask-section')
         else:
-            return answer_details()
+            return answer_class_details()
         return question(ask_msg)
     except KeyError:
-        err_msg = render_template()
-        return statement(err_msg)
+        err_msg = render_template("error-not-understand")
+        return question(err_msg)
     #TODO: Define MissingValueError
 
 
 # User says semester (fall), and then will be redirected to AnswerCourseNameIntent or AnswerSubjectIntent
 @ask.intent('AnswerSemesterIntent', mapping={'semester': 'semester'})
-def answer_semester():
+def answer_semester(semester):
     try:
         # get semester from request
         semester = request.intent.slots.semester.resolutions.resolutionsPerAuthority[0]['values'][0]['value']['id']
@@ -79,13 +82,13 @@ def answer_semester():
         if 'year' not in session.attributes.keys():
             ask_msg = render_template('ask-year')
         elif 'subject' not in session.attributes.keys():
-            ask_msg = render_template('ask-subject')
+            ask_msg = render_template('ask-course')
         elif 'course_num' not in session.attributes.keys():
             ask_msg = render_template('ask-course_num')
         elif 'section' not in session.attributes.keys():
             ask_msg = render_template('ask-section')
         else:
-            return answer_details()
+            return answer_class_details()
         return question(ask_msg)
     except KeyError:
         ask_msg = render_template('error-not-understand')
@@ -93,12 +96,12 @@ def answer_semester():
 
 
 # User says course name (CS 225), and then will be redirected to AnswerSectionIntent
-@ask.intent("AnswerCourseNameIntent")
-def answer_course_name():
+@ask.intent("AnswerCourseNameIntent", mapping={"subject": "subject", "courseNum": "course_num"})
+def answer_course_name(subject, course_num):
     try:
         # get subject and course_num from request
-        subject = request.intent.slots.subject.resolutions.resolutionsPerAuthority[0]['values'][0]['value']['id']
-        course_num = request.intent.slots.course_num.resolutions.resolutionsPerAuthority[0]['values'][0]['value']['id']
+        subject = request.intent.slots.subject['value']
+        course_num = request.intent.slots.courseNum['value']
         # store year into session
         session.attributes['subject'] = subject
         session.attributes['course_num'] = course_num
@@ -108,65 +111,97 @@ def answer_course_name():
         elif 'semester' not in session.attributes.keys():
             ask_msg = render_template('ask-semester')
         elif 'section' not in session.attributes.keys():
-            ask_msg = render_template('ask-section')
+            link = make_prelink(year=session.attributes['year'], semester=session.attributes['semester'], subject=subject, courseIdx=course_num)
+            sections = get_sections(link)
+            ask_msg = render_template('ask-section', subject = subject, course_num=course_num, sections=sections)
         else:
-            return answer_details()
+            return answer_class_details()
         return question(ask_msg)
     except KeyError:
-        err_msg = render_template('error-other')
-        return statement(err_msg)
+        err_msg = render_template("error-not-understand")
+        return question(err_msg)
+
+@ask.intent("AnswerCourseDescriptionIntent")
+def answer_course_des():
+    try:
+        return answer_course_details()
+    except:
+        return
+
 
 # User says subject name (C.S. or Computer Science), and then will be redirected to AnswerCourseNumIntent
-@ask.intent("AnswerSubjectIntent")
+@ask.intent("AnswerSubjectIntent", mapping={"subject": "subject"})
 def answer_subject():
     try:
-        # get subject and course_num from request
+        # get subject from request
         subject = request.intent.slots.subject.resolutions.resolutionsPerAuthority[0]['values'][0]['value']['id']
-        course_num = request.intent.slots.course_num.resolutions.resolutionsPerAuthority[0]['values'][0]['value']['id']
         # store year into session
         session.attributes['subject'] = subject
-        session.attributes['course_num'] = course_num
         # ask other not answered specs
         if 'year' not in session.attributes.keys():
             ask_msg = render_template('ask-year')
         elif 'semester' not in session.attributes.keys():
             ask_msg = render_template('ask-semester')
+        elif 'course_num' not in session.attributes.keys():
+            ask_msg = render_template('ask-course_num')
         elif 'section' not in session.attributes.keys():
             ask_msg = render_template('ask-section')
         else:
-            return answer_details()
+            return answer_class_details()
         return question(ask_msg)
     except KeyError:
-        err_msg = render_template('error-other')
-        return statement(err_msg)
+        err_msg = render_template("error-not-understand")
+        return question(err_msg)
 
 # User says course number (225), and then will be redirected to AnswerSectionIntent
 # However, for here, we will provide the detail of section name
-@ask.intent("AnswerCourseNumIntent")
+@ask.intent("AnswerCourseNumIntent", mapping={"course_num": "course_num"})
 def answer_course_num():
     try:
-        return answer_details(session.attributes['filter'])
+        # get course_num from request
+        course_num = request.intent.slots.course_num.resolutions.resolutionsPerAuthority[0]['values'][0]['value']['id']
+        # store year into session
+        session.attributes['course_num'] = course_num
+        # ask other not answered specs
+        if 'year' not in session.attributes.keys():
+            ask_msg = render_template('ask-year')
+        elif 'semester' not in session.attributes.keys():
+            ask_msg = render_template('ask-semester')
+        elif 'subject' not in session.attributes.keys():
+            ask_msg = render_template('ask-course')
+        elif 'section' not in session.attributes.keys():
+            ask_msg = render_template('ask-section')
+        else:
+            return answer_class_details()
+        return question(ask_msg)
     except KeyError:
-        err_msg = render_template('error-other')
-        return statement(err_msg)
+        err_msg = render_template("error-not-understand")
+        return question(err_msg)
 
 # What user says will be section number and I have to find corresponding crn
-@ask.intent("AnswerSectionIntent")
-def answer_crn():
+@ask.intent("AnswerSectionIntent", mapping={"section": "section"})
+def answer_section():
     try:
-        return answer_details()
+        # get course_num from request
+        section = request.intent.slots.section.resolutions.resolutionsPerAuthority[0]['values'][0]['value']['name']
+        # store year into session
+        session.attributes['section'] = section
+        return answer_class_details()
     except KeyError:
-        err_msg = render_template('error-other')
-        return statement(err_msg)
+        err_msg = render_template("error-not-understand")
+        return question(err_msg)
 
-# TODO: try only if all above done
-@ask.intent("AnswerMainIntent")
-def answer_crn():
+
+@ask.intent("RestartIntent")
+def restart():
     try:
-        return answer_details(session.attributes['filter'])
+        # clean the session attributions
+        session.attributes = {}
+        answer_msg = render_template("restart")
+        return question(answer_msg)
     except KeyError:
-        err_msg = render_template('error-other')
-        return statement(err_msg)
+        err_msg = render_template("ask-restart")
+        return question(err_msg)
 
 if __name__ == '__main__':
     app.run(debug=True)
