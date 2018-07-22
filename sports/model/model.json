@@ -55,6 +55,10 @@
                         }
                     ],
                     "samples": [
+                        "Recent {n} games",
+                        "Past game",
+                        "Past {n} games",
+                        "Latest game",
                         "Recent {n} matches",
                         "Recent match",
                         "Past match",
@@ -90,6 +94,7 @@
                         }
                     ],
                     "samples": [
+                        "game on {date}",
                         "match on {date}",
                         "{date}"
                     ]
