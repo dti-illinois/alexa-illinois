@@ -6,9 +6,13 @@ from cumtd_utils import *
 app = Flask(__name__)
 ask = Ask(app, '/')
 
-with open('CUMTD_stops_name_key.json', 'r') as f:
+with open('data/CUMTD_stops_name_key.json', 'r') as f:
     stops = json.load(f)['stops']
 
+#deploy as a lambda function
+def lambda_handler(event, _context):
+    return ask.run_aws_lambda(event)
+    
 @ask.launch
 def launch():
     device_id = context.System.device.deviceId

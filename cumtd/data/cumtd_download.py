@@ -78,7 +78,4 @@ def _reformat_name(name):
     r = r.replace('Sixth', '6th')
     return r.lower()
 
-write_stops_to_file1()
-write_stops_to_file2()
-write_stops_to_file3()
-write_stops_to_slots()
+print('hh')
