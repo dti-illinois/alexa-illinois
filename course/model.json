@@ -1,0 +1,233 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "course checker",
+            "intents": [
+                {
+                    "name": "AMAZON.FallbackIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AnswerYearIntent",
+                    "slots": [
+                        {
+                            "name": "year",
+                            "type": "year"
+                        }
+                    ],
+                    "samples": [
+                        "year {year}"
+                    ]
+                },
+                {
+                    "name": "AnswerSemesterIntent",
+                    "slots": [
+                        {
+                            "name": "semester",
+                            "type": "semester"
+                        }
+                    ],
+                    "samples": [
+                        "semester {semester}",
+                        "{semester} semester"
+                    ]
+                },
+                {
+                    "name": "AnswerCourseNameIntent",
+                    "slots": [
+                        {
+                            "name": "courseNum",
+                            "type": "AMAZON.NUMBER"
+                        },
+                        {
+                            "name": "subject",
+                            "type": "subject"
+                        }
+                    ],
+                    "samples": [
+                        "{subject}  {courseNum}"
+                    ]
+                },
+                {
+                    "name": "AnswerCourseDescriptionIntent",
+                    "samples": [
+                        "course description"
+                    ]
+                },
+                {
+                    "name": "AnswerSubjectIntent",
+                    "slots": [
+                        {
+                            "name": "subject",
+                            "type": "subject"
+                        }
+                    ],
+                    "samples": [
+                        "{subject}"
+                    ]
+                },
+                {
+                    "name": "AnswerCourseNumIntent",
+                    "slots": [
+                        {
+                            "name": "courseNum",
+                            "type": "AMAZON.NUMBER"
+                        }
+                    ],
+                    "samples": [
+                        "{courseNum}"
+                    ]
+                },
+                {
+                    "name": "AnswerSectionIntent",
+                    "slots": [
+                        {
+                            "name": "section",
+                            "type": "section"
+                        }
+                    ],
+                    "samples": [
+                        "{section} section",
+                        "section {section}"
+                    ]
+                },
+                {
+                    "name": "RestartIntent",
+                    "slots": [],
+                    "samples": [
+                        "start a new one",
+                        "reopen",
+                        "start again",
+                        "restart"
+                    ]
+                }
+            ],
+            "types": [
+                {
+                    "name": "subject",
+                    "values": [
+                        {
+                            "id": "cs",
+                            "name": {
+                                "value": "CS",
+                                "synonyms": [
+                                    "Computer Science",
+                                    "C.S."
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "semester",
+                    "values": [
+                        {
+                            "id": "winter",
+                            "name": {
+                                "value": "Winter"
+                            }
+                        },
+                        {
+                            "id": "summer",
+                            "name": {
+                                "value": "Summer"
+                            }
+                        },
+                        {
+                            "id": "fall",
+                            "name": {
+                                "value": "Fall",
+                                "synonyms": [
+                                    "autumn"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "spring",
+                            "name": {
+                                "value": "Spring"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "section",
+                    "values": [
+                        {
+                            "id": "ayb",
+                            "name": {
+                                "value": "A.Y.B"
+                            }
+                        },
+                        {
+                            "id": "a",
+                            "name": {
+                                "value": "B"
+                            }
+                        },
+                        {
+                            "id": "b",
+                            "name": {
+                                "value": "A"
+                            }
+                        },
+                        {
+                            "id": "al2",
+                            "name": {
+                                "value": "AL2",
+                                "synonyms": [
+                                    "A.L.2"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "al1",
+                            "name": {
+                                "value": "AL1",
+                                "synonyms": [
+                                    "al1",
+                                    "A.L.1"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "year",
+                    "values": [
+                        {
+                            "id": "2018",
+                            "name": {
+                                "value": "2018"
+                            }
+                        },
+                        {
+                            "id": "2019",
+                            "name": {
+                                "value": "2019"
+                            }
+                        },
+                        {
+                            "id": "2004",
+                            "name": {
+                                "value": "2004"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

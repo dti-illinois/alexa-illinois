@@ -1,0 +1,19 @@
+welcome: Welcome to U.I.U.C alexa course explorer! I am here to provide you the information of specific course you want. Please first tell me the year you want. For example, if you want two thousands and eighteen, please say "year 2018".
+
+ask-semester: Sure! Then, please tell me which semester you want. For example, you can say "fall semester" or "semester fall".
+
+ask-course: Please tell me which course you want.
+
+ask-section: Okay. Here are the sections of {{ subject }} {{course_num}}, {{sections | join(", ")}}. Which one do you want?
+
+answer-section-details: Here are the details about the {{ course }} of {{ semester }} semester in {{ year }}.. Course title, {{ course_title}}, and is taught by {{ professor | join(", and ") }}. This course starts on {{ start_date }}, and ends on {{ end_date }}. {% if not days_of_week == []%} This course is delivered on each {{ days_of_week | join(", ") }}; {% endif %} from {{ start_time }} to {{ end_time }}, and the location is {{ location }}. You may "stop" to end this session, or say a year to start a new one.
+
+answer-course-details: Here
+
+error-not-found: I am sorry to tell you that there is no information about that yet. You can ask another one now, or  say "stop" to end this session.
+
+error-not-understand: I am sorry that I couldn't understand you. Could you say it again?
+
+error-other: I am sorry to tell you that something has gone wrong. Please try again.
+
+goodbye: Goodbye.
