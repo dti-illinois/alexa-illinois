@@ -3,7 +3,7 @@ import datetime
 
 from sports_consts import sports_list
 
-PATH = 'sports.json'
+PATH = 'data/sports.json'
 Mon = {
 '01': 'January',
 '02': 'February',

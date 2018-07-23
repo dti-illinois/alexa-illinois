@@ -2,10 +2,10 @@ import json
 import datetime
 
 from cumtd_consts import device_dict, device_id_my_pc
-from cumtd_api import CUMTD
+from data.cumtd_api import CUMTD
 
 mtd = CUMTD()
-with open('CUMTD_stops_id_key.json', 'r') as f:
+with open('data/CUMTD_stops_id_key.json', 'r') as f:
     stops_id_key = json.load(f)['stops']
 
 def get_stop_info(device_id):

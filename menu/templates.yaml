@@ -1,53 +1,55 @@
 welcome: |
-  Welcome to U.I.U.C. menu checker. How can I help you? Say "help" to know about how to use me.
+  Welcome to the University of Illinois, Urbana-Champaign dining skill. How may I help you?
+  Or you can say "help" for more details on what I can answer.
 
 help: |
-  The first thing you can do with me is to check the menu, specifically entrees in dining halls. 
-  For example, here are some sample questions. You can ask "What's the dinner today in P.A.R. dining hall?", "What's the the dinner today in P.A.R tomorrow", or simply "Dinner in P.A.R hall today".
-  Or you can say "interactive" to let me ask questions about your query. 
-  After you got your answers for the entrees, you can continue asking about other things about your query by saying "detail". 
-  sYou can try it out now.
+  To begin with, I can tell you the menus in all available dining halls.
+  For example, you can ask "What's for breakfast today in P.A.R. dining hall?", "What's for lunch in Ikenberry dining hall tomorrow?,
+  or simply "dinner in P.A.R. hall today".
+  Or you can say "interactive" and I will ask you questions to help with your search.
+  I can also provide more details about the selected meals if you say "details". 
+  Feel free to try it out now.
 
 filter: |
   Got it. {{ filter_name }} food filter is 
   {% if flag %} activated {% else %} turned off {% endif %}. 
   Say it again if you want to
   {% if flag %} turn it off {% else %} switch it on {% endif %}. 
-  You can carry on with your query now. 
+  You can continue your query now. 
 
 inter-ask-hall: |
-  Sure. Which dining hall's menu do you want to know?
+  Sure. Which dining hall's menu would you like to hear?
 
 inter-ask-meal: |
-  Ok. Which meal do you want to know, breakfast, lunch, or dinner?
+  Ok. Which meal would you like to hear: breakfast, lunch, or dinner?
 
 inter-ask-date: |
-  Got it. Do you want it today or tomorrow?
+  Got it. Are you interested in today or tomorrow?
 
 answer-entrees-ask: |
   Sure, {{ date }} in {{ hall }} for {{ meal }}'s entrees, there are {{ results | join(", ") }}. \
-  If you want to know more details such as starches, salads, soups and desserts, say "details". 
+  If you want to know more details such as starches, salads, soups or desserts, say "details". 
   You can also start another query now, or say "stop" to end this session.
 
 answer-details: |
-  Here are the details about the {{ meal }} in {{ hall }} {{ date }}. 
+  Here are the details about {{ meal }} in {{ hall }} {{ date }}. 
   For entrees, there are {{ results_entrees | join(", ") }}; {% if not results_starches == [] %} 
   For starches, there are {{ results_starches | join(", ") }};  {% endif %} {% if not results_vegetables == [] %} 
   For vegetables, there are {{ results_vegetables | join(", ") }}; {% endif %} {% if not results_salads == [] %} 
   For salads, there are {{ results_salads | join(", ") }}; {% endif %} {% if not results_soups == [] %} 
   For soups, there are {{ results_soups | join(", ") }}; {% endif %} {% if not results_desserts == [] %} 
   For desserts, there are {{ results_desserts | join(", ") }}. {% endif %} 
-  You can ask another one now, or say "stop" to end this session.
+  You can continue with another query, or say "stop" to end this session.
 
 error-not-found: |
-  I am sorry to tell you that there is no information about that yet. 
-  You can ask another one now, or  say "stop" to end this session.
+  I'm sorry, but I do not have the answer to that right now. 
+  You can continue with another query, or say "stop" to end this session.
 
 error-not-understand: |
-  I am sorry that I couldn't understand you. Could you say it again?
+  I'm sorry, but I did not understand that. Could you say it again please?
 
 error-other: |
-  I am sorry to tell you that something has gone wrong. Please try again.
+  I'm sorry, but there is currently an error. Please try again.
 
 goodbye: |
   Goodbye.

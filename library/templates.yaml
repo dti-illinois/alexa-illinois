@@ -1,21 +1,21 @@
 welcome: |
-  Welcome to U.I.U.C. library checker. How can I help you?
+  Welcome to the University of Illinois, Urbana-Champaign library information skill. How May I help you?
 
 reprompt: |
-  You may ask a question now, or say stop to end this session.
+  You may ask a question now, or say "stop" to end this session.
 
 help: |
-  Take Grainger Library as an example.
-  Say "Grainger Library information" to know about some basic information about the library, such as consulting hours, phone number, email and address.
-  Say "Grainger Library opening hours tomorrow" to know about the opening hours of the library on whatever date.
-  Say "Grainger Library next seven days" to know about the opening hours of the library next seven days, including today.
-  There are more expressions that are supported to do the above. 
-  Say "sample questions" if you want to listen to some other sample expressions.
-  Say "catalog" to see what libraries are supported.
+  Let's use Grainger Library as an example.
+  Say "Grainger Library information" to get basic information about the library, such as consulting hours, phone number, email and address.
+  Say "Grainger Library opening hours tomorrow" to get tomorrow's opening hours of Grainger library, or for any other specific date.
+  Say "Grainger Library next seven days" to get the opening hours of Grainger library for the next seven days, including today.
+  There are many more questions that I can answer. 
+  For example, say "sample questions" if you want to hear other valid expressions.
+  Or say "catalog" to see which libraries are supported.
   You can try it out now.
 
 sample-questions: |
-  To ask basic information, you can say 
+  For basic information, you can say 
     "Grainger Library information", 
     "information of Grainger Library", 
     "information Grainger Library".
@@ -23,27 +23,28 @@ sample-questions: |
     "Grainger Library opening hours tomorrow", 
     "Grainger Library tomorrow opening hours", 
     "opening hours of Grainger Library tomorrow", 
-    "What's the opening hours of Grainger Library tomorrow",
-    "What's Grainger Library's opening hours tomorrow".
-  To ask about opening hours of a library next seven days, you can say
+    "What are the opening hours of Grainger Library tomorrow",
+    "What are Grainger Library's opening hours tomorrow".
+  To ask about opening hours for a library over the next seven days, you can say
     "Grainger Library next seven days",
     "Next seven days Grainger Library",
     "Next seven days of Grainger Library".
+  Or you can ask about any other specific library.
   You can try it out now.
 
 answer-catalog: |
-  Here are all the libraries we support. They are 
+  Here are all the libraries I support. They include 
   {% for item in catalog %} {{item+"."}} {% endfor %}.
   You can ask a question now.
 
 answer-basic-info: |
-  Here is the information of {{library}}.
+  Here is the information for {{library}}.
   Email: {{info['contact_email']}}.
   Phone number: {{info['phone_number']}}.
   Consulting hours: {{info['consulting_hours']}}.
   Building name: {{info['building_name']}}.
   Address: {{info['street_address']}}.
-  You can ask another question now, or say stop to end this session.
+  You can ask another question now, or say "stop" to end this session.
 
 answer-with-date: |
   Sure. On {{date_str}}, 
@@ -51,10 +52,10 @@ answer-with-date: |
   {% elif opening_hours == 'To Be Announced' %} the opening hours of {{library}} is not announced yet.
   {% else %} {{library}} is open from {{opening_hours}}.
   {% endif %}
-  You can ask another question now, or say stop to end this session.
+  You can ask another question now, or say "stop" to end this session.
 
 answer-next-seven-days: |
-  Sure, Opening hours of {{library}} next seven days are as follows.  
+  Sure, Opening hours of {{library}} for the next seven days are as follows.  
   {% for i in range(length) %}
     {% if date_from[i] == date_to[i] %}
       {% if date_from[i] == 'today' or date_from[i] == 'tomorrow' %} {{date_from[i]}} 
@@ -67,19 +68,19 @@ answer-next-seven-days: |
     {% else %} it is open from {{opening_hours[i]}}. 
     {% endif %}
   {% endfor %}
-  You can ask another question now, or say stop to end this session.
+  You can ask another question now, or say "stop" to end this session.
 
 error-not-found: |
-  I am sorry to tell you that there is no information about that yet. 
-  You can ask another question now, or  say "stop" to end this session.
+  Sorry, but there is no available information on that topic. 
+  You can ask another question now, or say "stop" to end this session.
 
 error-not-understand: |
-  I am sorry that I couldn't understand you. Could you say it again?
+  Sorry, but I did not understand that. Could you ask me again?
 
 error-no-match: |
-  I am sorry that No libraries or dates is matching your input. Could you say it again?
+  Sorry, but there are no libraries or dates that match your query. Could you ask me again?
 
 error-other: |
-  I am sorry to tell you that something has gone wrong. Please try again.
+  Sorry, but I have encountered an error. Please try again.
 
 goodbye: Goodbye.

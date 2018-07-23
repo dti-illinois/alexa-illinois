@@ -3,14 +3,14 @@ import json
 
 from ews_consts import BUILDINGS, ROOMS
 
-EWS_URL = 'https://my.engr.illinois.edu/labtrack/util_data_json.asp'
+EWS_URL = 'https://ma28a8yjr8.execute-api.us-west-2.amazonaws.com/dev/ews-status'
 
 #these buildings only have  a limited number of computers
 dummy_building_list = ['FAR', 'ESPL', 'PAR', 'REC', 'SDRP']
 #buildings that are currently supported
 inuse_building_list = ['digital computer lab', 'electrical and computer engineering building',
 'engineering hall', 'grainger engineering library', 'mechanical engineering lab',
-'siebel center', 'Transportation building']
+'siebel center', 'transportation building']
 
 def make_blur_search():
     result = []
@@ -38,8 +38,6 @@ def get_building_info(building):
     return raw, lab_count, total_free_comp
 
 def get_room_info(building, room):
-    print(building)
-    print(room)
     if building not in BUILDINGS.keys() or room not in ROOMS.keys():
         return None
     building = BUILDINGS[building]
@@ -85,9 +83,3 @@ def _parse_ews_json(ews_json):
             'machinecount': item['machinecount']
         }
     return result
-
-#print(json.dumps(_get_ews_usage(), indent=4))
-#print(get_supported_buildings())
-#a, b, c =get_building_info('digital computer lab')
-#print(json.dumps(a, indent=4))
-#print(make_blur_search())
