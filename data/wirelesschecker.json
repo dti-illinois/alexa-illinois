@@ -1,45 +1,45 @@
 {
     "data": [
         {
-            "buildingname": "Building Name",
-            "buildingnumber": "Building Number",
-            "clientdevices": "Client Devices",
-            "totalAP": "Total APs"
+            "buildingname": "Poultry Office USDA Soybean Lab",
+            "buildingnumber": "0974",
+            "clientdevices": "0",
+            "totalAP": "3"
         },
         {
-            "buildingname": "Nugent Hall",
-            "buildingnumber": "1248",
-            "clientdevices": "47",
-            "totalAP": "122"
+            "buildingname": "Solar Decathlon House",
+            "buildingnumber": "1485",
+            "clientdevices": "0",
+            "totalAP": "1"
+        },
+        {
+            "buildingname": "Illini Union",
+            "buildingnumber": "0023",
+            "clientdevices": "311",
+            "totalAP": "133"
         },
         {
             "buildingname": "State Farm Center",
             "buildingnumber": "0166",
-            "clientdevices": "50",
+            "clientdevices": "47",
             "totalAP": "195"
         },
         {
             "buildingname": "Vet Med Teaching Hospital",
             "buildingnumber": "0292",
-            "clientdevices": "282",
-            "totalAP": "150"
-        },
-        {
-            "buildingname": "Illini Union",
-            "buildingnumber": "0023",
-            "clientdevices": "395",
-            "totalAP": "134"
+            "clientdevices": "318",
+            "totalAP": "148"
         },
         {
             "buildingname": "Flagg Hall",
             "buildingnumber": "0089",
-            "clientdevices": "8",
+            "clientdevices": "11",
             "totalAP": "39"
         },
         {
             "buildingname": "Atrel 1611 Titan",
             "buildingnumber": "0382",
-            "clientdevices": "23",
+            "clientdevices": "24",
             "totalAP": "13"
         },
         {
@@ -51,115 +51,115 @@
         {
             "buildingname": "Davenport Hall",
             "buildingnumber": "0001",
-            "clientdevices": "85",
+            "clientdevices": "101",
             "totalAP": "88"
         },
         {
             "buildingname": "Art Annex East 2",
             "buildingnumber": "0002",
-            "clientdevices": "11",
+            "clientdevices": "14",
             "totalAP": "5"
         },
         {
             "buildingname": "Mckinley Health Clinic",
             "buildingnumber": "0003",
-            "clientdevices": "116",
+            "clientdevices": "103",
             "totalAP": "82"
         },
         {
             "buildingname": "Harding Band Building",
             "buildingnumber": "0004",
-            "clientdevices": "44",
+            "clientdevices": "8",
             "totalAP": "19"
         },
         {
             "buildingname": "Kenney Gym Annex",
             "buildingnumber": "0005",
-            "clientdevices": "28",
+            "clientdevices": "13",
             "totalAP": "4"
         },
         {
             "buildingname": "Armory",
             "buildingnumber": "0006",
-            "clientdevices": "125",
+            "clientdevices": "134",
             "totalAP": "140"
         },
         {
             "buildingname": "Foellinger Auditoruim",
             "buildingnumber": "0007",
-            "clientdevices": "6",
+            "clientdevices": "11",
             "totalAP": "33"
         },
         {
             "buildingname": "Agricultural Engineering Sciences Building",
             "buildingnumber": "0008",
-            "clientdevices": "100",
+            "clientdevices": "71",
             "totalAP": "65"
         },
         {
             "buildingname": "Chem Annex",
             "buildingnumber": "0010",
-            "clientdevices": "32",
+            "clientdevices": "20",
             "totalAP": "25"
         },
         {
             "buildingname": "Kiln House",
             "buildingnumber": "0011",
-            "clientdevices": "1",
+            "clientdevices": "0",
             "totalAP": "8"
         },
         {
             "buildingname": "Noyes",
             "buildingnumber": "0012",
-            "clientdevices": "179",
+            "clientdevices": "102",
             "totalAP": "110"
         },
         {
             "buildingname": "Talbot Lab",
             "buildingnumber": "0013",
-            "clientdevices": "228",
+            "clientdevices": "207",
             "totalAP": "83"
         },
         {
             "buildingname": "Ice Arena",
             "buildingnumber": "0014",
-            "clientdevices": "13",
+            "clientdevices": "4",
             "totalAP": "3"
         },
         {
             "buildingname": "Engineering Hall",
             "buildingnumber": "0015",
-            "clientdevices": "79",
+            "clientdevices": "112",
             "totalAP": "54"
         },
         {
             "buildingname": "Advanced Computation Building",
             "buildingnumber": "0017",
-            "clientdevices": "9",
+            "clientdevices": "15",
             "totalAP": "18"
         },
         {
             "buildingname": "Art Annex",
             "buildingnumber": "0018",
-            "clientdevices": "24",
+            "clientdevices": "26",
             "totalAP": "28"
         },
         {
             "buildingname": "Physiology Research Lab",
             "buildingnumber": "0020",
-            "clientdevices": "3",
+            "clientdevices": "2",
             "totalAP": "3"
         },
         {
             "buildingname": "Kenney Gym",
             "buildingnumber": "0021",
-            "clientdevices": "51",
+            "clientdevices": "43",
             "totalAP": "7"
         },
         {
             "buildingname": "Newmark",
             "buildingnumber": "0024",
-            "clientdevices": "240",
+            "clientdevices": "306",
             "totalAP": "117"
         },
         {
@@ -171,31 +171,31 @@
         {
             "buildingname": "Altgeld Hall",
             "buildingnumber": "0026",
-            "clientdevices": "208",
+            "clientdevices": "107",
             "totalAP": "55"
         },
         {
             "buildingname": "Lincoln Hall",
             "buildingnumber": "0027",
-            "clientdevices": "187",
+            "clientdevices": "149",
             "totalAP": "114"
         },
         {
             "buildingname": "Mechanical Engineering Laboratory",
             "buildingnumber": "0029",
-            "clientdevices": "222",
+            "clientdevices": "225",
             "totalAP": "100"
         },
         {
             "buildingname": "Natural History Building",
             "buildingnumber": "0032",
-            "clientdevices": "205",
+            "clientdevices": "142",
             "totalAP": "127"
         },
         {
             "buildingname": "Observatory",
             "buildingnumber": "0033",
-            "clientdevices": "14",
+            "clientdevices": "15",
             "totalAP": "10"
         },
         {
@@ -207,115 +207,115 @@
         {
             "buildingname": "Everitt",
             "buildingnumber": "0037",
-            "clientdevices": "71",
+            "clientdevices": "109",
             "totalAP": "100"
         },
         {
             "buildingname": "Music Building",
             "buildingnumber": "0039",
-            "clientdevices": "138",
+            "clientdevices": "58",
             "totalAP": "85"
         },
         {
             "buildingname": "Stock Pavilion",
             "buildingnumber": "0040",
-            "clientdevices": "6",
+            "clientdevices": "3",
             "totalAP": "9"
         },
         {
             "buildingname": "Main Library",
             "buildingnumber": "0041",
-            "clientdevices": "219",
+            "clientdevices": "240",
             "totalAP": "116"
         },
         {
             "buildingname": "Transportation Building",
             "buildingnumber": "0042",
-            "clientdevices": "59",
+            "clientdevices": "69",
             "totalAP": "35"
         },
         {
             "buildingname": "Gregory Hall",
             "buildingnumber": "0043",
-            "clientdevices": "93",
+            "clientdevices": "106",
             "totalAP": "99"
         },
         {
             "buildingname": "English Building",
             "buildingnumber": "0044",
-            "clientdevices": "71",
+            "clientdevices": "59",
             "totalAP": "89"
         },
         {
             "buildingname": "Henry Administration Building",
             "buildingnumber": "0046",
-            "clientdevices": "134",
+            "clientdevices": "111",
             "totalAP": "101"
         },
         {
             "buildingname": "Nuclear Radiations Laboratory",
             "buildingnumber": "0048",
-            "clientdevices": "23",
+            "clientdevices": "45",
             "totalAP": "6"
         },
         {
             "buildingname": "Architecture Building",
             "buildingnumber": "0050",
-            "clientdevices": "48",
+            "clientdevices": "44",
             "totalAP": "52"
         },
         {
             "buildingname": "Krannert Center for the Performing Arts",
             "buildingnumber": "0052",
-            "clientdevices": "190",
+            "clientdevices": "93",
             "totalAP": "116"
         },
         {
             "buildingname": "David Kinley Hall",
             "buildingnumber": "0054",
-            "clientdevices": "102",
+            "clientdevices": "47",
             "totalAP": "76"
         },
         {
             "buildingname": "Ceramics Building",
             "buildingnumber": "0055",
-            "clientdevices": "25",
+            "clientdevices": "26",
             "totalAP": "41"
         },
         {
             "buildingname": "Vivarium",
             "buildingnumber": "0056",
-            "clientdevices": "30",
+            "clientdevices": "17",
             "totalAP": "15"
         },
         {
             "buildingname": "Huff Hall",
             "buildingnumber": "0058",
-            "clientdevices": "102",
+            "clientdevices": "88",
             "totalAP": "75"
         },
         {
             "buildingname": "Richard D and Anne Marie Irwin Doctoral Study Hall",
             "buildingnumber": "0059",
-            "clientdevices": "35",
+            "clientdevices": "34",
             "totalAP": "9"
         },
         {
             "buildingname": "Smith Music Hall",
             "buildingnumber": "0060",
-            "clientdevices": "12",
+            "clientdevices": "1",
             "totalAP": "37"
         },
         {
             "buildingname": "University High School",
             "buildingnumber": "0061",
-            "clientdevices": "34",
+            "clientdevices": "28",
             "totalAP": "31"
         },
         {
             "buildingname": "Children's Development Laboratory",
             "buildingnumber": "0062",
-            "clientdevices": "17",
+            "clientdevices": "21",
             "totalAP": "15"
         },
         {
@@ -327,98 +327,98 @@
         {
             "buildingname": "Freer Hall",
             "buildingnumber": "0064",
-            "clientdevices": "53",
+            "clientdevices": "47",
             "totalAP": "41"
         },
         {
             "buildingname": "Illini Hall",
             "buildingnumber": "0065",
-            "clientdevices": "46",
+            "clientdevices": "47",
             "totalAP": "34"
         },
         {
             "buildingname": "Seitz Materials Research Laboratory",
             "buildingnumber": "0066",
-            "clientdevices": "105",
+            "clientdevices": "163",
             "totalAP": "102"
         },
         {
             "buildingname": "Loomis Laboratory",
             "buildingnumber": "0067",
-            "clientdevices": "284",
+            "clientdevices": "314",
             "totalAP": "134"
         },
         {
             "buildingname": "Horticulture Field Lab",
             "buildingnumber": "0068",
-            "clientdevices": "10",
+            "clientdevices": "13",
             "totalAP": "14"
         },
         {
             "buildingname": "Mumford Hall",
             "buildingnumber": "0069",
-            "clientdevices": "110",
+            "clientdevices": "128",
             "totalAP": "81"
         },
         {
             "buildingname": "Chemical and Life Sciences Laboratory",
             "buildingnumber": "0070",
-            "clientdevices": "288",
+            "clientdevices": "323",
             "totalAP": "154"
         },
         {
             "buildingname": "Student Arcade Building",
             "buildingnumber": "0071",
-            "clientdevices": "52",
+            "clientdevices": "50",
             "totalAP": "17"
         },
         {
             "buildingname": "Memorial Stadium",
             "buildingnumber": "0072",
-            "clientdevices": "111",
+            "clientdevices": "186",
             "totalAP": "98"
         },
         {
             "buildingname": "Agricultural Bioprocess Laboratory",
             "buildingnumber": "0073",
-            "clientdevices": "14",
+            "clientdevices": "23",
             "totalAP": "12"
         },
         {
             "buildingname": "IGPA",
             "buildingnumber": "0074",
-            "clientdevices": "16",
+            "clientdevices": "9",
             "totalAP": "8"
         },
         {
             "buildingname": "Childrens Research Center",
             "buildingnumber": "0075",
-            "clientdevices": "24",
+            "clientdevices": "23",
             "totalAP": "38"
         },
         {
             "buildingname": "Psychology",
             "buildingnumber": "0076",
-            "clientdevices": "174",
+            "clientdevices": "139",
             "totalAP": "128"
         },
         {
             "buildingname": "Plant Services NE",
             "buildingnumber": "0077",
-            "clientdevices": "3",
+            "clientdevices": "0",
             "totalAP": "3"
         },
         {
             "buildingname": "Snyder Hall",
             "buildingnumber": "0078",
-            "clientdevices": "14",
+            "clientdevices": "20",
             "totalAP": "97"
         },
         {
             "buildingname": "Scott Hall",
             "buildingnumber": "0079",
-            "clientdevices": "9",
-            "totalAP": "4"
+            "clientdevices": "11",
+            "totalAP": "44"
         },
         {
             "buildingname": "Weston Hall",
@@ -429,25 +429,25 @@
         {
             "buildingname": "Hopkins Hall",
             "buildingnumber": "0084",
-            "clientdevices": "18",
+            "clientdevices": "4",
             "totalAP": "50"
         },
         {
             "buildingname": "Lundgren",
             "buildingnumber": "0086",
-            "clientdevices": "8",
+            "clientdevices": "4",
             "totalAP": "38"
         },
         {
             "buildingname": "Clark",
             "buildingnumber": "0087",
-            "clientdevices": "50",
+            "clientdevices": "55",
             "totalAP": "16"
         },
         {
             "buildingname": "Barton",
             "buildingnumber": "0088",
-            "clientdevices": "7",
+            "clientdevices": "1",
             "totalAP": "37"
         },
         {
@@ -459,85 +459,85 @@
         {
             "buildingname": "Van Doren",
             "buildingnumber": "0091",
-            "clientdevices": "11",
+            "clientdevices": "7",
             "totalAP": "50"
         },
         {
             "buildingname": "Taft",
             "buildingnumber": "0092",
-            "clientdevices": "5",
+            "clientdevices": "8",
             "totalAP": "45"
         },
         {
             "buildingname": "Alice Campbell Alumni Center",
             "buildingnumber": "0094",
-            "clientdevices": "26",
+            "clientdevices": "40",
             "totalAP": "26"
         },
         {
             "buildingname": "Superconductivity Laboratory",
             "buildingnumber": "0095",
-            "clientdevices": "98",
+            "clientdevices": "94",
             "totalAP": "28"
         },
         {
             "buildingname": "Undergrad Library",
             "buildingnumber": "0099",
-            "clientdevices": "103",
+            "clientdevices": "168",
             "totalAP": "59"
         },
         {
             "buildingname": "Presidents House",
             "buildingnumber": "0100",
-            "clientdevices": "1",
+            "clientdevices": "4",
             "totalAP": "15"
         },
         {
             "buildingname": "Blaisdell Hall",
             "buildingnumber": "0101",
-            "clientdevices": "30",
+            "clientdevices": "16",
             "totalAP": "60"
         },
         {
             "buildingname": "Saunders Hall",
             "buildingnumber": "0102",
-            "clientdevices": "37",
+            "clientdevices": "9",
             "totalAP": "60"
         },
         {
             "buildingname": "Babcock Hall",
             "buildingnumber": "0103",
-            "clientdevices": "9",
+            "clientdevices": "7",
             "totalAP": "59"
         },
         {
             "buildingname": "Carr Hall",
             "buildingnumber": "0104",
-            "clientdevices": "9",
+            "clientdevices": "21",
             "totalAP": "59"
         },
         {
             "buildingname": "PAR Food Building",
             "buildingnumber": "0105",
-            "clientdevices": "57",
+            "clientdevices": "21",
             "totalAP": "18"
         },
         {
             "buildingname": "Illini Union Bookstore",
             "buildingnumber": "0106",
-            "clientdevices": "136",
+            "clientdevices": "123",
             "totalAP": "39"
         },
         {
             "buildingname": "Computer Applications Building",
             "buildingnumber": "0108",
-            "clientdevices": "51",
+            "clientdevices": "43",
             "totalAP": "38"
         },
         {
             "buildingname": "Natural Resources Building",
             "buildingnumber": "0109",
-            "clientdevices": "87",
+            "clientdevices": "85",
             "totalAP": "113"
         },
         {
@@ -549,43 +549,43 @@
         {
             "buildingname": "Busey Hall",
             "buildingnumber": "0111",
-            "clientdevices": "5",
+            "clientdevices": "6",
             "totalAP": "35"
         },
         {
             "buildingname": "Mechanical Engineering Building",
             "buildingnumber": "0112",
-            "clientdevices": "160",
+            "clientdevices": "145",
             "totalAP": "77"
         },
         {
             "buildingname": "Evans Hall",
             "buildingnumber": "0115",
-            "clientdevices": "8",
+            "clientdevices": "10",
             "totalAP": "38"
         },
         {
             "buildingname": "Roger Adams Laboratory",
             "buildingnumber": "0116",
-            "clientdevices": "448",
+            "clientdevices": "477",
             "totalAP": "222"
         },
         {
             "buildingname": "Nuclear Engineering Lab",
             "buildingnumber": "0117",
-            "clientdevices": "6",
+            "clientdevices": "13",
             "totalAP": "4"
         },
         {
             "buildingname": "ARC",
             "buildingnumber": "0118",
-            "clientdevices": "161",
+            "clientdevices": "176",
             "totalAP": "45"
         },
         {
             "buildingname": "Abbott Power Plant",
             "buildingnumber": "0120",
-            "clientdevices": "32",
+            "clientdevices": "22",
             "totalAP": "26"
         },
         {
@@ -597,25 +597,25 @@
         {
             "buildingname": "National Soybean Research Center",
             "buildingnumber": "0124",
-            "clientdevices": "53",
+            "clientdevices": "74",
             "totalAP": "63"
         },
         {
             "buildingname": "Levis",
             "buildingnumber": "0126",
-            "clientdevices": "30",
+            "clientdevices": "15",
             "totalAP": "20"
         },
         {
             "buildingname": "Geological Survey Laboratory",
             "buildingnumber": "0128",
-            "clientdevices": "11",
+            "clientdevices": "8",
             "totalAP": "7"
         },
         {
             "buildingname": "Coble Hall",
             "buildingnumber": "0130",
-            "clientdevices": "58",
+            "clientdevices": "43",
             "totalAP": "26"
         },
         {
@@ -627,55 +627,55 @@
         {
             "buildingname": "Natural Resources Garage",
             "buildingnumber": "0133",
-            "clientdevices": "2",
+            "clientdevices": "9",
             "totalAP": "2"
         },
         {
             "buildingname": "Natural Resources Building Greenhouse",
             "buildingnumber": "0134",
-            "clientdevices": "5",
+            "clientdevices": "1",
             "totalAP": "3"
         },
         {
             "buildingname": "Goodwin",
             "buildingnumber": "0136",
-            "clientdevices": "96",
+            "clientdevices": "88",
             "totalAP": "74"
         },
         {
             "buildingname": "Green",
             "buildingnumber": "0137",
-            "clientdevices": "60",
+            "clientdevices": "58",
             "totalAP": "61"
         },
         {
             "buildingname": "Burrill Hall",
             "buildingnumber": "0138",
-            "clientdevices": "121",
-            "totalAP": "108"
+            "clientdevices": "140",
+            "totalAP": "123"
         },
         {
             "buildingname": "Illinois Simulator Lab",
             "buildingnumber": "0140",
-            "clientdevices": "3",
+            "clientdevices": "7",
             "totalAP": "15"
         },
         {
             "buildingname": "LAR Hall",
             "buildingnumber": "0141",
-            "clientdevices": "31",
+            "clientdevices": "21",
             "totalAP": "106"
         },
         {
             "buildingname": "Allen Hall",
             "buildingnumber": "0142",
-            "clientdevices": "18",
+            "clientdevices": "15",
             "totalAP": "155"
         },
         {
             "buildingname": "Dalkey Press",
             "buildingnumber": "0144",
-            "clientdevices": "2",
+            "clientdevices": "1",
             "totalAP": "3"
         },
         {
@@ -687,7 +687,7 @@
         {
             "buildingname": "Coordinated Sciences Laboratory",
             "buildingnumber": "0148",
-            "clientdevices": "267",
+            "clientdevices": "311",
             "totalAP": "77"
         },
         {
@@ -699,7 +699,7 @@
         {
             "buildingname": "Hydrosystems Laboratory",
             "buildingnumber": "0152",
-            "clientdevices": "38",
+            "clientdevices": "31",
             "totalAP": "14"
         },
         {
@@ -711,7 +711,7 @@
         {
             "buildingname": "Law Building",
             "buildingnumber": "0156",
-            "clientdevices": "130",
+            "clientdevices": "106",
             "totalAP": "101"
         },
         {
@@ -723,37 +723,37 @@
         {
             "buildingname": "Bevier",
             "buildingnumber": "0158",
-            "clientdevices": "160",
+            "clientdevices": "133",
             "totalAP": "111"
         },
         {
             "buildingname": "Wohlers",
             "buildingnumber": "0159",
-            "clientdevices": "127",
+            "clientdevices": "193",
             "totalAP": "86"
         },
         {
             "buildingname": "Education Building",
             "buildingnumber": "0160",
-            "clientdevices": "152",
+            "clientdevices": "123",
             "totalAP": "76"
         },
         {
             "buildingname": "1401 S Maryland",
             "buildingnumber": "0161",
-            "clientdevices": "19",
+            "clientdevices": "13",
             "totalAP": "5"
         },
         {
             "buildingname": "Engineering Senior Design Laboratory",
             "buildingnumber": "0162",
-            "clientdevices": "0",
+            "clientdevices": "1",
             "totalAP": "1"
         },
         {
             "buildingname": "Animal Sciences Laboratory",
             "buildingnumber": "0165",
-            "clientdevices": "114",
+            "clientdevices": "103",
             "totalAP": "118"
         },
         {
@@ -765,37 +765,37 @@
         {
             "buildingname": "Burnsides Laboratory",
             "buildingnumber": "0169",
-            "clientdevices": "17",
+            "clientdevices": "14",
             "totalAP": "3"
         },
         {
             "buildingname": "Central Receiving Building",
             "buildingnumber": "0170",
-            "clientdevices": "4",
+            "clientdevices": "7",
             "totalAP": "12"
         },
         {
             "buildingname": "Meat Sciences Laboratory",
             "buildingnumber": "0171",
-            "clientdevices": "15",
+            "clientdevices": "18",
             "totalAP": "11"
         },
         {
             "buildingname": "Foreign Language Building",
             "buildingnumber": "0172",
-            "clientdevices": "155",
+            "clientdevices": "70",
             "totalAP": "105"
         },
         {
             "buildingname": "Engineering Sciences Building",
             "buildingnumber": "0174",
-            "clientdevices": "85",
+            "clientdevices": "127",
             "totalAP": "83"
         },
         {
             "buildingname": "Rehab Education Center",
             "buildingnumber": "0176",
-            "clientdevices": "65",
+            "clientdevices": "55",
             "totalAP": "27"
         },
         {
@@ -807,61 +807,61 @@
         {
             "buildingname": "Daniels Hall",
             "buildingnumber": "0181",
-            "clientdevices": "111",
+            "clientdevices": "121",
             "totalAP": "135"
         },
         {
             "buildingname": "Wood Engineering",
             "buildingnumber": "0183",
-            "clientdevices": "4",
+            "clientdevices": "5",
             "totalAP": "3"
         },
         {
             "buildingname": "Entomology Lab",
             "buildingnumber": "0187",
-            "clientdevices": "15",
+            "clientdevices": "14",
             "totalAP": "4"
         },
         {
             "buildingname": "Fred Turner Student Services Building",
             "buildingnumber": "0188",
-            "clientdevices": "101",
+            "clientdevices": "95",
             "totalAP": "30"
         },
         {
             "buildingname": "Medical Sciences Building",
             "buildingnumber": "0192",
-            "clientdevices": "85",
+            "clientdevices": "69",
             "totalAP": "92"
         },
         {
             "buildingname": "Swanlund",
             "buildingnumber": "0193",
-            "clientdevices": "118",
+            "clientdevices": "127",
             "totalAP": "32"
         },
         {
             "buildingname": "1203 W Nevada",
             "buildingnumber": "0195",
-            "clientdevices": "5",
+            "clientdevices": "3",
             "totalAP": "4"
         },
         {
             "buildingname": "Optical Physics and Engineering Building",
             "buildingnumber": "0196",
-            "clientdevices": "2",
+            "clientdevices": "4",
             "totalAP": "9"
         },
         {
             "buildingname": "Turner Hall",
             "buildingnumber": "0197",
-            "clientdevices": "149",
+            "clientdevices": "161",
             "totalAP": "129"
         },
         {
             "buildingname": "Physical Plant Services Building",
             "buildingnumber": "0198",
-            "clientdevices": "235",
+            "clientdevices": "245",
             "totalAP": "66"
         },
         {
@@ -873,7 +873,7 @@
         {
             "buildingname": "Garage and Car Pool",
             "buildingnumber": "0201",
-            "clientdevices": "18",
+            "clientdevices": "14",
             "totalAP": "11"
         },
         {
@@ -885,19 +885,19 @@
         {
             "buildingname": "Waste Management And Research Laboratory",
             "buildingnumber": "0206",
-            "clientdevices": "24",
+            "clientdevices": "29",
             "totalAP": "22"
         },
         {
             "buildingname": "1203 Half Nevada",
             "buildingnumber": "0207",
-            "clientdevices": "6",
+            "clientdevices": "7",
             "totalAP": "3"
         },
         {
             "buildingname": "Atmospheric Sciences",
             "buildingnumber": "0208",
-            "clientdevices": "12",
+            "clientdevices": "15",
             "totalAP": "11"
         },
         {
@@ -909,73 +909,73 @@
         {
             "buildingname": "Digital Computer Lab",
             "buildingnumber": "0210",
-            "clientdevices": "336",
+            "clientdevices": "307",
             "totalAP": "128"
         },
         {
             "buildingname": "Environmental Health and Safety",
             "buildingnumber": "0213",
-            "clientdevices": "10",
+            "clientdevices": "13",
             "totalAP": "6"
         },
         {
             "buildingname": "Housing Food Stores",
             "buildingnumber": "0217",
-            "clientdevices": "15",
+            "clientdevices": "13",
             "totalAP": "17"
         },
         {
             "buildingname": "School of Labor And Employment Relations",
             "buildingnumber": "0218",
-            "clientdevices": "16",
+            "clientdevices": "17",
             "totalAP": "23"
         },
         {
             "buildingname": "Art and Design",
             "buildingnumber": "0219",
-            "clientdevices": "50",
+            "clientdevices": "24",
             "totalAP": "56"
         },
         {
             "buildingname": "Krannert Art Museum",
             "buildingnumber": "0220",
-            "clientdevices": "25",
+            "clientdevices": "34",
             "totalAP": "36"
         },
         {
             "buildingname": "805 W Penn",
             "buildingnumber": "0221",
-            "clientdevices": "5",
+            "clientdevices": "11",
             "totalAP": "8"
         },
         {
             "buildingname": "Printing Services",
             "buildingnumber": "0222",
-            "clientdevices": "3",
+            "clientdevices": "6",
             "totalAP": "1"
         },
         {
             "buildingname": "1205 W Oregon",
             "buildingnumber": "0224",
-            "clientdevices": "21",
+            "clientdevices": "5",
             "totalAP": "4"
         },
         {
             "buildingname": "Orchard Place Apartments",
             "buildingnumber": "0227",
-            "clientdevices": "4",
+            "clientdevices": "11",
             "totalAP": "2"
         },
         {
             "buildingname": "Beckman Institute",
             "buildingnumber": "0228",
-            "clientdevices": "479",
+            "clientdevices": "458",
             "totalAP": "236"
         },
         {
             "buildingname": "OD North Laundry",
             "buildingnumber": "0230",
-            "clientdevices": "0",
+            "clientdevices": "1",
             "totalAP": "1"
         },
         {
@@ -987,103 +987,103 @@
         {
             "buildingname": "Housing Maintenance Shop",
             "buildingnumber": "0233",
-            "clientdevices": "13",
+            "clientdevices": "10",
             "totalAP": "5"
         },
         {
             "buildingname": "OD South Laundry",
             "buildingnumber": "0236",
-            "clientdevices": "2",
+            "clientdevices": "0",
             "totalAP": "2"
         },
         {
             "buildingname": "Micro and Nano",
             "buildingnumber": "0237",
-            "clientdevices": "140",
+            "clientdevices": "153",
             "totalAP": "100"
         },
         {
             "buildingname": "1207 W Oregon",
             "buildingnumber": "0238",
-            "clientdevices": "18",
+            "clientdevices": "6",
             "totalAP": "15"
         },
         {
             "buildingname": "Morrill Hall",
             "buildingnumber": "0242",
-            "clientdevices": "171",
+            "clientdevices": "166",
             "totalAP": "105"
         },
         {
             "buildingname": "508 S Sixth",
             "buildingnumber": "0243",
-            "clientdevices": "0",
+            "clientdevices": "1",
             "totalAP": "2"
         },
         {
             "buildingname": "625 S. Wright",
             "buildingnumber": "0247",
-            "clientdevices": "34",
+            "clientdevices": "22",
             "totalAP": "8"
         },
         {
             "buildingname": "OD Community Building",
             "buildingnumber": "0249",
-            "clientdevices": "1",
+            "clientdevices": "5",
             "totalAP": "1"
         },
         {
             "buildingname": "912 S Fifth",
             "buildingnumber": "0250",
-            "clientdevices": "18",
+            "clientdevices": "23",
             "totalAP": "2"
         },
         {
             "buildingname": "Housing Warehouse",
             "buildingnumber": "0252",
-            "clientdevices": "5",
+            "clientdevices": "8",
             "totalAP": "5"
         },
         {
             "buildingname": "University Press Building",
             "buildingnumber": "0255",
-            "clientdevices": "18",
+            "clientdevices": "15",
             "totalAP": "5"
         },
         {
             "buildingname": "Plant Sciences Laboratory",
             "buildingnumber": "0256",
-            "clientdevices": "26",
+            "clientdevices": "31",
             "totalAP": "58"
         },
         {
             "buildingname": "Ubben",
             "buildingnumber": "0257",
-            "clientdevices": "39",
+            "clientdevices": "20",
             "totalAP": "4"
         },
         {
             "buildingname": "Dance Studio",
             "buildingnumber": "0268",
-            "clientdevices": "12",
+            "clientdevices": "3",
             "totalAP": "3"
         },
         {
             "buildingname": "Waste Transfer And Mat. Recovery Facility",
             "buildingnumber": "0270",
-            "clientdevices": "3",
+            "clientdevices": "1",
             "totalAP": "1"
         },
         {
             "buildingname": "Wardall Hall",
             "buildingnumber": "0272",
-            "clientdevices": "17",
+            "clientdevices": "22",
             "totalAP": "119"
         },
         {
             "buildingname": "Townsend Hall",
             "buildingnumber": "0273",
-            "clientdevices": "8",
+            "clientdevices": "2",
             "totalAP": "49"
         },
         {
@@ -1101,7 +1101,7 @@
         {
             "buildingname": "Police Training Institute Tactical",
             "buildingnumber": "0277",
-            "clientdevices": "1",
+            "clientdevices": "2",
             "totalAP": "4"
         },
         {
@@ -1113,61 +1113,61 @@
         {
             "buildingname": "Driver Training Facility",
             "buildingnumber": "0283",
-            "clientdevices": "1",
+            "clientdevices": "0",
             "totalAP": "1"
         },
         {
             "buildingname": "Vet Med Clinical Studies",
             "buildingnumber": "0287",
-            "clientdevices": "4",
+            "clientdevices": "5",
             "totalAP": "6"
         },
         {
             "buildingname": "State Water Survey Building 2",
             "buildingnumber": "0289",
-            "clientdevices": "1",
+            "clientdevices": "0",
             "totalAP": "7"
         },
         {
             "buildingname": "Fire Station",
             "buildingnumber": "0290",
-            "clientdevices": "16",
+            "clientdevices": "5",
             "totalAP": "2"
         },
         {
             "buildingname": "Sherman Hall",
             "buildingnumber": "0291",
-            "clientdevices": "32",
+            "clientdevices": "21",
             "totalAP": "186"
         },
         {
             "buildingname": "Fire Safety",
             "buildingnumber": "0294",
-            "clientdevices": "29",
+            "clientdevices": "37",
             "totalAP": "9"
         },
         {
             "buildingname": "Trelease",
             "buildingnumber": "0295",
-            "clientdevices": "7",
+            "clientdevices": "2",
             "totalAP": "96"
         },
         {
             "buildingname": "Oglesby",
             "buildingnumber": "0296",
-            "clientdevices": "19",
+            "clientdevices": "11",
             "totalAP": "96"
         },
         {
             "buildingname": "Florida Avenue Residence Hall Lounge Building",
             "buildingnumber": "0297",
-            "clientdevices": "18",
+            "clientdevices": "11",
             "totalAP": "9"
         },
         {
             "buildingname": "Astronomy Building",
             "buildingnumber": "0300",
-            "clientdevices": "44",
+            "clientdevices": "54",
             "totalAP": "16"
         },
         {
@@ -1179,7 +1179,7 @@
         {
             "buildingname": "Building Research Council Building",
             "buildingnumber": "0306",
-            "clientdevices": "5",
+            "clientdevices": "6",
             "totalAP": "6"
         },
         {
@@ -1191,7 +1191,7 @@
         {
             "buildingname": "Survey Storage 1",
             "buildingnumber": "0311",
-            "clientdevices": "1",
+            "clientdevices": "0",
             "totalAP": "2"
         },
         {
@@ -1209,25 +1209,25 @@
         {
             "buildingname": "Natural Resources Studies Annex",
             "buildingnumber": "0321",
-            "clientdevices": "18",
+            "clientdevices": "7",
             "totalAP": "28"
         },
         {
             "buildingname": "Public Safety Building",
             "buildingnumber": "0323",
-            "clientdevices": "36",
+            "clientdevices": "27",
             "totalAP": "15"
         },
         {
             "buildingname": "Grainger Library",
             "buildingnumber": "0324",
-            "clientdevices": "273",
+            "clientdevices": "392",
             "totalAP": "80"
         },
         {
             "buildingname": "Agriculture Services Building",
             "buildingnumber": "0326",
-            "clientdevices": "7",
+            "clientdevices": "1",
             "totalAP": "3"
         },
         {
@@ -1239,19 +1239,19 @@
         {
             "buildingname": "South Studio 1",
             "buildingnumber": "0328",
-            "clientdevices": "5",
+            "clientdevices": "4",
             "totalAP": "2"
         },
         {
             "buildingname": "Library Information Sciences Building",
             "buildingnumber": "0331",
-            "clientdevices": "105",
+            "clientdevices": "58",
             "totalAP": "43"
         },
         {
             "buildingname": "Edward R Madigan Laboratory",
             "buildingnumber": "0336",
-            "clientdevices": "176",
+            "clientdevices": "183",
             "totalAP": "110"
         },
         {
@@ -1263,67 +1263,67 @@
         {
             "buildingname": "Temple Buell Hall",
             "buildingnumber": "0339",
-            "clientdevices": "38",
+            "clientdevices": "55",
             "totalAP": "58"
         },
         {
             "buildingname": "Motorcycle Safety",
             "buildingnumber": "0347",
-            "clientdevices": "6",
+            "clientdevices": "2",
             "totalAP": "3"
         },
         {
             "buildingname": "Veterinary Medicine Basic Science Building",
             "buildingnumber": "0350",
-            "clientdevices": "264",
+            "clientdevices": "231",
             "totalAP": "196"
         },
         {
             "buildingname": "Veterinary Medicine Chiller Plant",
             "buildingnumber": "0352",
-            "clientdevices": "1",
+            "clientdevices": "2",
             "totalAP": "2"
         },
         {
             "buildingname": "505 E Green",
             "buildingnumber": "0353",
-            "clientdevices": "33",
+            "clientdevices": "30",
             "totalAP": "21"
         },
         {
             "buildingname": "Japan House",
             "buildingnumber": "0354",
-            "clientdevices": "8",
+            "clientdevices": "0",
             "totalAP": "2"
         },
         {
             "buildingname": "PTI",
             "buildingnumber": "0358",
-            "clientdevices": "18",
+            "clientdevices": "20",
             "totalAP": "23"
         },
         {
             "buildingname": "Covenent",
             "buildingnumber": "0359",
-            "clientdevices": "10",
+            "clientdevices": "6",
             "totalAP": "1"
         },
         {
             "buildingname": "Atkins Tennis Center",
             "buildingnumber": "0360",
-            "clientdevices": "19",
+            "clientdevices": "31",
             "totalAP": "12"
         },
         {
             "buildingname": "CRCE",
             "buildingnumber": "0364",
-            "clientdevices": "27",
+            "clientdevices": "29",
             "totalAP": "9"
         },
         {
             "buildingname": "Dance Admin",
             "buildingnumber": "0365",
-            "clientdevices": "2",
+            "clientdevices": "3",
             "totalAP": "4"
         },
         {
@@ -1335,13 +1335,13 @@
         {
             "buildingname": "901 W Oregon",
             "buildingnumber": "0367",
-            "clientdevices": "16",
+            "clientdevices": "10",
             "totalAP": "6"
         },
         {
             "buildingname": "International Studies Building",
             "buildingnumber": "0369",
-            "clientdevices": "20",
+            "clientdevices": "27",
             "totalAP": "24"
         },
         {
@@ -1359,55 +1359,55 @@
         {
             "buildingname": "Special Materials Storage Facility",
             "buildingnumber": "0372",
-            "clientdevices": "10",
+            "clientdevices": "9",
             "totalAP": "5"
         },
         {
             "buildingname": "Spurlock Museum",
             "buildingnumber": "0373",
-            "clientdevices": "29",
+            "clientdevices": "28",
             "totalAP": "14"
         },
         {
             "buildingname": "South Studio 6",
             "buildingnumber": "0375",
-            "clientdevices": "1",
+            "clientdevices": "0",
             "totalAP": "3"
         },
         {
             "buildingname": "Campbell Hall",
             "buildingnumber": "0376",
-            "clientdevices": "25",
+            "clientdevices": "39",
             "totalAP": "30"
         },
         {
             "buildingname": "ACES Funk Library",
             "buildingnumber": "0377",
-            "clientdevices": "77",
+            "clientdevices": "45",
             "totalAP": "46"
         },
         {
             "buildingname": "Admissions and Records Building",
             "buildingnumber": "0378",
-            "clientdevices": "55",
+            "clientdevices": "64",
             "totalAP": "24"
         },
         {
             "buildingname": "Bielfeldt Hall",
             "buildingnumber": "0379",
-            "clientdevices": "58",
+            "clientdevices": "59",
             "totalAP": "9"
         },
         {
             "buildingname": "Campus Rec Outdoor Center",
             "buildingnumber": "0380",
-            "clientdevices": "3",
+            "clientdevices": "11",
             "totalAP": "3"
         },
         {
             "buildingname": "Irwin Academic Building",
             "buildingnumber": "0381",
-            "clientdevices": "36",
+            "clientdevices": "31",
             "totalAP": "27"
         },
         {
@@ -1431,49 +1431,49 @@
         {
             "buildingname": "ECE Building",
             "buildingnumber": "0409",
-            "clientdevices": "221",
+            "clientdevices": "217",
             "totalAP": "118"
         },
         {
             "buildingname": "909 W Oregon",
             "buildingnumber": "0506",
-            "clientdevices": "2",
+            "clientdevices": "3",
             "totalAP": "2"
         },
         {
             "buildingname": "Illini Plaza",
             "buildingnumber": "0507",
-            "clientdevices": "60",
+            "clientdevices": "70",
             "totalAP": "14"
         },
         {
             "buildingname": "201 W Curtis Suite 1",
             "buildingnumber": "0523",
-            "clientdevices": "2",
+            "clientdevices": "3",
             "totalAP": "2"
         },
         {
             "buildingname": "631 Green",
             "buildingnumber": "0528",
-            "clientdevices": "77",
+            "clientdevices": "57",
             "totalAP": "5"
         },
         {
             "buildingname": "1112 W University",
             "buildingnumber": "0530",
-            "clientdevices": "11",
+            "clientdevices": "4",
             "totalAP": "5"
         },
         {
             "buildingname": "Illini Center",
             "buildingnumber": "0540",
-            "clientdevices": "43",
+            "clientdevices": "35",
             "totalAP": "26"
         },
         {
             "buildingname": "510 Devonshire",
             "buildingnumber": "0547",
-            "clientdevices": "13",
+            "clientdevices": "16",
             "totalAP": "1"
         },
         {
@@ -1485,49 +1485,49 @@
         {
             "buildingname": "Fire Sub Station",
             "buildingnumber": "0556",
-            "clientdevices": "8",
+            "clientdevices": "4",
             "totalAP": "5"
         },
         {
             "buildingname": "111 E Green",
             "buildingnumber": "0559",
-            "clientdevices": "25",
+            "clientdevices": "35",
             "totalAP": "17"
         },
         {
             "buildingname": "Eichelberger Field Press Box",
             "buildingnumber": "0560",
-            "clientdevices": "2",
+            "clientdevices": "1",
             "totalAP": "1"
         },
         {
             "buildingname": "Siebel Center",
             "buildingnumber": "0563",
-            "clientdevices": "322",
+            "clientdevices": "356",
             "totalAP": "171"
         },
         {
             "buildingname": "NCSA",
             "buildingnumber": "0564",
-            "clientdevices": "302",
+            "clientdevices": "283",
             "totalAP": "92"
         },
         {
             "buildingname": "Carle Forum Center",
             "buildingnumber": "0565",
-            "clientdevices": "4",
+            "clientdevices": "2",
             "totalAP": "1"
         },
         {
             "buildingname": "Native American House",
             "buildingnumber": "0568",
-            "clientdevices": "7",
+            "clientdevices": "6",
             "totalAP": "2"
         },
         {
             "buildingname": "Trade Center",
             "buildingnumber": "0572",
-            "clientdevices": "18",
+            "clientdevices": "16",
             "totalAP": "2"
         },
         {
@@ -1539,25 +1539,25 @@
         {
             "buildingname": "Snow Removal Equipment Building",
             "buildingnumber": "0656",
-            "clientdevices": "2",
+            "clientdevices": "4",
             "totalAP": "3"
         },
         {
             "buildingname": "Quonset 7",
             "buildingnumber": "0671",
-            "clientdevices": "10",
+            "clientdevices": "2",
             "totalAP": "2"
         },
         {
             "buildingname": "Quonset 8",
             "buildingnumber": "0672",
-            "clientdevices": "2",
+            "clientdevices": "0",
             "totalAP": "3"
         },
         {
             "buildingname": "Willard Main Terminal",
             "buildingnumber": "0675",
-            "clientdevices": "38",
+            "clientdevices": "45",
             "totalAP": "10"
         },
         {
@@ -1569,7 +1569,7 @@
         {
             "buildingname": "Airport Rescue and Firefighting",
             "buildingnumber": "0677",
-            "clientdevices": "7",
+            "clientdevices": "9",
             "totalAP": "2"
         },
         {
@@ -1581,31 +1581,31 @@
         {
             "buildingname": "OD Computer Lab",
             "buildingnumber": "0774",
-            "clientdevices": "0",
+            "clientdevices": "2",
             "totalAP": "1"
         },
         {
             "buildingname": "OD Health Clinic",
             "buildingnumber": "0777",
-            "clientdevices": "1",
+            "clientdevices": "0",
             "totalAP": "1"
         },
         {
             "buildingname": "Orchard Downs South Computer Lab",
             "buildingnumber": "0794",
-            "clientdevices": "3",
+            "clientdevices": "4",
             "totalAP": "1"
         },
         {
             "buildingname": "Horse Feed Storage",
             "buildingnumber": "0815",
-            "clientdevices": "1",
+            "clientdevices": "0",
             "totalAP": "1"
         },
         {
             "buildingname": "Agronomy South Farms Laboratory",
             "buildingnumber": "0824",
-            "clientdevices": "7",
+            "clientdevices": "10",
             "totalAP": "1"
         },
         {
@@ -1623,13 +1623,13 @@
         {
             "buildingname": "Seedhouse",
             "buildingnumber": "0842",
-            "clientdevices": "7",
+            "clientdevices": "5",
             "totalAP": "2"
         },
         {
             "buildingname": "Sheet Metal Barn",
             "buildingnumber": "0846",
-            "clientdevices": "1",
+            "clientdevices": "0",
             "totalAP": "1"
         },
         {
@@ -1641,7 +1641,7 @@
         {
             "buildingname": "Dairy Experimental Round Barn",
             "buildingnumber": "0855",
-            "clientdevices": "3",
+            "clientdevices": "1",
             "totalAP": "1"
         },
         {
@@ -1653,37 +1653,31 @@
         {
             "buildingname": "Horticulture Research Laboratory",
             "buildingnumber": "0885",
-            "clientdevices": "6",
+            "clientdevices": "0",
             "totalAP": "1"
         },
         {
             "buildingname": "Milking Parlor",
             "buildingnumber": "0934",
-            "clientdevices": "3",
+            "clientdevices": "1",
             "totalAP": "1"
         },
         {
             "buildingname": "Swine Research Center Farm House",
             "buildingnumber": "0957",
-            "clientdevices": "0",
+            "clientdevices": "1",
             "totalAP": "1"
-        },
-        {
-            "buildingname": "Poultry Office USDA Soybean Lab",
-            "buildingnumber": "0974",
-            "clientdevices": "2",
-            "totalAP": "3"
         },
         {
             "buildingname": "Machinery Storage Building",
             "buildingnumber": "0983",
-            "clientdevices": "0",
+            "clientdevices": "3",
             "totalAP": "2"
         },
         {
             "buildingname": "Soybean Research Agronomy Farm",
             "buildingnumber": "0991",
-            "clientdevices": "3",
+            "clientdevices": "2",
             "totalAP": "2"
         },
         {
@@ -1701,7 +1695,7 @@
         {
             "buildingname": "Swine Research Center",
             "buildingnumber": "1030",
-            "clientdevices": "0",
+            "clientdevices": "1",
             "totalAP": "4"
         },
         {
@@ -1713,25 +1707,25 @@
         {
             "buildingname": "Pesticides",
             "buildingnumber": "1048",
-            "clientdevices": "1",
+            "clientdevices": "0",
             "totalAP": "2"
         },
         {
             "buildingname": "Early Childhood Development Lab",
             "buildingnumber": "1071",
-            "clientdevices": "33",
+            "clientdevices": "29",
             "totalAP": "19"
         },
         {
             "buildingname": "Forbes Natural History",
             "buildingnumber": "1073",
-            "clientdevices": "51",
+            "clientdevices": "55",
             "totalAP": "55"
         },
         {
             "buildingname": "Z Building",
             "buildingnumber": "1074",
-            "clientdevices": "50",
+            "clientdevices": "42",
             "totalAP": "14"
         },
         {
@@ -1743,163 +1737,163 @@
         {
             "buildingname": "Technology Plaza",
             "buildingnumber": "1083",
-            "clientdevices": "88",
+            "clientdevices": "75",
             "totalAP": "15"
         },
         {
             "buildingname": "Soyface Trailer",
             "buildingnumber": "1085",
-            "clientdevices": "9",
+            "clientdevices": "6",
             "totalAP": "1"
         },
         {
             "buildingname": "Aerodynamics Research Laboratory",
             "buildingnumber": "1093",
-            "clientdevices": "5",
+            "clientdevices": "0",
             "totalAP": "5"
         },
         {
             "buildingname": "North Campus Parking Deck",
             "buildingnumber": "1094",
-            "clientdevices": "53",
+            "clientdevices": "66",
             "totalAP": "14"
         },
         {
             "buildingname": "Enterprise Works",
             "buildingnumber": "1095",
-            "clientdevices": "131",
+            "clientdevices": "142",
             "totalAP": "12"
         },
         {
             "buildingname": "Oak Street Library",
             "buildingnumber": "1096",
-            "clientdevices": "17",
-            "totalAP": "8"
+            "clientdevices": "16",
+            "totalAP": "36"
         },
         {
             "buildingname": "Pond Site Laboratory",
             "buildingnumber": "1101",
-            "clientdevices": "3",
+            "clientdevices": "1",
             "totalAP": "1"
         },
         {
             "buildingname": "Z2",
             "buildingnumber": "1103",
-            "clientdevices": "40",
+            "clientdevices": "26",
             "totalAP": "4"
         },
         {
             "buildingname": "State Water Survey Building 1",
             "buildingnumber": "1104",
-            "clientdevices": "6",
+            "clientdevices": "8",
             "totalAP": "13"
         },
         {
             "buildingname": "State Water Survey Building 3",
             "buildingnumber": "1106",
-            "clientdevices": "4",
+            "clientdevices": "3",
             "totalAP": "12"
         },
         {
             "buildingname": "State Water Survey Building 4",
             "buildingnumber": "1107",
-            "clientdevices": "13",
+            "clientdevices": "11",
             "totalAP": "9"
         },
         {
             "buildingname": "State Water Survey Building 5",
             "buildingnumber": "1108",
-            "clientdevices": "13",
+            "clientdevices": "9",
             "totalAP": "9"
         },
         {
             "buildingname": "State Water Survey Building 6",
             "buildingnumber": "1109",
-            "clientdevices": "7",
+            "clientdevices": "17",
             "totalAP": "10"
         },
         {
             "buildingname": "State Water Survey Building 9",
             "buildingnumber": "1112",
-            "clientdevices": "2",
+            "clientdevices": "4",
             "totalAP": "9"
         },
         {
             "buildingname": "CDMS",
             "buildingnumber": "1114",
-            "clientdevices": "6",
+            "clientdevices": "7",
             "totalAP": "3"
         },
         {
             "buildingname": "203 W Curtis Suite 1",
             "buildingnumber": "1115",
-            "clientdevices": "6",
+            "clientdevices": "3",
             "totalAP": "2"
         },
         {
             "buildingname": "201 W Curtis Suite 2",
             "buildingnumber": "1131",
-            "clientdevices": "3",
+            "clientdevices": "9",
             "totalAP": "1"
         },
         {
             "buildingname": "Christopher Hall",
             "buildingnumber": "1133",
-            "clientdevices": "21",
+            "clientdevices": "13",
             "totalAP": "22"
         },
         {
             "buildingname": "State Water Survey Building 11",
             "buildingnumber": "1139",
-            "clientdevices": "23",
+            "clientdevices": "22",
             "totalAP": "10"
         },
         {
             "buildingname": "701 Greg",
             "buildingnumber": "1140",
-            "clientdevices": "29",
+            "clientdevices": "8",
             "totalAP": "5"
         },
         {
             "buildingname": "Asian American House",
             "buildingnumber": "1145",
-            "clientdevices": "6",
+            "clientdevices": "8",
             "totalAP": "8"
         },
         {
             "buildingname": "Beef and Sheep Field Lab",
             "buildingnumber": "1146",
-            "clientdevices": "1",
+            "clientdevices": "3",
             "totalAP": "2"
         },
         {
             "buildingname": "Calving Isolation",
             "buildingnumber": "1154",
-            "clientdevices": "0",
+            "clientdevices": "1",
             "totalAP": "1"
         },
         {
             "buildingname": "Bee Research",
             "buildingnumber": "1165",
-            "clientdevices": "7",
+            "clientdevices": "16",
             "totalAP": "2"
         },
         {
             "buildingname": "FSI Hazmat Storage Building",
             "buildingnumber": "1171",
-            "clientdevices": "1",
+            "clientdevices": "2",
             "totalAP": "2"
         },
         {
             "buildingname": "FSI Storage Building",
             "buildingnumber": "1172",
-            "clientdevices": "4",
+            "clientdevices": "3",
             "totalAP": "2"
         },
         {
             "buildingname": "FSI Apparatus Storage Building",
             "buildingnumber": "1173",
-            "clientdevices": "3",
+            "clientdevices": "0",
             "totalAP": "1"
         },
         {
@@ -1911,73 +1905,73 @@
         {
             "buildingname": "Indoor Golf",
             "buildingnumber": "1187",
-            "clientdevices": "1",
+            "clientdevices": "2",
             "totalAP": "1"
         },
         {
             "buildingname": "Business Instructional Facility",
             "buildingnumber": "1206",
-            "clientdevices": "397",
+            "clientdevices": "343",
             "totalAP": "112"
         },
         {
             "buildingname": "528 Green",
             "buildingnumber": "1207",
-            "clientdevices": "45",
+            "clientdevices": "17",
             "totalAP": "6"
         },
         {
             "buildingname": "Engineering Senior Project Laboratory",
             "buildingnumber": "1209",
-            "clientdevices": "5",
+            "clientdevices": "3",
             "totalAP": "2"
         },
         {
             "buildingname": "Tech Fab",
             "buildingnumber": "1211",
-            "clientdevices": "28",
+            "clientdevices": "31",
             "totalAP": "1"
         },
         {
             "buildingname": "Child Care Facility",
             "buildingnumber": "1213",
-            "clientdevices": "16",
+            "clientdevices": "8",
             "totalAP": "3"
         },
         {
             "buildingname": "Conference Center",
             "buildingnumber": "1214",
-            "clientdevices": "136",
+            "clientdevices": "12",
             "totalAP": "22"
         },
         {
             "buildingname": "Poultry Cage House Building 3",
             "buildingnumber": "1216",
-            "clientdevices": "2",
+            "clientdevices": "0",
             "totalAP": "1"
         },
         {
             "buildingname": "Ashton Woods Apartment Office",
             "buildingnumber": "1217",
-            "clientdevices": "2",
+            "clientdevices": "0",
             "totalAP": "2"
         },
         {
             "buildingname": "Integrated Bioprocessing Research Laboratory",
             "buildingnumber": "1233",
-            "clientdevices": "4",
+            "clientdevices": "10",
             "totalAP": "25"
         },
         {
             "buildingname": "Poultry Specialized Research Building 2",
             "buildingnumber": "1234",
-            "clientdevices": "1",
+            "clientdevices": "0",
             "totalAP": "1"
         },
         {
             "buildingname": "Poultry Chick Lab Hatchery Building 1",
             "buildingnumber": "1235",
-            "clientdevices": "0",
+            "clientdevices": "2",
             "totalAP": "1"
         },
         {
@@ -1995,7 +1989,7 @@
         {
             "buildingname": "700 S Gregory",
             "buildingnumber": "1241",
-            "clientdevices": "70",
+            "clientdevices": "103",
             "totalAP": "29"
         },
         {
@@ -2007,61 +2001,67 @@
         {
             "buildingname": "Petascale",
             "buildingnumber": "1244",
-            "clientdevices": "22",
+            "clientdevices": "20",
             "totalAP": "18"
         },
         {
             "buildingname": "Ikenberry Dining",
             "buildingnumber": "1247",
-            "clientdevices": "107",
+            "clientdevices": "57",
             "totalAP": "52"
+        },
+        {
+            "buildingname": "Nugent Hall",
+            "buildingnumber": "1248",
+            "clientdevices": "98",
+            "totalAP": "148"
         },
         {
             "buildingname": "Wassaja Hall",
             "buildingnumber": "1249",
-            "clientdevices": "26",
+            "clientdevices": "40",
             "totalAP": "152"
         },
         {
             "buildingname": "Bousfield Hall",
             "buildingnumber": "1252",
-            "clientdevices": "28",
+            "clientdevices": "16",
             "totalAP": "171"
         },
         {
             "buildingname": "Fruit Research",
             "buildingnumber": "1258",
-            "clientdevices": "4",
+            "clientdevices": "5",
             "totalAP": "3"
         },
         {
             "buildingname": "FSI Learning Resource Center",
             "buildingnumber": "1261",
-            "clientdevices": "31",
+            "clientdevices": "28",
             "totalAP": "14"
         },
         {
             "buildingname": "507 E Green",
             "buildingnumber": "1262",
-            "clientdevices": "98",
+            "clientdevices": "113",
             "totalAP": "28"
         },
         {
             "buildingname": "McFarland Carillon",
             "buildingnumber": "1263",
-            "clientdevices": "18",
+            "clientdevices": "10",
             "totalAP": "4"
         },
         {
             "buildingname": "901 W University",
             "buildingnumber": "1265",
-            "clientdevices": "55",
+            "clientdevices": "54",
             "totalAP": "10"
         },
         {
             "buildingname": "Tech Fab 2",
             "buildingnumber": "1266",
-            "clientdevices": "7",
+            "clientdevices": "8",
             "totalAP": "4"
         },
         {
@@ -2073,19 +2073,19 @@
         {
             "buildingname": "Robert Evers Lab",
             "buildingnumber": "1268",
-            "clientdevices": "15",
+            "clientdevices": "19",
             "totalAP": "16"
         },
         {
             "buildingname": "Eichelberger Field Locker Room",
             "buildingnumber": "1270",
-            "clientdevices": "1",
+            "clientdevices": "2",
             "totalAP": "2"
         },
         {
             "buildingname": "Illinois Field Locker Room",
             "buildingnumber": "1284",
-            "clientdevices": "1",
+            "clientdevices": "0",
             "totalAP": "2"
         },
         {
@@ -2103,25 +2103,25 @@
         {
             "buildingname": "Dixon Springs IFRC",
             "buildingnumber": "1380",
-            "clientdevices": "1",
+            "clientdevices": "3",
             "totalAP": "2"
         },
         {
             "buildingname": "Dixon Springs Arnold House",
             "buildingnumber": "1381",
-            "clientdevices": "1",
+            "clientdevices": "0",
             "totalAP": "1"
         },
         {
             "buildingname": "Dixon Springs Dorm And Meeting Hall",
             "buildingnumber": "1391",
-            "clientdevices": "1",
+            "clientdevices": "2",
             "totalAP": "6"
         },
         {
             "buildingname": "Dixon Springs Admin Office",
             "buildingnumber": "1393",
-            "clientdevices": "1",
+            "clientdevices": "3",
             "totalAP": "5"
         },
         {
@@ -2139,7 +2139,7 @@
         {
             "buildingname": "Dixon Springs Office and Lab",
             "buildingnumber": "1407",
-            "clientdevices": "1",
+            "clientdevices": "0",
             "totalAP": "1"
         },
         {
@@ -2151,14 +2151,8 @@
         {
             "buildingname": "Carle Mills Cancer Center",
             "buildingnumber": "1479",
-            "clientdevices": "30",
+            "clientdevices": "32",
             "totalAP": "3"
-        },
-        {
-            "buildingname": "Solar Decathlon House",
-            "buildingnumber": "1485",
-            "clientdevices": "0",
-            "totalAP": "1"
         },
         {
             "buildingname": "Center for Wounded Vets",
@@ -2175,19 +2169,19 @@
         {
             "buildingname": "Technology Development and Fabrication Center IV",
             "buildingnumber": "1531",
-            "clientdevices": "1",
+            "clientdevices": "0",
             "totalAP": "6"
         },
         {
             "buildingname": "Allerton Main House",
             "buildingnumber": "2001",
-            "clientdevices": "4",
+            "clientdevices": "53",
             "totalAP": "8"
         },
         {
             "buildingname": "Allerton Gate House",
             "buildingnumber": "2002",
-            "clientdevices": "0",
+            "clientdevices": "1",
             "totalAP": "1"
         },
         {
@@ -2205,43 +2199,43 @@
         {
             "buildingname": "Allerton Tool House",
             "buildingnumber": "2008",
-            "clientdevices": "3",
+            "clientdevices": "2",
             "totalAP": "1"
         },
         {
             "buildingname": "Allerton Visitor Center",
             "buildingnumber": "2010",
-            "clientdevices": "10",
+            "clientdevices": "5",
             "totalAP": "1"
         },
         {
             "buildingname": "Allerton 4H Camp Office",
             "buildingnumber": "2027",
-            "clientdevices": "8",
+            "clientdevices": "7",
             "totalAP": "1"
         },
         {
             "buildingname": "ICYT",
             "buildingnumber": "2105",
-            "clientdevices": "48",
+            "clientdevices": "51",
             "totalAP": "7"
         },
         {
             "buildingname": "M2",
             "buildingnumber": "2509",
-            "clientdevices": "26",
+            "clientdevices": "7",
             "totalAP": "7"
         },
         {
             "buildingname": "Oak Chiller",
             "buildingnumber": "8283",
-            "clientdevices": "9",
+            "clientdevices": "11",
             "totalAP": "3"
         },
         {
             "buildingname": "Vet Med Harrison",
             "buildingnumber": "9515",
-            "clientdevices": "11",
+            "clientdevices": "12",
             "totalAP": "7"
         },
         {
@@ -2253,7 +2247,7 @@
         {
             "buildingname": "UIF Wacker Dr Chicago",
             "buildingnumber": "9520",
-            "clientdevices": "3",
+            "clientdevices": "6",
             "totalAP": "3"
         }
     ]

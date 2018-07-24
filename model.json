@@ -1,6 +1,7 @@
 {
     "interactionModel": {
         "languageModel": {
+            "invocationName": "wireless information",
             "intents": [
                 {
                     "name": "AMAZON.FallbackIntent",
@@ -16,30 +17,38 @@
                 },
                 {
                     "name": "AMAZON.StopIntent",
-                    "samples": []
+                    "samples": [
+                        "goodbye"
+                    ]
                 },
                 {
                     "name": "StartIntent",
+                    "slots": [],
                     "samples": [
                         "begin",
                         "start"
-                    ],
-                    "slots": []
+                    ]
                 },
                 {
                     "name": "AnswerBuildingNameIntent",
-                    "samples": [
-                        "{buildingname}"
-                    ],
                     "slots": [
                         {
                             "name": "buildingname",
-                            "type": "BuildingName"
+                            "type": "BUILDINGNAME"
                         }
+                    ],
+                    "samples": [
+                        "{buildingname}"
+                    ]
+                },
+                {
+                    "name": "AnswerBuildingBusy",
+                    "slots": [],
+                    "samples": [
+                        "which buildings are busy"
                     ]
                 }
             ],
-            "invocationName": "wireless checker",
             "types": [
                 {
                     "name": "BUILDINGNAME",

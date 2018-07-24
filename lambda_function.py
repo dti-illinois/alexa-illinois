@@ -2,8 +2,7 @@ import logging
 from flask import Flask, render_template
 from flask_ask import Ask, statement, question, session, request
 
-from search_wirelesschecker import search_wirelesschecker
-
+from search_wirelesschecker import search_wirelesschecker, search_busy_building, search_most_connection
 
 app = Flask(__name__)
 ask = Ask(app, '/')
@@ -38,6 +37,11 @@ def stop():
     goodbye_msg = render_template('goodbye')
     return statement(goodbye_msg)
 
+@ask.intent('AnswerBuildingBusy')
+def answer_busybuildingname():
+    results = search_busy_building()
+    answer_busy_msg = render_template("answer-busy-results", result = results)
+    return question(answer_busy_msg)
 
 
 @ask.intent('AnswerBuildingNameIntent')
@@ -49,6 +53,12 @@ def answer_buildingname(buildingname):
     )
     return question(confirm_msg)
 
+
+@ask.intent('AnswerMostlyConnection')
+def answer_mostly_connection():
+    results = search_most_connection()
+    answer_busy_msg = render_template("answer-mostly-connection", result = results)
+    return question(answer_busy_msg)
 
 @ask.intent('StartIntent')
 def start_search():
@@ -71,6 +81,9 @@ def start_search():
     if 'buildingname' in session.attributes.keys():
         session.attributes.pop('buildingname')
     return question(answer_msg)
+
+
+
 
 
 if __name__ == '__main__':

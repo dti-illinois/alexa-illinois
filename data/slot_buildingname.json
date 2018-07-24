@@ -1,16 +1,6 @@
 [
     {
         "name": {
-            "value": "Building Name"
-        }
-    },
-    {
-        "name": {
-            "value": "Nugent Hall"
-        }
-    },
-    {
-        "name": {
             "value": "State Farm Center"
         }
     },
@@ -1672,6 +1662,11 @@
     {
         "name": {
             "value": "Ikenberry Dining"
+        }
+    },
+    {
+        "name": {
+            "value": "Nugent Hall"
         }
     },
     {
