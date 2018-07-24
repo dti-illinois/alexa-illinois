@@ -1,19 +1,19 @@
-welcome: Welcome to U.I.U.C alexa course explorer! I am here to provide you the information of specific course you want. Please first tell me the year you want. For example, if you want two thousands and eighteen, please say "year 2018".
+welcome: Welcome to the University of Illinois, Urbana-Champaign Course Explorer Skill! I can provide you the information for any specific courses you might be interested in. To begin, please tell me the year that you are interested in.  For example, you can say "2018".
 
-ask-semester: Sure! Then, please tell me which semester you want. For example, you can say "fall semester" or "semester fall".
+ask-semester: Sure!  Which semester are you interested in? For example, you can say "fall semester" or "semester fall".
 
-ask-course: Please tell me which course you want.
+ask-course: Please tell me the subject and course number for the course you are interested in.
 
 ask-section: Okay. Here are the sections of {{ subject }} {{course_num}}, {{sections | join(", ")}}. Which one do you want?
 
-answer-section-details: Here are the details about the {{ course }} of {{ semester }} semester in {{ year }}.. Course title, {{ course_title}}, and is taught by {{ professor | join(", and ") }}. This course starts on {{ start_date }}, and ends on {{ end_date }}. {% if not days_of_week == []%} This course is delivered on each {{ days_of_week | join(", ") }}; {% endif %} from {{ start_time }} to {{ end_time }}, and the location is {{ location }}. You may "stop" to end this session, or say a year to start a new one.
+answer-section-details: Here are the details for {{ course }} in the {{ semester }} semester of {{ year }}. The course title is {{ course_title}}, and it is taught by {{ professor | join(", and ") }}. This course starts on {{ start_date }}, and ends on {{ end_date }}. {% if not days_of_week == []%} This course is delivered on each {{ days_of_week | join(", ") }}; {% endif %} from {{ start_time }} to {{ end_time }}, and the location is {{ location }}. You may say "stop" to end this session, or provide me a new year to search from.
 
 answer-course-details: Here
 
-error-not-found: I am sorry to tell you that there is no information about that yet. You can ask another one now, or  say "stop" to end this session.
+error-not-found: I'm sorry, but I don't have any information on that. You can try a different query, or  say "stop" to end this session.
 
-error-not-understand: I am sorry that I couldn't understand you. Could you say it again?
+error-not-understand: I'm sorry, but I couldn't understand that. Could you say it again?
 
-error-other: I am sorry to tell you that something has gone wrong. Please try again.
+error-other: I'm sorry, but I am currently experiencing an error. Please try again.
 
 goodbye: Goodbye.
