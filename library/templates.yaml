@@ -1,5 +1,6 @@
 welcome: |
   Welcome to the University of Illinois, Urbana-Champaign library information skill. How May I help you?
+  Or you can say "help" for more details on what I can answer.
 
 reprompt: |
   You may ask a question now, or say "stop" to end this session.

@@ -57,7 +57,7 @@ def process_next_seven_days(calendar):
     flag_next_week = False
     for i in range(7):
         oneday = datetime.strptime(calendar['nextSevenDays'][i]['date'], "%m/%d/%Y")
-        if oneday.weekday() == 0:
+        if i != 0 and oneday.weekday() == 0:
             flag_next_week = True
         if flag_next_week:
             dates.append("next " + weekday[oneday.weekday()])
