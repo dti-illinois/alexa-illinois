@@ -7,48 +7,20 @@ from datetime import date
 from datetime import timedelta
 
 
-url_dining = "https://web.housing.illinois.edu/MobileDining2/WebService/Search.aspx?k=7A828F94-620B-4EE3-A56F-328036CC3C04"
-url_dining_search = "https://web.housing.illinois.edu/MobileDining/WebService/MobileDining.asmx/SearchMenus?k=7A828F94-620B-4EE3-A56F-328036CC3C04&SearchPhrase="
-
-hall_id = {
-    'ikenberrydininghall': 1,
-    'par': 2,
-    'isr': 3,
-    'buseyevans': 4,
-    'lar': 5,
-    'far': 6,
-    '57north': 7,
-    'crackedeggcafe': 8,
-    'caffeinator': 9,
-    'cocinamexicana': 10,
-    'buseybeanandgreen': 11,
-    'fieldofgreens': 12,
-    'leafy': 13,
-    'pennstation': 14,
-    'soulingredient': 16,
-    'tasteofasia': 17,
-    'chomps': 18,
-    'oodles': 19,
-    'betterburger': 20,
-    'neosoulingredient': 21,
-}
+url_dining = "https://ma28a8yjr8.execute-api.us-west-2.amazonaws.com/dev/dining"
 
 
-def get_hall_id(hall_name):
-    return hall_id[hall_name]
-
-
-def get_tomorrow_url():
+def get_tomorrow_url(hall):
     tmr = date.today() + timedelta(days=1)
     tmr_str = tmr.strftime("%Y-%m-%d")
-    return url_dining + "&from=" + tmr_str + "&to=" + tmr_str
+    return url_dining + "/" + hall + "/" + tmr_str + "/" + tmr_str
 
 
 def get_dining(date, hall, meal, course, filters):
     if date =='today':
-        request_url = url_dining + "&id=" + str(hall) + "&t=json"
+        request_url = url_dining + "/" + hall
     elif date == 'tomorrow':
-        request_url = get_tomorrow_url() + "&id=" + str(hall) + "&t=json"
+        request_url = get_tomorrow_url(hall)
     else:
         return None
     response = urlopen(request_url)

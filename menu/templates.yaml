@@ -1,6 +1,9 @@
 welcome: |
-  Welcome to the University of Illinois, Urbana-Champaign dining skill. How may I help you?
+  Welcome to the University of Illinois, Urbana-Champaign dining information skill. How may I help you?
   Or you can say "help" for more details on what I can answer.
+
+reprompt: |
+  You may ask a question now, or say "stop" to end this session.
 
 help: |
   To begin with, I can tell you the menus in all available dining halls.
