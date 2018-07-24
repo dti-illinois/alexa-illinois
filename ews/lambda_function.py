@@ -2,7 +2,8 @@ from flask import Flask, render_template
 from flask_ask import Ask, request, session, question, statement
 
 from ews_utils import make_blur_search, get_building_info, get_room_info, get_supported_buildings
-from ews_utils import BUILDINGS, ROOMS
+from ews_consts import BUILDINGS, ROOMS
+
 app = Flask(__name__)
 ask = Ask(app, "/")
 
