@@ -1,0 +1,5 @@
+*.pyc
+*.zip
+*.md
+slot_buildingname.json
+wirelesschecker.json
