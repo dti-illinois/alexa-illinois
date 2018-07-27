@@ -1,0 +1,41 @@
+
+
+welcome: |
+  Welcome to the University of Illinois, Urbana-Champaign quiet space information skill,
+  using wireless connection info to determine the busyness of a building on campus.
+  How can I help you? If you'd like more information on what I can do, say "help".
+
+help: |
+  I can provide information about wireless connections in various buildings here at the university. 
+  I can also tell you how many total wireless access points and client devices are connected to these points. 
+  To start a query, just tell me the building name. 
+  For example, if want to know the wireless information for Illini Union, just say "Illini Union". 
+  Then, say "start" to initiate the query. 
+  Or, you can say "which buildings are busy", and I will tell you the names of busy buildings. 
+  Or, you can say "which building has mostly connection", and I will tell you top 3 buildingname and how many client device.
+  Finally, you can say "stop" or "goodbye" to end this session.
+
+confirm-clue: |
+  Got it, {{ which_name }} {{ name }}. Say "start" or "begin" to initiate the query.
+
+answer-results: |
+  There are a total of {{ result["totalAP"] }} wireless access points, and {{ result["clientdevices"] }} client devices connected to these points, at {{ result["buildingname"] }}. 
+  Anything else?
+
+answer-busy-results: |
+  The following buildings are currently busy: {{ result }}. 
+  
+answer-mostly-connection: |
+  The buildings with the highest number of connected client devices are: {{ result[0] }} which has {{ result[1] }} connections, {{ result[2] }} which has {{ result[3] }} connections, and {{ result[4] }} which has {{ result[5] }} connections.	
+
+answer-noresults: |
+  I'm sorry, but I don't know a building that matches that query. 
+  You can start another query now, or say "stop" to end this session.
+
+error-not-understand: |
+  I'm sorry, but I couldn't understand that. Could you say it again?
+
+error-other: |
+  I'm sorry, but I am experiencing an error. Please try again.
+
+goodbye: Goodbye. Thank you for using University of Illinois, Urbana-Champaign wireless checker.
