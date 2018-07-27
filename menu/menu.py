@@ -53,21 +53,23 @@ def detail():
     try:
         return answer_details(session.attributes['filter'])
     except KeyError:
-        err_msg = render_template('error-other')
-        return statement(err_msg)
+        return statement(render_template('error-other'))
 
 
 def add_filter(filter_name):
-    filter_name = request.intent.slots.filter_name.resolutions.resolutionsPerAuthority[0]['values'][0]['value']['id']
-    if filter_name not in session.attributes['filter'].keys():
-        session.attributes['filter'][filter_name] = True
-    else:
-        session.attributes['filter'][filter_name] = not session.attributes['filter'][filter_name]
-    filter_msg = render_template('filter', 
-        filter_name=filter_name,
-        flag=session.attributes['filter'][filter_name]
-    )
-    return question(filter_msg)
+    try:
+        filter_name = request.intent.slots.filter_name.resolutions.resolutionsPerAuthority[0]['values'][0]['value']['id']
+        if filter_name not in session.attributes['filter'].keys():
+            session.attributes['filter'][filter_name] = True
+        else:
+            session.attributes['filter'][filter_name] = not session.attributes['filter'][filter_name]
+        filter_msg = render_template('filter', 
+            filter_name=filter_name,
+            flag=session.attributes['filter'][filter_name]
+        )
+        return question(filter_msg)
+    except KeyError:
+        return question(render_template('error-not-understand'))
 
 
 def ask_main(hall_name, meal, date):
@@ -83,8 +85,7 @@ def ask_main(hall_name, meal, date):
         session.attributes['date'] = date
         return answer_entrees(session.attributes['filter'])
     except KeyError:
-        ask_msg = render_template('error-not-understand')
-        return question(ask_msg)
+        return question(render_template('error-not-understand'))
 
 
 def interactive():
@@ -120,8 +121,7 @@ def answer_hall(hall_name):
             return answer_entrees(session.attributes['filter'])
         return question(ask_msg)
     except KeyError:
-        ask_msg = render_template('error-not-understand')
-        return question(ask_msg)
+        return question(render_template('error-not-understand'))
 
 
 def answer_meal(meal):
@@ -141,8 +141,7 @@ def answer_meal(meal):
             return answer_entrees(session.attributes['filter'])
         return question(ask_msg)
     except KeyError:
-        ask_msg = render_template('error-not-understand')
-        return question(ask_msg)
+        return question(render_template('error-not-understand'))
 
 
 def answer_date(date):
@@ -162,5 +161,4 @@ def answer_date(date):
             return answer_entrees(session.attributes['filter'])
         return question(ask_msg)
     except KeyError:
-        ask_msg = render_template('error-not-understand')
-        return question(ask_msg)
+        return question(render_template('error-not-understand'))

@@ -30,18 +30,18 @@ inter-ask-date: |
   Got it. Are you interested in today or tomorrow?
 
 answer-entrees-ask: |
-  Sure, {{ date }} in {{ hall }} for {{ meal }}'s entrees, there are {{ results | join(", ") }}. \
+  Sure, {{ date }} in {{ hall }} for {{ meal }}'s entrees, there are {{ results | join(". ") }}. \
   If you want to know more details such as starches, salads, soups or desserts, say "details". 
   You can also start another query now, or say "stop" to end this session.
 
 answer-details: |
   Here are the details about {{ meal }} in {{ hall }} {{ date }}. 
-  For entrees, there are {{ results_entrees | join(", ") }}; {% if not results_starches == [] %} 
-  For starches, there are {{ results_starches | join(", ") }};  {% endif %} {% if not results_vegetables == [] %} 
-  For vegetables, there are {{ results_vegetables | join(", ") }}; {% endif %} {% if not results_salads == [] %} 
-  For salads, there are {{ results_salads | join(", ") }}; {% endif %} {% if not results_soups == [] %} 
-  For soups, there are {{ results_soups | join(", ") }}; {% endif %} {% if not results_desserts == [] %} 
-  For desserts, there are {{ results_desserts | join(", ") }}. {% endif %} 
+  For entrees, there are {{ results_entrees | join(". ") }}; {% if not results_starches == [] %} 
+  For starches, there are {{ results_starches | join(". ") }};  {% endif %} {% if not results_vegetables == [] %} 
+  For vegetables, there are {{ results_vegetables | join(". ") }}; {% endif %} {% if not results_salads == [] %} 
+  For salads, there are {{ results_salads | join(". ") }}; {% endif %} {% if not results_soups == [] %} 
+  For soups, there are {{ results_soups | join(". ") }}; {% endif %} {% if not results_desserts == [] %} 
+  For desserts, there are {{ results_desserts | join(". ") }}. {% endif %} 
   You can continue with another query, or say "stop" to end this session.
 
 error-not-found: |
