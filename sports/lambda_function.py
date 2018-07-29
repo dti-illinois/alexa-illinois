@@ -1,12 +1,13 @@
 from flask import Flask, render_template
 from flask_ask import Ask, request, session, question, statement
 
-from sports_utils import get_past_games, get_future_games, get_game_by_date, get_supported_list
-from sports_consts import sports_list
+from athletic_consts import AthleticConsts
+from athletic import AthleticSkill
 
 app = Flask(__name__)
 ask = Ask(app, '/')
 
+skill = AthleticSkill()
 
 def lambda_handler(event, _context):
     return ask.run_aws_lambda(event)
@@ -21,11 +22,9 @@ def launch():
     return question(welcome_text).reprompt(help_text)
 
 
-@ask.intent('SportsTypeIntent',
-    mapping={'sport': 'sports'},
-    default={'sport': 'baseball'})
+@ask.intent('SportsTypeIntent', mapping={'sport': 'sports'}, default={'sport': 'baseball'})
 def get_sport_type(sport):
-    if sport not in sports_list:
+    if sport not in AthleticConsts.sports_list:
         error_text = render_template('sport_type_error')
         session.attributes['lastSpeech'] = error_text
         return question(error_text)
@@ -38,10 +37,8 @@ def get_sport_type(sport):
 
 @ask.intent('SportsDPastIntent')
 def get_past_n_matches(n):
-    if n is None:
-        n = 1
-    n = int(n)
-    games = get_past_games(session.attributes['sportType'], n)
+    if n is None:   n = 1
+    games = skill.get_past_games(session.attributes['sportType'], int(n))
     if games is None:
         error_text = render_template('sport_info_error')
         reprompt_text = render_template('reprompt')
@@ -55,10 +52,8 @@ def get_past_n_matches(n):
 
 @ask.intent('SportsDFutureIntent')
 def get_future_n_matches(n):
-    if n is None:
-        n = 1
-    n = int(n)
-    games = get_future_games(session.attributes['sportType'], n)
+    if n is None:   n = 1
+    games = skill.get_future_games(session.attributes['sportType'], int(n))
     if games is None:
         error_text = render_template('sport_info_error')
         reprompt_text = render_template('reprompt')
@@ -77,7 +72,7 @@ def get_match_by_date(date):
         reprompt_text = render_template('reprompt')
         return question(error_text).reprompt(reprompt_text)
     else:
-        games = get_game_by_date(session.attributes['sportType'], date)
+        games = skill.get_game_by_date(session.attributes['sportType'], date)
         if games is None:
             error_text = render_template('sport_info_error')
             reprompt_text = render_template('reprompt')
@@ -91,7 +86,7 @@ def get_match_by_date(date):
 
 @ask.intent('SportSupportedIntent')
 def get_supported_sport():
-    sports = get_supported_list()
+    sports = skill.get_supported_list()
     supported_sports_text = render_template('list_sports', sports=sports)
     session.attributes['lastSpeech'] = supported_sports_text
     reprompt_text = render_template('reprompt')
