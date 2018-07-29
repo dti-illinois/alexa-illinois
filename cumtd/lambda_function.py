@@ -1,28 +1,29 @@
 from flask import Flask, render_template
 from flask_ask import Ask, request, session, context, question, statement
+import json
 
-from cumtd_utils import *
+from cumtd import CUMTDSkill
 
 app = Flask(__name__)
 ask = Ask(app, '/')
 
+skill = CUMTDSkill()
 with open('data/CUMTD_stops_name_key.json', 'r') as f:
     stops = json.load(f)['stops']
 
 #deploy as a lambda function
 def lambda_handler(event, _context):
     return ask.run_aws_lambda(event)
-    
+
 @ask.launch
 def launch():
     device_id = context.System.device.deviceId
-    session.attributes['stop_name'], session.attributes['stop_id'] = get_stop_info(device_id)
-    session.attributes['routes'] = get_routes_on_service(session.attributes['stop_id'])
+    session.attributes['stop_name'], session.attributes['stop_id'] = skill.get_stop_info(device_id)
+    session.attributes['routes'] = skill.get_routes_on_service(session.attributes['stop_id'])
     session.attributes['remainingTrips'] = []
-
     welcome_text = render_template('welcome')
-    help_text = render_template('help')
     session.attributes['lastSpeech'] = welcome_text
+    help_text = render_template('help')
     return question(welcome_text).reprompt(help_text)
 
 
@@ -49,10 +50,10 @@ def get_route_service_by_date(route_id, date):
     if date is None:
         date_error_text = render_template('date_error')
         return question(date_error_text).reprompt(help_text)
-    if route_id not in session.attributes['routes'] or route_id is None:
+    if route_id not in session.attributes['routes']:
         route_id_error_text = render_template('route_id_error')
         return question(route_id_error_text).reprompt(help_text)
-    on_service = get_route_on_service_by_date(route_id, date)
+    on_service = skill.get_route_on_service_by_date(route_id, date)
     route_on_service_by_date_text = render_template('route_on_service_by_date',
     route_id=route_id, on_service=on_service, date=date)
     session.attributes['lastSpeech'] = route_on_service_by_date_text
@@ -63,11 +64,11 @@ def get_route_service_by_date(route_id, date):
 def get_remaining_time_by_route(route_id):
     help_text = render_template('help')
     route_id = route_id.upper()
-    if route_id is None or route_id not in session.attributes['routes']:
+    if route_id not in session.attributes['routes']:
         route_id_error_text = render_template('route_id_error')
         return question(route_id_error_text).reprompt(help_text)
 
-    remaining_time_info = get_remaining_time(session.attributes['stop_id'], route_id)
+    remaining_time_info = skill.get_remaining_time(session.attributes['stop_id'], route_id)
     if remaining_time_info == []:
         no_bus_comming_error_text = render_template('no_bus_comming_error', route=route_id)
         return question(no_bus_comming_error_text).reprompt(help_text)
@@ -80,12 +81,12 @@ def get_remaining_time_by_route(route_id):
 def get_route_by_destination(destination_stop_name):
     help_text = render_template('help')
     destination_stop_name = destination_stop_name.replace('and', '&').lower()
-    if destination_stop_name is None or destination_stop_name not in stops.keys():
+    if destination_stop_name not in stops.keys():
         stop_name_error_text = render_template('stop_name_error')
         return question(stop_name_error_text).reprompt(help_text)
     else:
         destination_stop_id = stops[destination_stop_name]
-        planned_trips = get_planned_trip(session.attributes['stop_id'], destination_stop_id)
+        planned_trips = skill.get_planned_trip(session.attributes['stop_id'], destination_stop_id)
         if len(planned_trips) == 0:
             trip_error_text = render_template('trip_error')
             return question(trip_error_text).reprompt(help_text)

@@ -77,5 +77,3 @@ def _reformat_name(name):
     r = r.replace('Fifth', '5th')
     r = r.replace('Sixth', '6th')
     return r.lower()
-
-print('hh')

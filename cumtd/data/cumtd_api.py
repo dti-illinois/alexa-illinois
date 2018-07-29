@@ -4,7 +4,7 @@ BASE_URL = 'https://developer.cumtd.com/api/'
 API_VERSION = 'v2.2'
 KEY = '5dffc40cd2534eb58fa3e984699befe1'
 
-class CUMTD:
+class CUMTDAPI:
 
     def __init__(self):
         self.key = KEY
@@ -56,5 +56,8 @@ class CUMTD:
             if v is not None and k != 'self':
                 params[k] = v
         url = self.url + func.lower()
-        r = requests.get(url, params=params)
+        try:
+            r = requests.get(url, params=params)
+        except:
+            return None
         return r.json()
