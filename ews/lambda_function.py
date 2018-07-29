@@ -1,12 +1,13 @@
 from flask import Flask, render_template
 from flask_ask import Ask, request, session, question, statement
 
-from ews_utils import make_blur_search, get_building_info, get_room_info, get_supported_buildings
-from ews_consts import BUILDINGS, ROOMS
+from ews import EWSSkill
+from consts import EWSConsts
 
 app = Flask(__name__)
 ask = Ask(app, "/")
 
+skill = EWSSkill()
 #deploy as a lambda function
 def lambda_handler(event, _context):
     return ask.run_aws_lambda(event)
@@ -22,7 +23,7 @@ def launch():
 
 @ask.intent('EWSBlurSearchIntent')
 def blur_search():
-    info = make_blur_search()
+    info = skill.make_blur_search()
     if len(info) == 0:
         blur_search_text = render_template('blur_search_fail')
     else:
@@ -32,15 +33,13 @@ def blur_search():
     return question(blur_search_text).reprompt(reprompt_text)
 
 
-@ask.intent('EWSBuildingUsageIntent',
-    mapping={'building': 'buildings'},
-    default={'building': 'digital computer lab'})
+@ask.intent('EWSBuildingUsageIntent', mapping={'building': 'buildings'}, default={'building': 'digital computer lab'})
 def building_usage(building):
-    building_info, lab_count, total_free_comp = get_building_info(building)
+    building_info, lab_count, total_free_comp = skill.get_building_info(building)
     if building_info is None:
         building_problem_text = render_template('building_problem')
         return question(building_problem_text)
-    building_usage_text = render_template('building_usage_info', building=BUILDINGS[building],
+    building_usage_text = render_template('building_usage_info', building=EWSConsts.buildings[building],
                                         lab_count=lab_count, free_comp_count=total_free_comp,
                                         building_info=building_info)
     session.attributes['lastSpeech'] = building_usage_text
@@ -55,12 +54,12 @@ def room_usage(building, room, room_l, room_3):
     if room_l is not None:  room = room_l
     if room_3 is not None:  room = room_3
 
-    room_info = get_room_info(building, room)
+    room_info = skill.get_room_info(building, room)
     if room_info is None:
         room_problem_text = render_template('room_problem')
         return question(room_problem_text)
-    room_usage_text = render_template('room_usage_info', building=BUILDINGS[building],
-                                    room=ROOMS[room], room_info=room_info)
+    room_usage_text = render_template('room_usage_info', building=EWSConsts.buildings[building],
+                                    room=EWSConsts.rooms[room], room_info=room_info)
     session.attributes['lastSpeech'] = room_usage_text
     reprompt_text = render_template('reprompt_general')
     return question(room_usage_text).reprompt(reprompt_text)
@@ -68,7 +67,7 @@ def room_usage(building, room, room_l, room_3):
 
 @ask.intent('EWSSupportedBuildingsIntent')
 def supported_buildings():
-    buildings = get_supported_buildings()
+    buildings = skill.get_supported_buildings()
     buildings_text = render_template('list_buildings', buildings=buildings)
     session.attributes['lastSpeech'] = buildings_text
     reprompt_text = render_template('reprompt_general')
