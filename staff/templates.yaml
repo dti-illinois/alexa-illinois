@@ -3,6 +3,9 @@ welcome: |
   For details on what information I can provide, say help.
   How can I assist you today?
 
+reprompt: |
+  You may ask a question now, or say "stop" to end this session.
+
 help: |
   You can search for information about Illinois faculty and staff by using their first, last, or middle names. 
   To build a query, I need one part of their name at a time so I know where to look.  
