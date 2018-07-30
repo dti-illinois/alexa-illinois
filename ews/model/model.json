@@ -33,14 +33,14 @@
                     "name": "EWSBlurSearchIntent",
                     "slots": [],
                     "samples": [
-                        "blur search",
-                        "Where can I find an avaible computer",
-                        "find me a computer",
-                        "find me a lab"
+                        "find me an engineering computer",
+                        "find me an engineering lab",
+                        "find me an engineering workstation",
+                        "find me a workstation"
                     ]
                 },
                 {
-                    "name": "EWSBuildingUsageIntent",
+                    "name": "BuildingUsageIntent",
                     "slots": [
                         {
                             "name": "buildings",
@@ -92,7 +92,7 @@
                     ]
                 },
                 {
-                    "name": "EWSSupportedBuildingsIntent",
+                    "name": "SupportedBuildingsIntent",
                     "slots": [],
                     "samples": [
                         "What buildings are supported"
@@ -101,12 +101,151 @@
                 {
                     "name": "AMAZON.RepeatIntent",
                     "samples": []
+                },
+                {
+                    "name": "ICSBlurSearchIntent",
+                    "slots": [],
+                    "samples": [
+                        "find me a general computer",
+                        "find me a general lab",
+                        "find me a lab"
+                    ]
                 }
             ],
             "types": [
                 {
                     "name": "buildings",
                     "values": [
+                        {
+                            "name": {
+                                "value": "wohlers",
+                                "synonyms": [
+                                    "W.H."
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "illini union",
+                                "synonyms": [
+                                    "U.N."
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "undergrad",
+                                "synonyms": [
+                                    "U.G."
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "sherman",
+                                "synonyms": [
+                                    "S.H.M."
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "pennsylvania avenue",
+                                "synonyms": [
+                                    "P.A.R."
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "orchard downs",
+                                "synonyms": [
+                                    "O.R.C."
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "oregon",
+                                "synonyms": [
+                                    "O.R."
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "nevada",
+                                "synonyms": [
+                                    "N.V.E."
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "illinois street",
+                                "synonyms": [
+                                    "I.S.R."
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "ikenberry floor two"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "ikenberry floor one"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "illini hall",
+                                "synonyms": [
+                                    "I.H."
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "florida avenue",
+                                "synonyms": [
+                                    "F.A.R."
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "english",
+                                "synonyms": [
+                                    "E.N.G."
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "daniels",
+                                "synonyms": [
+                                    "D.A.N."
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "busey evans",
+                                "synonyms": [
+                                    "B.E.H."
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "allen residence hall",
+                                "synonyms": [
+                                    "A.L.N."
+                                ]
+                            }
+                        },
                         {
                             "name": {
                                 "value": "transportation building",

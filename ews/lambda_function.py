@@ -2,12 +2,15 @@ from flask import Flask, render_template
 from flask_ask import Ask, request, session, question, statement
 
 from ews import EWSSkill
-from consts import EWSConsts
+from ics import ICSSkill
+from consts import EWSConsts, ICSConsts
 
 app = Flask(__name__)
 ask = Ask(app, "/")
 
-skill = EWSSkill()
+ews_skill = EWSSkill()
+ics_skill = ICSSkill()
+
 #deploy as a lambda function
 def lambda_handler(event, _context):
     return ask.run_aws_lambda(event)
@@ -21,43 +24,61 @@ def launch():
     return question(welcome_text).reprompt(help_text)
 
 
-@ask.intent('EWSBlurSearchIntent')
-def blur_search():
-    info = skill.make_blur_search()
+@ask.intent('ICSBlurSearchIntent')
+def ics_blur_search():
+    info = ics_skill.make_blur_search()
     if len(info) == 0:
         blur_search_text = render_template('blur_search_fail')
     else:
-        blur_search_text = render_template('blue_search_success', info=info)
+        blur_search_text = render_template('ics_blur_search_success', info=info)
     reprompt_text = render_template('reprompt_general')
     session.attributes['lastSpeech'] = blur_search_text
     return question(blur_search_text).reprompt(reprompt_text)
 
 
-@ask.intent('EWSBuildingUsageIntent', mapping={'building': 'buildings'}, default={'building': 'digital computer lab'})
+@ask.intent('EWSBlurSearchIntent')
+def ews_blur_search():
+    info = ews_skill.make_blur_search()
+    if len(info) == 0:
+        blur_search_text = render_template('blur_search_fail')
+    else:
+        blur_search_text = render_template('ews_blur_search_success', info=info)
+    reprompt_text = render_template('reprompt_general')
+    session.attributes['lastSpeech'] = blur_search_text
+    return question(blur_search_text).reprompt(reprompt_text)
+
+
+@ask.intent('BuildingUsageIntent', mapping={'building': 'buildings'}, default={'building': 'digital computer lab'})
 def building_usage(building):
-    building_info, lab_count, total_free_comp = skill.get_building_info(building)
-    if building_info is None:
-        building_problem_text = render_template('building_problem')
-        return question(building_problem_text)
-    building_usage_text = render_template('building_usage_info', building=EWSConsts.buildings[building],
-                                        lab_count=lab_count, free_comp_count=total_free_comp,
-                                        building_info=building_info)
+    building = building.lower()
+    if building in EWSConsts.buildings.keys():
+        building = EWSConsts.buildings[building]
+        building_info, lab_count, total_free_comp = ews_skill.get_building_info(building)
+        building_usage_text = render_template('ews_building_usage_info', building=building, lab_count=lab_count, free_comp_count=total_free_comp, building_info=building_info)
+    elif building in ICSConsts.buildings.keys():
+        building = ICSConsts.buildings[building]
+        building_info = ics_skill.get_building_info(building)
+        building_usage_text = render_template('ics_building_usage_info', building=building, building_info=building_info)
+    else:
+        return question(render_template('building_problem'))
     session.attributes['lastSpeech'] = building_usage_text
     reprompt_text = render_template('reprompt_general')
     return question(building_usage_text).reprompt(reprompt_text)
 
 
-@ask.intent('EWSRoomUsageIntent',
-    mapping={'building': 'buildings', 'room': 'room_four_digits', 'room_l': 'room_letter', 'room_3': 'room_three_digits'})
+@ask.intent('EWSRoomUsageIntent', mapping={'building': 'buildings', 'room': 'room_four_digits', 'room_l': 'room_letter', 'room_3': 'room_three_digits'})
 def room_usage(building, room, room_l, room_3):
     #shit this is dirty, but I don't know how to make it clean
     if room_l is not None:  room = room_l
     if room_3 is not None:  room = room_3
-
-    room_info = skill.get_room_info(building, room)
-    if room_info is None:
+    building = building.lower()
+    room = room.lower()
+    if building not in EWSConsts.buildings.keys() or room not in EWSConsts.rooms.keys():
         room_problem_text = render_template('room_problem')
         return question(room_problem_text)
+    building = EWSConsts.buildings[building]
+    room = EWSConsts.rooms[room]
+    room_info = ews_skill.get_room_info(building, room)
     room_usage_text = render_template('room_usage_info', building=EWSConsts.buildings[building],
                                     room=EWSConsts.rooms[room], room_info=room_info)
     session.attributes['lastSpeech'] = room_usage_text
@@ -65,10 +86,11 @@ def room_usage(building, room, room_l, room_3):
     return question(room_usage_text).reprompt(reprompt_text)
 
 
-@ask.intent('EWSSupportedBuildingsIntent')
+@ask.intent('SupportedBuildingsIntent')
 def supported_buildings():
-    buildings = skill.get_supported_buildings()
-    buildings_text = render_template('list_buildings', buildings=buildings)
+    ews_buildings = ews_skill.get_supported_buildings()
+    ics_buildings = ics_skill.get_supported_buildings()
+    buildings_text = render_template('list_buildings', ews_buildings=ews_buildings, ics_buildings=ics_buildings)
     session.attributes['lastSpeech'] = buildings_text
     reprompt_text = render_template('reprompt_general')
     return question(buildings_text).reprompt(reprompt_text)
@@ -81,15 +103,18 @@ def help():
     session.attributes['lastSpeech'] = help_text
     return question(help_text).reprompt(reprompt_text)
 
+
 @ask.intent('AMAZON.RepeatIntent')
 def repeat():
     repeat_text = session.attributes['lastSpeech']
     return question(repeat_text)
 
+
 @ask.intent('AMAZON.FallbackIntent')
 def fallback():
     intent_problem_text = render_template('intent_problem')
     return question(intent_problem_text)
+
 
 @ask.intent('AMAZON.YesIntent')
 def yes():

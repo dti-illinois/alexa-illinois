@@ -29,9 +29,6 @@ class EWSSkill():
         return max_free_comp, name
 
     def get_building_info(self, building):
-        if building not in EWSConsts.buildings.keys():
-            return None, None, None
-        building = EWSConsts.buildings[building]
         raw = self._load_data()[building]
         lab_count, total_free_comp = 0, 0
         for room in raw:
@@ -42,10 +39,6 @@ class EWSSkill():
         return raw, lab_count, total_free_comp
 
     def get_room_info(self, building, room):
-        if building not in EWSConsts.buildings.keys() or room not in EWSConsts.rooms.keys():
-            return None
-        building = EWSConsts.buildings[building]
-        room = EWSConsts.rooms[room]
         return self._load_data()[building][room]
 
     def get_supported_buildings(self):

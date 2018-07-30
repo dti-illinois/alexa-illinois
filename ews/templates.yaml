@@ -1,8 +1,15 @@
 welcome: |
-  Welcome to the University of Illinois, Urbana-Champaign engineering workstation checker.
+  Welcome to the University of Illinois, Urbana-Champaign laboratory checker.
   Which building would you like information for?
 
-blue_search_success: |
+ics_blur_search_success: |
+  I recommend the following labs.
+  {% for item in info %}
+    {{ item.building }} with {{ item.count }} available computers.
+  {% endfor %}
+  Is there any other information that you would like?
+
+ews_blur_search_success: |
   I recommend the following labs.
   {% for item in info %}
     {{ item.building }} room {{ item.room }} with {{ item.count }} available computers.
@@ -13,12 +20,17 @@ blur_search_fail: |
   I am sorry, but none of the labs currently have more than 5 available computers.
   Please try again later.
   Is there any other information that you would like?
-  
-building_usage_info: |
-  {{ building }} has {{lab_count}} labs and {{free_comp_count}} available computers.
+
+ews_building_usage_info: |
+  {{ building }} has {{ lab_count }} labs and {{ free_comp_count }} available computers.
   {% for room_name, room_info in building_info.items() %}
-    {{ room_info.free_comp }} in room {{room_name}}.
+    {{ room_info.free_comp }} in room {{ room_name }}.
   {% endfor %}
+  Is there any other information that you would like?
+
+ics_building_usage_info: |
+  {{ building }} has {{ building_info.machinecount }} computers.
+  {{ building_info.inusecount }} of them are in use.
   Is there any other information that you would like?
 
 room_usage_info: |
@@ -29,12 +41,13 @@ room_usage_info: |
 help: |
   I can provide the real time computer usage for a particular building.
   For example, you can say "get information for digital computer lab".
-  Or if you don't need a specific building, you can say "find me a lab".
+  Or if you don't need a specific building, you can say "find me a lab" or "find me a workstation".
   For a list of all supported buildings, you can say "which buildings are supported".
   Which building would you like information for?
 
 list_buildings: |
-  Currently, I know machine usage information for these buildings: {{ buildings }}
+  Currently, I support the following engineering workstation buildings: {{ ews_buildings }}.
+  I also support the following general use labs: {{ ics_buildings }}
   Which building would you like information for?
 
 reprompt_help: Which building would you like information for?
