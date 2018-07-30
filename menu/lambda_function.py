@@ -1,6 +1,5 @@
-import logging
 import menu
-
+import logging
 from flask import Flask, render_template
 from flask_ask import Ask, statement, question, session, request
 
