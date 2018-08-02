@@ -1,5 +1,5 @@
 # Alexa Skills in the University of Illinois at Urbana-Champaign
-[![Build Status][travis-image]][travis-url]  
+[![Build Status][travis-image]][travis-url] [![Deploy Status](https://img.shields.io/badge/deploy-partial-yellow.svg)](https://img.shields.io)  
 Alexa skills that provides multiple student-related utilities to be deployed for echo dots in the U.I.U.C campus. Funtionalities covers dining info, library info, EWS usage, course info, sports, mass transportation and so on. 
 
 #### Notes: 
@@ -8,7 +8,7 @@ Alexa skills that provides multiple student-related utilities to be deployed for
 
 Feel free to submit an issue or contribute!
 
-### Skills
+## Skills
 - [Dining Information](#dining-information)  
 - [Library Information](#library-information)  
 - [Staff Information](#staff-information)  
@@ -18,12 +18,12 @@ Feel free to submit an issue or contribute!
 - [Course Information](#course-information)  
 - [Wireless Information](#wireless-information)  
 
-### Dining Information
+## Dining Information
 This skill can provide user with the menu of the 20 dining halls (supported hall list below) in the campus of the University of Illinois at Urbana-Champaign.
 Below are the supported phrases to use this skill:
 - Invoking Skill: Alexa, start menu checker
 ...
-#### Supported dining halls
+### Supported dining halls
 | Residence Hall | Dining Hall | Supported Names in the skill|
 | -------------- | ----------- | --------------- |
 | Lincoln Avenue (LAR) | Lincoln/Allen Dining Hall | LAR, LAR Dining Hall, LAR Hall | 
@@ -49,13 +49,13 @@ Below are the supported phrases to use this skill:
 
 
 
-### Library Information
-### Staff Information
-### EWS Usage
-### Sports Schedule
-### CUMTD
-### Course Information
-### Wireless Information
+## Library Information
+## Staff Information
+## EWS Usage
+## Sports Schedule
+## CUMTD
+## Course Information
+## Wireless Information
 
 ## Developers
 [Wang Jikun](https://github.com/WagJK) - Dining info, library info, staff info <br>
