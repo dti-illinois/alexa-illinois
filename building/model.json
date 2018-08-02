@@ -1,0 +1,61 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "building hours",
+            "intents": [
+                {
+                    "name": "AMAZON.FallbackIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "SampleQuestionsIntent",
+                    "samples": [
+                        "sample question",
+                        "sample questions"
+                    ]
+                },
+                {
+                    "name": "AskCatalogIntent",
+                    "slots": [],
+                    "samples": [
+                        "catalog"
+                    ]
+                },
+                {
+                    "name": "AskBasicInfoIntent",
+                    "slots": [
+                        {
+                            "name": "",
+                            "type": ""
+                        }
+                    ],
+                    "samples": [
+                        "information {}",
+                        "{} information",
+                        "information of {}"
+                    ]
+                }
+            ],
+            "types": [
+                {
+                    "name": "",
+                    "values": [
+                        
+                    ]
+                }
+            ]
+        }
+    }
+}
