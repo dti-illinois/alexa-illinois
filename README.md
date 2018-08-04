@@ -54,12 +54,29 @@ Below are the supported phrases to use this skill:
 ## Lab Usage
 This skill provides user with computer usage information in EWS labs, ICS labs and residence halls in the campus of the University of Illinois at Urbana-Champaign.
 ### User Guide
-- Invoking skill
->> Alexa, start lab checker.
-- Quick search for engineering workstation: Find me a (engineering) workstation.
-- Quick search for general use computer: Find me a lab.
+- Invoking skill:
+   - Alexa, start lab checker.  
+- Quick search for engineering workstation: 
+   - Find me an engineering workstation.
+   - Find me an engineering computer.
+   - Find me an engineering lab.
+   - Find me a workstation (recommanded)
+- Quick search for general use computer:
+   - Find me a general computer.
+   - Find me a general lab.
+   - Find me a lab (recommanded)
+- Search for a specific building:
+   - How many available computers in { building name }
+   - Information abount { building name }
+   - Information on { building name }
+   - Tell me about { building name }
+   - { building name } (recommaned)
+- Search for a specific room in building:
+   - Information on { building name } room { room number }
+   - Tell me about { building name } room { room number }
+   - { building name } room { room number } (recommaned)
 ### Supported labs/buildings
-| EWS Buildings | Supported Names | Supported Rooms |
+| Buildings | Supported Names | Supported Rooms |
 | --------- | --------------- | --------------- |
 | Digital Computer Laboratory | Digital Computer Laboratory (Lab), DCL | 416, 426, 440, 520 |
 | Electrical and Computer Engineering Building | Electrical and Computer Engineering Building, ECE Building, ECEB, ECE | 2022, 3022, 3070|
@@ -68,9 +85,6 @@ This skill provides user with computer usage information in EWS labs, ICS labs a
 | Mechanical Engineering Library | Mechanical Engineering Laboratory (Lab), Mechanical Lab, MEL | 1001, 1009 |
 | Siebel Center | Siebel Center, Sieble, SIEBL | (0)218, (0)220, (0)222, (0)403 |
 | Transportation Building | Transportation Building, TB | 207, 302, 316 |
-
-| Buildings | Supported Names |
-| --------- | --------------- |
 | Allen Residence Hall | Allen Residence Hall, ALN |
 | Busey Evans | Busey Evans, BEH |
 | Daniels | Daniels, DAN |
