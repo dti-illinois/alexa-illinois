@@ -54,19 +54,40 @@ Below are the supported phrases to use this skill:
 ## Lab Usage
 This skill provides user with computer usage information in EWS labs, ICS labs and residence halls in the campus of the University of Illinois at Urbana-Champaign.
 ### User Guide
-- Invoking skill: Alexa, start lab checker.
+- Invoking skill
+>> Alexa, start lab checker.
 - Quick search for engineering workstation: Find me a (engineering) workstation.
 - Quick search for general use computer: Find me a lab.
 ### Supported labs/buildings
+| EWS Buildings | Supported Names | Supported Rooms |
+| --------- | --------------- | --------------- |
+| Digital Computer Laboratory | Digital Computer Laboratory (Lab), DCL | 416, 426, 440, 520 |
+| Electrical and Computer Engineering Building | Electrical and Computer Engineering Building, ECE Building, ECEB, ECE | 2022, 3022, 3070|
+| Engineering Hall | Engineering Hall, EH | 406(B)1, 406(B)8 |
+| Grainger Engineering Library | Grainger (Engineering) Library, Grainger, GELIB | 4th floor center, 4th floor east |
+| Mechanical Engineering Library | Mechanical Engineering Laboratory (Lab), Mechanical Lab, MEL | 1001, 1009 |
+| Siebel Center | Siebel Center, Sieble, SIEBL | (0)218, (0)220, (0)222, (0)403 |
+| Transportation Building | Transportation Building, TB | 207, 302, 316 |
+
 | Buildings | Supported Names |
 | --------- | --------------- |
-| Digital Computer Laboratory | Digital Computer Laboratory (Lab), DCL |
-| Electrical and Computer Engineering Building | Electrical and Computer Engineering Building, ECE Building, ECEB, ECE |
-| Engineering Hall | Engineering Hall, EH |
-| Grainger Engineering Library | Grainger (Engineering) Library, Grainger, GELIB |
-| Mechanical Engineering Library | Mechanical Engineering Laboratory (Lab), Mechanical Lab, MEL |
-| Siebel Center | Siebel Center, Sieble, SIEBL |
-| Transportation Building | Transportation Building, TB |
+| Allen Residence Hall | Allen Residence Hall, ALN |
+| Busey Evans | Busey Evans, BEH |
+| Daniels | Daniels, DAN |
+| English | English, ENG |
+| Florida Avenue | Florida Avenue, FAR |
+| Illini Hall | Illini Hall |
+| Ikenberry Floor One | Ikenberry Floor One |
+| Ikenberry Floor Two | Ikenberry Floor Two |
+| Illinois Street | Illinois Street, ISR |
+| Nevada | Nevada, NEV |
+| Oregon | Oregon, OR |
+| Orchard Downs | Orchard Downs, ORC |
+| Pennsylvania Avenue | Pennsylvania Avenue, PAR |
+| Sherman | Sherman, SHM |
+| Undergrad | Undergrad, UG |
+| Illini Union | Illini Union, UN |
+| Wohlers | Wohlers, WH |
 
 ## Sports Schedule
 ## CUMTD
