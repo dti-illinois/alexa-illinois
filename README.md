@@ -54,7 +54,7 @@ Below are the supported phrases to use this skill:
 ## Lab Usage
 This skill provides user with computer usage information in EWS labs, ICS labs and residence halls in the campus of the University of Illinois at Urbana-Champaign.
 ### User Guide
-- Invoking skill:
+- Invoke skill:
    - Alexa, start lab checker.  
 - Quick search for engineering workstation: 
    - Find me an engineering workstation.
@@ -104,6 +104,56 @@ This skill provides user with computer usage information in EWS labs, ICS labs a
 | Wohlers | Wohlers, WH |
 
 ## Sports Schedule
+This skill provides user with athletic schedule for 19 sports.
+### User Guide
+- Invoke skill:
+   - Alexa, start sports checker.
+- Enter a sport section:
+   - { sport }
+- Search for past match information:
+   - Recent { n } matches
+   - Recent { n } games
+   - Past { n } matches
+   - Past { n } games
+   - Recent match
+   - Recent game
+   - Latest match
+   - Latest game
+- Search for future match information:
+   - Coming { n } matches
+   - Coming { n } games
+   - Future { n } matches
+   - Future { n } games
+   - Coming match
+   - Coming game
+   - Future match
+   - Future game
+- Search match information on a specific date:
+   - match on { date }
+   - game on { date }
+   - { date } (recommanded)
+### Supported Sports
+| Sport |
+| -- |
+| Baseball |
+| Football |
+| Men's Basketball |
+| Men's Croos Country |
+| Men's Golf |
+| Men's Gymnastics |
+| Men's Tennis |
+| Men's Track & Field |
+| Soccer |
+| Softball |
+| Swimming & Diving |
+| Volleyball |
+| Women's Basketball |
+| Women's Cross Country |
+| Women's Golf |
+| Women's Gymnastics |
+| Women's Tennis |
+| Women's Track & Firld |
+| Wrestling |
 ## CUMTD
 ## Course Information
 ## Wireless Information
