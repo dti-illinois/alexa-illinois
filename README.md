@@ -51,8 +51,10 @@ Below are the supported phrases to use this skill:
 
 ## Library Information
 ## Staff Information
+
 ## Lab Usage
 This skill provides user with computer usage information in EWS labs, ICS labs and residence halls in the campus of the University of Illinois at Urbana-Champaign.
+
 ### User Guide
 - Invoke skill:
    - Alexa, start lab checker.  
@@ -67,14 +69,14 @@ This skill provides user with computer usage information in EWS labs, ICS labs a
    - Find me a lab (recommanded)
 - Search for a specific building:
    - How many available computers in { building name }
-   - Information abount { building name }
-   - Information on { building name }
+   - Information abount/on { building name }
    - Tell me about { building name }
    - { building name } (recommaned)
 - Search for a specific room in building:
    - Information on { building name } room { room number }
    - Tell me about { building name } room { room number }
    - { building name } room { room number } (recommaned)
+
 ### Supported labs/buildings
 | Buildings | Supported Names | Supported Rooms |
 | --------- | --------------- | --------------- |
@@ -105,33 +107,26 @@ This skill provides user with computer usage information in EWS labs, ICS labs a
 
 ## Sports Schedule
 This skill provides user with athletic schedule for 19 sports.
+
 ### User Guide
 - Invoke skill:
    - Alexa, start sports checker.
 - Enter a sport section:
    - { sport }
 - Search for past match information:
-   - Recent { n } matches
-   - Recent { n } games
-   - Past { n } matches
-   - Past { n } games
-   - Recent match
-   - Recent game
-   - Latest match
-   - Latest game
+   - Recent/Past { n } matches
+   - Recent/Past { n } games
+   - Recent/Latest match
+   - Recent/Latest game
 - Search for future match information:
-   - Coming { n } matches
-   - Coming { n } games
-   - Future { n } matches
-   - Future { n } games
-   - Coming match
-   - Coming game
-   - Future match
-   - Future game
+   - Coming/Future { n } matches
+   - Coming/Future { n } games
+   - Coming/Future match
+   - Coming/Future game
 - Search match information on a specific date:
-   - match on { date }
-   - game on { date }
+   - Match/Game on { date }
    - { date } (recommanded)
+
 ### Supported Sports
 | Sport |
 | -- |
@@ -154,7 +149,37 @@ This skill provides user with athletic schedule for 19 sports.
 | Women's Tennis |
 | Women's Track & Firld |
 | Wrestling |
+
 ## CUMTD
+This skill is designed for device deployed at bus stop around the campus of the University of Illinois at Urbana Champaign. It provides user with routes, buses and itineraries information.
+
+### User Guide
+- Invoke skill:
+   - Alexa, start bus checker.
+- Get stop name:
+   - Which stop is this.
+   - Tell me the stop.
+   - Where am I.
+   - Stop name.
+- Get route on service today:
+   - What lines go through this stop.
+   - What routes go through this stop.
+   - Tell me the routes.
+   - Tell me the lines.
+   - Route(s) on service.
+   - Route(s)
+- Get route on service by date:
+   - Will bus/line { route ID } on service (on) { date }.
+   - Whether bus/line { route ID } will be on service (on) {date}.
+- Get remaining waiting time for a route:
+   - When will/does bus/line { route ID } come.
+- Get planned trip for a destination:
+   - How to go do {destination stop name}.
+
+### Note
+- The code is hard coded to bus stop Transit Plaza (in front of bookstore).
+- User should use exact stop name to get a planned trip.
+
 ## Course Information
 ## Wireless Information
 
