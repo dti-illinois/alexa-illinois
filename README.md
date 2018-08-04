@@ -1,6 +1,6 @@
 # Alexa Skills in the University of Illinois at Urbana-Champaign
 [![Build Status][travis-image]][travis-url] [![Deploy Status](https://img.shields.io/badge/deploy-partial-yellow.svg)](https://img.shields.io)  
-Alexa skills that provides multiple student-related utilities to be deployed for echo dots in the U.I.U.C campus. Funtionalities covers dining info, library info, EWS usage, course info, sports, mass transportation and so on. 
+Alexa skills that provides multiple student-related utilities to be deployed for echo dots in the University of Illinois at Urbana-Champaign campus. Funtionalities covers dining info, library info, EWS usage, course info, sports, mass transportation and so on. 
 
 #### Notes: 
 - This is an unofficial development and is not supported or controlled by the University of Illinois at Urbana-Champaign itself.
@@ -12,7 +12,7 @@ Feel free to submit an issue or contribute!
 - [Dining Information](#dining-information)  
 - [Library Information](#library-information)  
 - [Staff Information](#staff-information)  
-- [EWS Usage](#ews-usage)  
+- [Lab Usage](#lab-usage)  
 - [Sports Schedule](#sports-schedule)  
 - [CUMTD](#cumtd)  
 - [Course Information](#course-information)  
@@ -51,7 +51,23 @@ Below are the supported phrases to use this skill:
 
 ## Library Information
 ## Staff Information
-## EWS Usage
+## Lab Usage
+This skill provides user with computer usage information in EWS labs, ICS labs and residence halls in the campus of the University of Illinois at Urbana-Champaign.
+### User Guide
+- Invoking skill: Alexa, start lab checker.
+- Quick search for engineering workstation: Find me a (engineering) workstation.
+- Quick search for general use computer: Find me a lab.
+### Supported labs/buildings
+| Buildings | Supported Names |
+| --------- | --------------- |
+| Digital Computer Laboratory | Digital Computer Laboratory (Lab), DCL |
+| Electrical and Computer Engineering Building | Electrical and Computer Engineering Building, ECE Building, ECEB, ECE |
+| Engineering Hall | Engineering Hall, EH |
+| Grainger Engineering Library | Grainger (Engineering) Library, Grainger, GELIB |
+| Mechanical Engineering Library | Mechanical Engineering Laboratory (Lab), Mechanical Lab, MEL |
+| Siebel Center | Siebel Center, Sieble, SIEBL |
+| Transportation Building | Transportation Building, TB |
+
 ## Sports Schedule
 ## CUMTD
 ## Course Information
