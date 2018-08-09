@@ -20,9 +20,31 @@ Feel free to submit an issue or contribute!
 
 ## Dining Information
 This skill can provide user with the menu of the 20 dining halls (supported hall list below) in the campus of the University of Illinois at Urbana-Champaign.
+### Supported Language
 Below are the supported phrases to use this skill:
-- Invoking Skill: Alexa, start menu checker
-...
+- Invoke Skill:  
+   - Alexa, start menu checker.  
+- Apply/Remove food filter:  
+   - Vegan/Vegetarian/Gluten-free.  
+- General Query:  
+   - {meal} in {hall} today/tomorrow?  
+   - What's the {meal} in {hall} today/tomorrow?  
+   - What's the {meal} at {hall} today/tomorrow?  
+   - What is the {meal} in {hall} today/tomorrow?  
+   - {meal} {date} in {hall}?  
+   - What's the {meal} today/tomorrow in {hall}?  
+   - What's the {meal} today/tomorrow at {hall}?  
+   - What is the {meal} today/tomorrow in {hall}?  
+- Activate interactive mode (it asks questions):  
+   - Interactive.  
+- Interactive mode: answer meal:  
+   - {meal}.
+- Interactive mode: answer hall:  
+   - {hall}.
+- Interactive mode: answer date:  
+   - Today/Tomorrow.
+- After a query, ask about the details:
+   - Detail/Details.
 ### Supported dining halls
 | Residence Hall | Dining Hall | Supported Names in the skill|
 | -------------- | ----------- | --------------- |
@@ -55,7 +77,7 @@ Below are the supported phrases to use this skill:
 ## Lab Usage
 This skill provides user with computer usage information in EWS labs, ICS labs and residence halls in the campus of the University of Illinois at Urbana-Champaign.
 
-### User Guide
+### Supported Language
 - Invoke skill:
    - Alexa, start lab checker.  
 - Quick search for engineering workstation: 
@@ -108,7 +130,7 @@ This skill provides user with computer usage information in EWS labs, ICS labs a
 ## Sports Schedule
 This skill provides user with athletic schedule for 19 sports.
 
-### User Guide
+### Supported Language
 - Invoke skill:
    - Alexa, start sports checker.
 - Enter a sport section:
@@ -153,7 +175,7 @@ This skill provides user with athletic schedule for 19 sports.
 ## CUMTD
 This skill is designed for device deployed at bus stop around the campus of the University of Illinois at Urbana Champaign. It provides user with routes, buses and itineraries information.
 
-### User Guide
+### Supported Language
 - Invoke skill:
    - Alexa, start bus checker.
 - Get stop name:
