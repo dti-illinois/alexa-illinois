@@ -20,13 +20,13 @@ Feel free to submit an issue or contribute!
 
 ## Dining Information
 This skill can provide user with the menu of the 20 dining halls (supported hall list below) in the campus of the University of Illinois at Urbana-Champaign.
+
 ### Supported Language
-Below are the supported phrases to use this skill:
-- Invoke Skill:  
+- Invoke skill:  
    - Alexa, start menu checker.  
 - Apply/Remove food filter:  
    - Vegan/Vegetarian/Gluten-free.  
-- General Query:  
+- General query:  
    - {meal} in {hall} today/tomorrow?  
    - What's the {meal} in {hall} today/tomorrow?  
    - What's the {meal} at {hall} today/tomorrow?  
@@ -45,6 +45,7 @@ Below are the supported phrases to use this skill:
    - Today/Tomorrow.
 - After a query, ask about the details:
    - Detail/Details.
+
 ### Supported dining halls
 | Residence Hall | Dining Hall | Supported Names in the skill|
 | -------------- | ----------- | --------------- |
@@ -69,10 +70,82 @@ Below are the supported phrases to use this skill:
 | Busey-Evans | Busey Bean and Green | Busey Bean and Green |
 | Busey-Evans | Oodles | Oodles |
 
-
-
 ## Library Information
+This skill can provide user with the information and updated opening hours of 30+ libraries in the campus of the University of Illinois at Urbana-Champaign.
+
+### Supported Language
+- Invoke skill:  
+   - Alexa, start library checker.  
+- Ask general information about a Library:  
+   - information {library}  
+   - {library} information  
+   - information of {library}  
+- Ask opening hours of a specific date of a library:
+   - {library} opening hours {date}  
+   - {library} opening hours on {date}  
+   - {library} {date} opening hours  
+   - opening hours {library} {date}  
+   - opening hours of {library} {date}  
+   - opening hours of {library} on {date}  
+   - what's the opening hours of {library} {date}  
+   - what's the opening hours of {library} on {date}  
+   - what's the {library} opening hours on {date}  
+   - what is the opening hours of {library} {date}  
+   - what is the opening hours of {library} on {date}  
+   - what is the {library} opening hours on {date}  
+- Ask opening hours of a library next seven days:
+   - {library} next seven days  
+   - next seven days {library}  
+   - next seven days of {library}  
+
+### Supported libraries
+| ID | Library | Supported Names in the skill |
+| ---------- | ------- | ---------------------------- |
+| 1 | Grainger Library | Grainger, Grainger Library, Grainger Engineering Library Information Center |
+| 3 | Mathematics Library | Mathematics Library |
+| 5 | Communications Library | Communications Library |
+| 6 | International and Area Studies Library | International and Area Studies Library |
+| 9 | A.C.E.S. Library | A.C.E.S. Library, Funk Library |
+| 11 | Social Sciences, Health, and Education Library | Social Sciences, Health, and Education Library |
+| 12 | Architecture and Art Library | Architecture and Art Library, Ricker Library |
+| 13 | University Archives | University Archives |
+| 16 | Map Library | Map Library |
+| 17 | Undergraduate Library | Undergraduate Library |
+| 22 | Rare Book and Manuscript Library | Rare Book and Manuscript Library |
+| 23 | Literatures and Languages Library | Literatures and Languages Library |
+| 27 | Music and Performing Arts Library | Music and Performing Arts Library, M.P.A.L. |
+| 29 | Law Library | Law Library |
+| 31 | Illinois History and Lincoln Collections | Illinois History and Lincoln Collections |
+| 34 | University High School Library | University High School Library |
+| 37 | Center for Children's Books | Center for Children's Books |
+| 44 | Illinois Fire Service Institute Library | Illinois Fire Service Institute Library |
+| 50 | Interlibrary Loan and Document Delivery | Interlibrary Loan and Document Delivery |
+| 56 | Residence Hall Libraries - Urbana | Residence Hall Libraries - Urbana |
+| 57 | Scholarly Commons | Scholarly Commons |
+| 59 | Sousa Archives & Center For American Music | Sousa Archives & Center For American Music |
+| 73 | Veterinary Medicine Library | Veterinary Medicine Library |
+| 75 | History, Philosophy, and Newspaper Library | History, Philosophy, and Newspaper Library |
+| 76 | Chemistry Library | Chemistry Library |
+| 80 | Main Library | Main Library |
+| 81 | Student Life and Culture Archives | Student Life and Culture Archives, Archives Research Center |
+| 82 | Residence Hall Libraries - Ikenberry | Residence Hall Libraries - Ikenberry |
+| 83 | Oak Street Library | Oak Street Library |
+
+
 ## Staff Information
+This skill can provide user with some information about staff, including professors, employees, in the campus of the University of Illinois at Urbana-Champaign.
+
+### Supported Language
+- Invoke skill:  
+   - Alexa, start staff checker.  
+- Input first name:
+   - First name, {first name}.
+- Input middlename:
+   - Middle name, {middle name}.
+- Input last name:
+   - Last name, {last name}.
+- Start the query:
+   - Start/Begin/Query.
 
 ## Lab Usage
 This skill provides user with computer usage information in EWS labs, ICS labs and residence halls in the campus of the University of Illinois at Urbana-Champaign.
@@ -84,20 +157,20 @@ This skill provides user with computer usage information in EWS labs, ICS labs a
    - Find me an engineering workstation.
    - Find me an engineering computer.
    - Find me an engineering lab.
-   - Find me a workstation (recommanded)
+   - Find me a workstation (recommended)
 - Quick search for general use computer:
    - Find me a general computer.
    - Find me a general lab.
    - Find me a lab (recommanded)
 - Search for a specific building:
-   - How many available computers in { building name }
-   - Information abount/on { building name }
-   - Tell me about { building name }
-   - { building name } (recommaned)
+   - How many available computers in {building name}
+   - Information abount/on {building name}
+   - Tell me about {building name}
+   - {building name} (recommended)
 - Search for a specific room in building:
-   - Information on { building name } room { room number }
-   - Tell me about { building name } room { room number }
-   - { building name } room { room number } (recommaned)
+   - Information on {building name} room {room number}
+   - Tell me about {building name} room {room number}
+   - {building name} room {room number} (recommended)
 
 ### Supported labs/buildings
 | Buildings | Supported Names | Supported Rooms |
@@ -134,20 +207,20 @@ This skill provides user with athletic schedule for 19 sports.
 - Invoke skill:
    - Alexa, start sports checker.
 - Enter a sport section:
-   - { sport }
+   - {sport}
 - Search for past match information:
-   - Recent/Past { n } matches
-   - Recent/Past { n } games
+   - Recent/Past {n} matches
+   - Recent/Past {n} games
    - Recent/Latest match
    - Recent/Latest game
 - Search for future match information:
-   - Coming/Future { n } matches
-   - Coming/Future { n } games
+   - Coming/Future {n} matches
+   - Coming/Future {n} games
    - Coming/Future match
    - Coming/Future game
 - Search match information on a specific date:
-   - Match/Game on { date }
-   - { date } (recommanded)
+   - Match/Game on {date}
+   - {date} (recommanded)
 
 ### Supported Sports
 | Sport |
@@ -191,10 +264,10 @@ This skill is designed for device deployed at bus stop around the campus of the 
    - Route(s) on service.
    - Route(s)
 - Get route on service by date:
-   - Will bus/line { route ID } on service (on) { date }.
-   - Whether bus/line { route ID } will be on service (on) {date}.
+   - Will bus/line {route ID} on service (on) {date}.
+   - Whether bus/line {route ID} will be on service (on) {date}.
 - Get remaining waiting time for a route:
-   - When will/does bus/line { route ID } come.
+   - When will/does bus/line {route ID} come.
 - Get planned trip for a destination:
    - How to go do {destination stop name}.
 
