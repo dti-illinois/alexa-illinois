@@ -1,9 +1,9 @@
 welcome: |
-  Welcome to the University of Illinois, Urbana-Champaign dining information skill. How may I help you?
+  Welcome to the University of Illinois, Urbana-Champaign dining information skill. How may I assist you today?
   Or you can say "help" for more details on what I can answer.
 
 reprompt: |
-  You may ask a question now, or say "stop" to end this session.
+  What else can I assist you with?
 
 help: |
   To begin with, I can tell you the menus in all available dining halls.
@@ -11,7 +11,7 @@ help: |
   or simply "dinner in P.A.R. hall today".
   Or you can say "interactive" and I will ask you questions to help with your search.
   I can also provide more details about the selected meals if you say "details". 
-  Feel free to try it out now.
+  What else can I assist you with?
 
 filter: |
   Got it. {{ filter_name }} food filter is 
@@ -32,7 +32,7 @@ inter-ask-date: |
 answer-entrees-ask: |
   Sure, {{ date }} in {{ hall }} for {{ meal }}'s entrees, there are {{ results | join(". ") }}. \
   If you want to know more details such as starches, salads, soups or desserts, say "details". 
-  You can also start another query now, or say "stop" to end this session.
+  What else can I assist you with?
 
 answer-details: |
   Here are the details about {{ meal }} in {{ hall }} {{ date }}. 
@@ -42,17 +42,16 @@ answer-details: |
   For salads, there are {{ results_salads | join(". ") }}; {% endif %} {% if not results_soups == [] %} 
   For soups, there are {{ results_soups | join(". ") }}; {% endif %} {% if not results_desserts == [] %} 
   For desserts, there are {{ results_desserts | join(". ") }}. {% endif %} 
-  You can continue with another query, or say "stop" to end this session.
+  What else can I assist you with?
 
 error-not-found: |
-  I'm sorry, but I do not have the answer to that right now. 
-  You can continue with another query, or say "stop" to end this session.
-
+  I'm sorry, but I don't have the answer to that. What else can I assist you with?
+  
 error-not-understand: |
-  I'm sorry, but I did not understand that. Could you say it again please?
+  I'm sorry, but I did not understand that. Could you ask me again?
 
 error-other: |
-  I'm sorry, but there is currently an error. Please try again.
+  I'm sorry, but I experienced an error.  Please try again.
 
 goodbye: |
   Goodbye.
