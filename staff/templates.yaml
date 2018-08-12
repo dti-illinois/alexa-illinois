@@ -1,7 +1,6 @@
 welcome: |
   Welcome to the University of Illinois, Urbana-Champaign faculty and staff directory skill.
-  For details on what information I can provide, say help.
-  How can I assist you today?
+  How may I assist you today? Or say "help" for more information on what I can answer.
 
 reprompt: |
   You may ask a question now, or say "stop" to end this session.
@@ -12,8 +11,7 @@ help: |
   For example, if you're looking for information on a Will Smith, you would start by saying "first name Will". 
   After I've got that name, you would then say "last name Smith". 
   Finally, say "start" to initiate the query.
-  It's okay if you don't give me one or two of the names, I'll return all the matches. 
-  You can try it out now.
+  What else can I assist you with?
 
 confirm-clue: |
   Got it, {{ which_name }} {{ name }}. Do you know any additional parts of their name? Or you can say "start" to initiate the query.
@@ -44,9 +42,9 @@ answer-noresults: |
   You can build another query now, or say "stop" to end this session.
 
 error-not-understand: |
-  I'm sorry, but I couldn't understand that. Can you please say it again?
+  I'm sorry, but I did not understand that. Can you please ask me again?
 
 error-other: |
-  I'm sorry, but I've hit an error. Please try again.
+  I'm sorry, but I experienced an error. Please try again.
 
 goodbye: Goodbye.
