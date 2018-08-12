@@ -1,19 +1,19 @@
-welcome: Welcome to the University of Illinois, Urbana-Champaign Course Explorer Skill! I can provide you the information for any specific courses you might be interested in. To begin, please tell me the year that you are interested in.  For example, you can say "2018".
+welcome: Welcome to the University of Illinois, Urbana-Champaign Course Explorer skill. What year are you interested in?
 
-ask-semester: Sure!  Which semester are you interested in? For example, you can say "fall semester" or "semester fall".
+ask-semester: Is this for the fall, spring, or summer semester?
 
-ask-course: Please tell me the subject and course number for the course you are interested in.
+ask-course: What is the subject and course number for the course you are interested in.
 
-ask-section: Okay. Here are the sections of {{ subject }} {{course_num}}, {{sections | join(", ")}}. Which one do you want?
+ask-section: Okay. Here are the sections of {{ subject }} {{course_num}}, {{sections | join(", ")}}. Which one would you like?
 
 answer-section-details: Here are the details for {{ course }} in the {{ semester }} semester of {{ year }}. The course title is {{ course_title}}, and it is taught by {{ professor | join(", and ") }}. This course starts on {{ start_date }}, and ends on {{ end_date }}. {% if not days_of_week == []%} This course is delivered on each {{ days_of_week | join(", ") }}; {% endif %} from {{ start_time }} to {{ end_time }}, and the location is {{ location }}. You may say "stop" to end this session, or provide me a new year to search from.
 
 answer-course-details: Here
 
-error-not-found: I'm sorry, but I don't have any information on that. You can try a different query, or  say "stop" to end this session.
+error-not-found: I'm sorry, but I don't have the answer to that. What else can I assist you with?
 
-error-not-understand: I'm sorry, but I couldn't understand that. Could you say it again?
+error-not-understand: I'm sorry, but I did not understand that.  Could you ask me again?
 
-error-other: I'm sorry, but I am currently experiencing an error. Please try again.
+error-other: I'm sorry, but I experienced an error.  Please try again.
 
 goodbye: Goodbye.
