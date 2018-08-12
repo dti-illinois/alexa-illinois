@@ -1,19 +1,15 @@
 welcome: |
-  Welcome to the University of Illinois, Urbana-Champaign library information skill. How May I help you?
-  Or you can say "help" for more details on what I can answer.
+  Welcome to the University of Illinois, Urbana-Champaign library building information skill.
+  For details on what I can answer, just say "help".  How may I assist you today?
 
 reprompt: |
   You may ask a question now, or say "stop" to end this session.
 
 help: |
-  Let's use Grainger Library as an example.
-  Say "Grainger Library information" to get basic information about the library, such as consulting hours, phone number, email and address.
-  Say "Grainger Library opening hours tomorrow" to get tomorrow's opening hours of Grainger library, or for any other specific date.
-  Say "Grainger Library next seven days" to get the opening hours of Grainger library for the next seven days, including today.
-  There are many more questions that I can answer. 
-  For example, say "sample questions" if you want to hear other valid expressions.
-  Or say "catalog" to see which libraries are supported.
-  You can try it out now.
+  Okay, let's use Grainger Library as an example.
+  Say "Grainger Library information" to get basic information about the library; such as consulting hours, phone number, email and address.
+  Or say "catalog" for a list of supported libraries.  You can also say "sample questions" for examples of more detailed expressions.
+  What else can I assits you with
 
 sample-questions: |
   For basic information, you can say 
@@ -31,12 +27,12 @@ sample-questions: |
     "Next seven days Grainger Library",
     "Next seven days of Grainger Library".
   Or you can ask about any other specific library.
-  You can try it out now.
+  What else can I assist you with?
 
 answer-catalog: |
   Here are all the libraries I support. They include 
   {% for item in catalog %} {{item+"."}} {% endfor %}.
-  You can ask a question now.
+  What else can I assist you with?
 
 answer-basic-info: |
   Here is the information for {{library}}.
@@ -72,16 +68,17 @@ answer-next-seven-days: |
   You can ask another question now, or say "stop" to end this session.
 
 error-not-found: |
-  Sorry, but there is no available information on that topic. 
-  You can ask another question now, or say "stop" to end this session.
+  I'm sorry, but I don't have the answer to that. 
+  What else can I assist you with?
 
 error-not-understand: |
-  Sorry, but I did not understand that. Could you ask me again?
+  I'm sorry, but I did not understand that. Could you ask me again?
 
 error-no-match: |
-  Sorry, but there are no libraries or dates that match your query. Could you ask me again?
+  I'm sorry, but there are no libraries or dates that match your query.
+  What else can I assist you with?
 
 error-other: |
-  Sorry, but I have encountered an error. Please try again.
+  I'm sorry, but I experienced an error.  Please try again.
 
 goodbye: Goodbye.
