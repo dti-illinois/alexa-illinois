@@ -45,6 +45,6 @@ sport_info_error: |
 
 intent_error: |
   I'm sorry, but I did not understand that.
-  For further instruction, say "what can you do"?
+  Could you please repeat it?
 
 bye: Goodbye.  i.l.l. . i.n.i.
