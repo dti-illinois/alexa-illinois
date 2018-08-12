@@ -1,7 +1,7 @@
 welcome: |
   Welcome to the Champaign-Urbana Mass Transit District information skill.
-  For details on what I can answer, say "help".
-  How can I assist you today?
+  For details on what I can answer, just say "help".
+  How may I assist you today?
 
 stop_name: |
   You are currently located at {{ stop_name }}.
@@ -43,28 +43,22 @@ help: |
   To find out all routes that will stop at this location today, say "routes in service".
   To find out what time a specific route will stop at this location, say "when will the green route come", for example.
   You can also ask if a specific route will be running on any given day.
-  To get directions to a specific stop, say "how do I get to" and say your destination.
-  How can I assist you now?
+  To get directions to a specific stop, say "how do I get to" and then say your destination.
+  What else can I assist you with?
 
 intent_error: |
-  I'm sorry, but I cannot understand that statement.
-  Can you repeat it please?
-  Or for further instruction, say "help".
+  I'm sorry, but I did not understand that.  Could you repeat it?
 
 date_error: |
-  I'm sorry, but I cannot understand that date.
-  Can you repeat it please?
-  Or for further instruction, say "help".
+  I'm sorry, but I did not understand that date.  Could you repeat it?
 
 route_id_error: |
   I'm sorry, but that route does not stop at this location, or it may not be in service today.
-  Please ask for a different route.
-  Or for further instruction, say "help".
+  Please ask for a different route. Or for further instruction, say "help".
 
 stop_name_error: |
   I'm sorry, but I do not recognize that stop.
-  Can you say it again?
-  Or for further instruction, say "help".
+  Can you say it again? Or for further instruction, say "help".
 
 trip_error: |
   I'm sorry, but there are no available trips that meet your criteria.
