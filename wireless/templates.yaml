@@ -1,9 +1,8 @@
 
 
 welcome: |
-  Welcome to the University of Illinois, Urbana-Champaign quiet space information skill,
-  using wireless connection info to determine the busyness of a building on campus.
-  How can I help you? If you'd like more information on what I can do, say "help".
+  Welcome to the University of Illinois, Urbana-Champaign wireless information skill.
+  How may I assist you? If you'd like more information on what I can do, say "help".
 
 help: |
   I can provide information about wireless connections in various buildings here at the university. 
@@ -20,22 +19,24 @@ confirm-clue: |
 
 answer-results: |
   There are a total of {{ result["totalAP"] }} wireless access points, and {{ result["clientdevices"] }} client devices connected to these points, at {{ result["buildingname"] }}. 
-  Anything else?
+  What else can I assist you with?
 
 answer-busy-results: |
-  The following buildings are currently busy: {{ result }}. 
+  The following buildings are currently busy: {{ result }}.
+  What else can I assist you with?
   
 answer-mostly-connection: |
-  The buildings with the highest number of connected client devices are: {{ result[0] }} which has {{ result[1] }} connections, {{ result[2] }} which has {{ result[3] }} connections, and {{ result[4] }} which has {{ result[5] }} connections.	
+  The buildings with the highest number of connected client devices are: {{ result[0] }} which has {{ result[1] }} connections, {{ result[2] }} which has {{ result[3] }} connections, and {{ result[4] }} which has {{ result[5] }} connections.
+  What else can I assist you with
 
 answer-noresults: |
   I'm sorry, but I don't know a building that matches that query. 
   You can start another query now, or say "stop" to end this session.
 
 error-not-understand: |
-  I'm sorry, but I couldn't understand that. Could you say it again?
+  I'm sorry, but I did not understand that. Could you ask me again?
 
 error-other: |
-  I'm sorry, but I am experiencing an error. Please try again.
+  I'm sorry, but I experienced an error. Please try again.
 
-goodbye: Goodbye. Thank you for using University of Illinois, Urbana-Champaign wireless checker.
+goodbye: Goodbye.
