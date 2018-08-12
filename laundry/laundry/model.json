@@ -1,0 +1,248 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "campus laundry",
+      "intents": [
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AnswerBuildingIntent",
+          "slots": [
+            {
+              "name": "building",
+              "type": "BUILDING"
+            }
+          ],
+          "samples": [
+            "{building}"
+          ]
+        },
+        {
+          "name": "AnswerMachineIntent",
+          "slots": [
+            {
+              "name": "machine",
+              "type": "MACHINE"
+            }
+          ],
+          "samples": [
+            "{machine}"
+          ]
+        },
+        {
+          "name": "LaundryGeneralSearchIntent",
+          "slots": [
+            {
+              "name": "machine",
+              "type": "MACHINE"
+            }
+          ],
+          "samples": [
+            "find me a {machine}",
+            "where can I find an available {machine}",
+            "general search"
+          ]
+        },
+        {
+          "name": "InteractiveIntent",
+          "slots": [],
+          "samples": [
+            "interactive"
+          ]
+        },
+        {
+          "name": "SupportedBuildingIntent",
+          "slots": [],
+          "samples": [
+            "what buildings are supported"
+          ]
+        }
+      ],
+      "types": [
+        {
+          "name": "BUILDING",
+          "values": [
+            {
+              "id": "allen",
+              "name": {
+                "value": "Allen",
+                "synonyms": [
+                  "A.L.L.E.N."
+                ]
+              }
+            },
+            {
+              "id": "bousefield",
+              "name": {
+                "value": "Bousefield",
+                "synonyms": [
+                  "Busey-Evans Laundry Room",
+                  "B.O.U.S.E.F.I.E.L.D."
+                ]
+              }
+            },
+            {
+              "id": "busey",
+              "name": {
+                "value": "Busey-Evans",
+                "synonyms": [
+                  "Busey-Evans Laundry Room",
+                  "B.U.S.E.Y."
+                ]
+              }
+            },
+            {
+              "id": "clark",
+              "name": {
+                "value": "Clark"
+              }
+            },
+            {
+              "id": "daniels",
+              "name": {
+                "value": "Daniels"
+              }
+            },
+            {
+              "id": "f.a.r",
+              "name": {
+                "value": "FAR",
+                "synonyms": [
+                  "FAR Laundry Room",
+                  "F.A.R."
+                ]
+              }
+            },
+            {
+              "id": "goodwingreen",
+              "name": {
+                "value": "Goodwin Green"
+              }
+            },
+            {
+              "id": "hopkins",
+              "name": {
+                "value": "Hopkins"
+              }
+            },
+            {
+              "id": "i.s.r",
+              "name": {
+                "value": "ISR",
+                "synonyms": [
+                  "I.S.R."
+                ]
+              }
+            },
+            {
+              "id": "l.a.r",
+              "name": {
+                "value": "LAR",
+                "synonyms": [
+                  "L.A.R."
+                ]
+              }
+            },
+            {
+              "id": "nugent",
+              "name": {
+                "value": "Nugent"
+              }
+            },
+            {
+              "id": "orcharddowns",
+              "name": {
+                "value": "Orchard Downs"
+              }
+            },
+            {
+              "id": "p.a.r",
+              "name": {
+                "value": "PAR",
+                "synonyms": [
+                  "P.A.R."
+                ]
+              }
+            },
+            {
+              "id": "scott",
+              "name": {
+                "value": "Scott"
+              }
+            },
+            {
+              "id": "sherman",
+              "name": {
+                "value": "Sherman"
+              }
+            },
+            {
+              "id": "snyder",
+              "name": {
+                "value": "Snyder",
+                "synonyms": [
+                  "S.N.Y.D.E.R."
+                ]
+              }
+            },
+            {
+              "id": "tvd",
+              "name": {
+                "value": "TVD",
+                "synonyms": [
+                  "TVD Laundry Room"
+                ]
+              }
+            },
+            {
+              "id": "wassaja",
+              "name": {
+                "value": "Wassaja",
+                "synonyms": [
+                  "W.A.S.S.A.J.A."
+                ]
+              }
+            },
+            {
+              "id": "weston",
+              "name": {
+                "value": "Weston"
+              }
+            }
+          ]
+        },
+        {
+          "name": "MACHINE",
+          "values": [
+            {
+              "id": "washer",
+              "name": {
+                "value": "washers"
+              }
+            },
+            {
+              "id": "dryer",
+              "name": {
+                "value": "dryers"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
