@@ -1,5 +1,5 @@
 welcome: |
-  Welcome to the University of Illinois, Urbana-Champaign residence hall laundry info skill. 
+  Welcome to the University of Illinois, Urbana-Champaign residence hall laundry information skill. 
   Say "help" for more information on what I can do.
   
 help: |
@@ -15,7 +15,7 @@ ask-building: |
   Which building's machines are you interested in now?
 
 ask-machine: |
-  Ok. Which type of machine in {{ building }} do you want to know about? Washers or Dryers?
+  Ok. Which type of machine in {{ building }} do you want to know about? Washers or dryers?
 
 answer-supported-building: |
   I have information for the laundry availability in these buildings. {% for item in results %}  {{ item }}.. {% endfor %}
@@ -24,16 +24,15 @@ answer-entress: |
   Right now, {{ building }} {{ room }} has {{ numbers }} {{ machine }} available.
 
 reprompt_general: |
-  What other information would you like?
+  What else can I assist you with?
 
 error-not-found: |
-  I'm sorry, but I have no information about that right now. 
-  You can ask another one question now, or  say "stop" or "cancel" to end this session.
+  I'm sorry, but I don't have the answer to that. What else can I assist you with?
 
 error-not-understand: |
-  I'm sorry, but I didn't understand that. Could you say it again?
+  I'm sorry, but I did not understand that.  Could you ask me again?
 
 error-other: |
-  I'm sorry, but I experienced an error. Please ask me again.'
+  I'm sorry, but I experienced an error. Please try again.
 
 goodbye: Goodbye.
