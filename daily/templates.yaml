@@ -1,0 +1,27 @@
+welcome: |
+  Welcome to the University of Illinois, Urbana-Champaign daily news.
+
+news: |
+  Here is news out line.
+  Date: {{ news.date }}.
+  Title: {{ news.title }}.
+  Description: {{ news.description }}
+  For more information, please go to daily illini website.
+
+no_news_problem: |
+  Sorry, I cannot find any news currently.
+  Please try again later.
+
+exceed_news_problem: |
+  Sorry, I cannot find any more news.
+  To check for previous news, say "back"
+
+help: |
+  I can provide the latest news from daily illini.
+  To get a news, say "tell me a news".
+  To get next or previous news, say "next" or "previous".
+
+intent_problem: |
+  I'm sorry, but I did not understand that. Could you ask me again?
+
+bye: Goodbye
