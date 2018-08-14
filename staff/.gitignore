@@ -3,5 +3,4 @@ buildings.json
 slot_firstname.json
 slot_middlename.json
 slot_lastname.json
-model.json
 *.pyc
