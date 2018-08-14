@@ -6,7 +6,7 @@ from consts import ICSConsts
 class ICSSkill():
 
     def __init__(self):
-        self.url = 'https://lyogz55hd1.execute-api.us-west-2.amazonaws.com/api/ics'
+        self.url = 'https://69smoo2dc6.execute-api.us-east-1.amazonaws.com/api/ics'
 
     def make_blur_search(self):
         raw = self._load_data()

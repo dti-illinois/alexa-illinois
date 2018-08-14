@@ -7,7 +7,7 @@ from consts import DailyNewsConsts
 class DailyNewsSkill():
 
     def __init__(self):
-        self.url = 'https://hs7k17eh68.execute-api.us-west-2.amazonaws.com/api/dailynews'
+        self.url = 'https://69smoo2dc6.execute-api.us-east-1.amazonaws.com/api/dailynews'
 
     def get_news(self):
         data = self._load_data()

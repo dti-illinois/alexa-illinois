@@ -7,7 +7,7 @@ from athletic_consts import AthleticConsts
 class AthleticSkill():
 
     def __init__(self):
-        self.base_url = 'https://lyogz55hd1.execute-api.us-west-2.amazonaws.com/api/sports/'
+        self.base_url = 'https://69smoo2dc6.execute-api.us-east-1.amazonaws.com/api/sports/'
 
     def get_past_games(self, sport, n):
         data = self._load_data(sport)
