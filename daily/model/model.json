@@ -1,0 +1,64 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "daily news",
+            "intents": [
+                {
+                    "name": "AMAZON.FallbackIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.YesIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NoIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.RepeatIntent",
+                    "samples": []
+                },
+                {
+                    "name": "DailyNewsInitialIntent",
+                    "slots": [],
+                    "samples": [
+                        "Tell me something",
+                        "Tell me a news"
+                    ]
+                },
+                {
+                    "name": "DailyNewsNextIntent",
+                    "slots": [],
+                    "samples": [
+                        "Next",
+                        "Next news"
+                    ]
+                },
+                {
+                    "name": "DailyNewsPreviousIntent",
+                    "slots": [],
+                    "samples": [
+                        "Go back",
+                        "Back",
+                        "Previous",
+                        "Previous news"
+                    ]
+                }
+            ],
+            "types": []
+        }
+    }
+}
