@@ -8,6 +8,7 @@ from datetime import date
 from datetime import timedelta
 from datetime import datetime
 
+
 url_library_all = "https://quest.library.illinois.edu/LibDirectory/Api/UnitsWithCalendars"
 url_library_search = "https://quest.library.illinois.edu/LibDirectory/Api/SearchCalendar/"
 

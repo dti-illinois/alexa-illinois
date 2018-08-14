@@ -7,7 +7,7 @@ from datetime import date
 from datetime import timedelta
 
 
-url_dining = "https://ma28a8yjr8.execute-api.us-west-2.amazonaws.com/dev/dining"
+url_dining = "https://69smoo2dc6.execute-api.us-east-1.amazonaws.com/api/dining"
 
 
 def get_tomorrow_url(hall):
