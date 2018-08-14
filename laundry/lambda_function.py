@@ -2,10 +2,7 @@ import logging
 from flask import Flask, render_template
 from flask_ask import Ask, statement, question, session, request
 
-from uiuc_laundry import get_building_id
-from uiuc_laundry import get_specific_slots
-from uiuc_laundry import general_search
-from uiuc_laundry import get_supported_buildings
+from uiuc_laundry import get_building_id, get_specific_slots, general_search, get_supported_buildings
 
 app = Flask(__name__)
 ask = Ask(app, '/')
@@ -58,7 +55,7 @@ def supported_build():
 @ask.intent("AnswerBuildingIntent", mapping={'building_name': 'building'})
 def answer_building(building_name):
     building = request.intent.slots.building.resolutions.resolutionsPerAuthority[0]['values'][0]['value']['id']
-    session.attributes['building_id'] = get_building_id(building) 
+    session.attributes['building_id'] = get_building_id(building)
     session.attributes['building_name'] = building_name
 
     ask_msg = render_template('ask-machine')
@@ -73,8 +70,8 @@ def answer_machine(machine_name):
     machine = request.intent.slots.machine.resolutions.resolutionsPerAuthority[0]['values'][0]['value']['id']
     session.attributes['machine_name'] = machine_name
     results = get_specific_slots(building_id, machine)
-    answer_msg = render_template('answer-entress', 
-        building=building_name, 
+    answer_msg = render_template('answer-entress',
+        building=building_name,
         numbers=results,
         machine=machine
     )

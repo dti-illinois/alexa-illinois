@@ -1,15 +1,15 @@
 welcome: |
-  Welcome to the University of Illinois, Urbana-Champaign residence hall laundry information skill. 
+  Welcome to the University of Illinois, Urbana-Champaign residence hall laundry information skill.
   Say "help" for more information on what I can do.
-  
+
 help: |
-  My main function is to provide information on availability of laundry machines in all residence hall buildings. 
-  For example, you can say, "general search", to get the current status of all laundry rooms. 
-  For information on which buildings I know about, say "what buildings are supported?" 
+  My main function is to provide information on availability of laundry machines in all residence hall buildings.
+  For example, you can say, "general search", to get the current status of all laundry rooms.
+  For information on which buildings I know about, say "what buildings are supported?"
   Or say, "interactive", and I will ask you questions to help narrow down your query.
 
 general_search_answer: |
-  The current status is. {% for item in info %}  {{ item.building }} room {{ item.room }} has {{ item.washers }} washers and {{ item.dryers }} dryers available. {% endfor %}
+  The current status is. {% for item in info %}  {{ item.building }} {{ item.room }} has {{ item.washers }} washers and {{ item.dryers }} dryers available. {% endfor %}
 
 ask-building: |
   Which building's machines are you interested in now?
