@@ -115,19 +115,19 @@
                     "name": "HALL",
                     "values": [
                         {
-                            "id": "oodles",
+                            "id": "19",
                             "name": {
                                 "value": "Oodles"
                             }
                         },
                         {
-                            "id": "buseybeanandgreen",
+                            "id": "11",
                             "name": {
                                 "value": "Busey Bean and Green"
                             }
                         },
                         {
-                            "id": "buseyevans",
+                            "id": "4",
                             "name": {
                                 "value": "Busey-Evans Dining Hall",
                                 "synonyms": [
@@ -137,19 +137,19 @@
                             }
                         },
                         {
-                            "id": "soulingredient",
+                            "id": "16",
                             "name": {
                                 "value": "Soul Ingredient"
                             }
                         },
                         {
-                            "id": "crackedeggcafe",
+                            "id": "8",
                             "name": {
                                 "value": "Cracked Egg Café"
                             }
                         },
                         {
-                            "id": "far",
+                            "id": "6",
                             "name": {
                                 "value": "F.A.R. Dining Hall",
                                 "synonyms": [
@@ -160,31 +160,31 @@
                             }
                         },
                         {
-                            "id": "neosoulingredient",
+                            "id": "21",
                             "name": {
                                 "value": "Neo Soul Ingredient"
                             }
                         },
                         {
-                            "id": "caffeinator",
+                            "id": "9",
                             "name": {
                                 "value": "Caffeinator"
                             }
                         },
                         {
-                            "id": "betterburger",
+                            "id": "20",
                             "name": {
                                 "value": "Better Burger"
                             }
                         },
                         {
-                            "id": "57north",
+                            "id": "7",
                             "name": {
                                 "value": "57 North"
                             }
                         },
                         {
-                            "id": "ikenberrydininghall",
+                            "id": "1",
                             "name": {
                                 "value": "Ikenberry Dining Hall",
                                 "synonyms": [
@@ -194,25 +194,25 @@
                             }
                         },
                         {
-                            "id": "tasteofasia",
+                            "id": "17",
                             "name": {
                                 "value": "Taste of Asia"
                             }
                         },
                         {
-                            "id": "cocinamexicana",
+                            "id": "10",
                             "name": {
                                 "value": "Cocina Mexicana"
                             }
                         },
                         {
-                            "id": "chomps",
+                            "id": "18",
                             "name": {
                                 "value": "CHOMPS"
                             }
                         },
                         {
-                            "id": "isr",
+                            "id": "3",
                             "name": {
                                 "value": "I.S.R Dining Hall",
                                 "synonyms": [
@@ -222,13 +222,13 @@
                             }
                         },
                         {
-                            "id": "pennstation",
+                            "id": "14",
                             "name": {
                                 "value": "Penn Station"
                             }
                         },
                         {
-                            "id": "par",
+                            "id": "2",
                             "name": {
                                 "value": "P.A.R. Dining Hall",
                                 "synonyms": [
@@ -239,19 +239,19 @@
                             }
                         },
                         {
-                            "id": "leafy",
+                            "id": "13",
                             "name": {
                                 "value": "Leafy"
                             }
                         },
                         {
-                            "id": "fieldofgreens",
+                            "id": "12",
                             "name": {
                                 "value": "Field of Greens"
                             }
                         },
                         {
-                            "id": "lar",
+                            "id": "5",
                             "name": {
                                 "value": "Lincoln Hall",
                                 "synonyms": [

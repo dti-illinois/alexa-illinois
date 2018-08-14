@@ -23,6 +23,7 @@ def get_dining(date, hall, meal, course, filters):
         request_url = get_tomorrow_url(hall)
     else:
         return None
+    print(request_url)
     response = urlopen(request_url)
     try:
         response_json = json.load(response)
