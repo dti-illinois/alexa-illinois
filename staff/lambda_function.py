@@ -44,12 +44,12 @@ def answer_firstname(firstname):
 
 @ask.intent('AnswerLastNameIntent')
 def answer_lastname(lastname):
-    return staff.answer_lastname(firstname)
+    return staff.answer_lastname(lastname)
 
 
 @ask.intent('AnswerMiddleNameIntent')
 def answer_middlename(middlename):
-    return staff.answer_middlename(firstname)
+    return staff.answer_middlename(middlename)
 
 
 @ask.intent('StartIntent')
