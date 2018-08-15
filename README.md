@@ -272,7 +272,7 @@ This skill is designed for device deployed at bus stop around the campus of the 
    - How to go do {destination stop name}.
 
 ### Note
-- The code is hard coded to bus stop Transit Plaza (in front of bookstore).
+- The code is hard coded to bus stop at County Market (E Stoughton & 4th St).
 - User should use exact stop name to get a planned trip.
 
 ## Course Information
