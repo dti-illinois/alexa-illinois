@@ -46,8 +46,9 @@ help: |
   Which building would you like information for?
 
 list_buildings: |
-  Currently, I support the following engineering workstation buildings: {{ ews_buildings }}.
-  I also support the following general use labs: {{ ics_buildings }}
+  Currently, I support the following engineering workstation labs: {{ ews_buildings }}.
+  I also support the following instructional computing services labs: {{ ics_buildings }}.
+  Labs that are located in residence halls are reserved for residents of those buildings.
   Which building would you like information for?
 
 reprompt_help: Which building would you like information for?
