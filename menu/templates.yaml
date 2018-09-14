@@ -1,5 +1,6 @@
 welcome: |
-  Welcome to the University of Illinois, Urbana-Champaign dining information skill. How may I assist you today?
+  Welcome to the University of Illinois, <speak>
+    <phoneme alphabet="ipa" ph="ɚ.bæ.nə">Urbana</phoneme></speak> Champaign dining information skill. How may I assist you today?
   Or you can say "help" for more details on what I can answer.
 
 reprompt: |
