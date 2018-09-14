@@ -41,7 +41,7 @@ sport_type_error: |
   Which sport would you like information for?
 
 sport_info_error: |
-  I'm sorry, but I cannot find any game that matches the description.
+  I'm sorry, but I cannot find any game that matches the description. Please ask me for a different game, or a different sport.
 
 intent_error: |
   I'm sorry, but I did not understand that.
