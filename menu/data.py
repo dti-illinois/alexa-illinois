@@ -1,30 +1,28 @@
 import json
 import time
-import urllib
-import requests
-from urllib.request import urlopen
+import urllib2
+
+from urllib2 import urlopen
 from datetime import date
 from datetime import timedelta
 
 
-url_dining = "https://69smoo2dc6.execute-api.us-east-1.amazonaws.com/api/dining"
+url_dining = "https://web.housing.illinois.edu/MobileDining2/WebService/Search.aspx?id="
 
 
-def get_tomorrow_url(hall):
+def get_tomorrow_url(hall_id):
     tmr = date.today() + timedelta(days=1)
-    tmr_str = tmr.strftime("%Y-%m-%d")
-    return url_dining + "/" + hall + "/" + tmr_str + "/" + tmr_str
+    tmr_str = tmr.strftime("%m/%d/%Y")
+    return url_dining + hall_id + "&from=" + tmr_str + "&to=" + tmr_str + "&t=json&k=7A828F94-620B-4EE3-A56F-328036CC3C04"
 
+def get_today_url(hall_id):
+    tmr = date.today()
+    tmr_str = tmr.strftime("%m/%d/%Y")
+    return url_dining + hall_id + "&from=" + tmr_str + "&to=" + tmr_str + "&t=json&k=7A828F94-620B-4EE3-A56F-328036CC3C04"
 
-def get_dining(date, hall, meal, course, filters):
-    if date =='today':
-        request_url = url_dining + "/" + hall
-    elif date == 'tomorrow':
-        request_url = get_tomorrow_url(hall)
-    else:
-        return None
-    print(request_url)
-    response = urlopen(request_url)
+def get_dining(date, hall_id, meal, course, filters):
+    url_dining = get_today_url(hall_id)
+    response = urlopen(url_dining)
     try:
         response_json = json.load(response)
         items = response_json['Menus']['Item']
