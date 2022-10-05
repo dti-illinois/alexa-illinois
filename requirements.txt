@@ -2,4 +2,4 @@ flask
 flask-ask
 flask-restful
 beautifulsoup4
-cryptography<2.2
+cryptography<3.2
